@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice</title>
+</head>
+
+<body>
+    <script>
+        let score = 0
+
+        const ans1 = confirm("嘉伶是輔大法文系畢業的嗎？")
+        if (ans1) {
+            alert("答錯了qaq，是淡江法文系啦！")
+        } else {
+            score += 20
+            alert("答對了！愛你唷")
+        }
+
+        const ans2 = confirm("嘉伶是雙魚座嗎？")
+        if (ans2) {
+            score += 20
+            alert("答對了～～你真了解我")
+        } else {
+            alert("答錯了qaq")
+        }
+
+        const ans3 = confirm("你是我好朋友嗎？")
+        if (ans3) {
+            score += 20
+            alert("你當然是我麻吉啊！！！")
+        } else {
+            alert("原來你不把我當朋友(桑心")
+        }
+
+        const ans4 = confirm("嘉伶有確診過嗎？")
+        if (ans4) {
+            alert("你才確診")
+        } else {
+            score += 20
+            alert("健康好寶寶")
+        }
+
+        const ans5 = confirm("嘉伶蜜月想要去冰島")
+        if (ans5) {
+            score += 20
+            alert("真的好想去冰島")
+        } else {
+            alert("其實法國也不錯")
+        }
+        document.write(`恭喜你對嘉伶的了解度得了 ${score} 分`)
+    </script>
+</body>
+
+</html>

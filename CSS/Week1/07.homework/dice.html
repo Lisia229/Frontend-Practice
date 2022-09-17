@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .container {
+      width: 1300px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .box {
+      width: 200px;
+      height: 200px;
+      margin: 1px;
+      border-radius: 10%;
+      border: 3px solid black;
+      background: linear-gradient(45deg, rgb(204, 199, 199), #fff);
+      font-size: 0;
+      box-shadow: 5px 5px 15px rgb(138, 131, 131);
+      position: relative;
+      float: left;
+    }
+
+    .circle {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      position: absolute;
+    }
+
+    .colorred {
+      background: red;
+    }
+
+    .colorblack {
+      background: black;
+    }
+
+    .center {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .lefttop {
+      top: 20%;
+      left: 20%;
+      transform: translate(-50%, -50%);
+    }
+
+    .rightbottom {
+      bottom: 20%;
+      right: 20%;
+      transform: translate(50%, 50%);
+    }
+
+    .righttop {
+      top: 20%;
+      right: 20%;
+      transform: translate(50%, -50%);
+    }
+
+    .leftbottom {
+      left: 20%;
+      bottom: 20%;
+      transform: translate(-50%, 50%);
+    }
+
+    .leftcenter {
+      top: 30%;
+      left: 20%;
+      transform: translate(-50%, 50%);
+    }
+
+    .rightcenter {
+      right: 20%;
+      top: 30%;
+      transform: translate(50%, 50%);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="box">
+      <span class="circle colorred center"></span>
+    </div>
+    <div class="box">
+      <!-- 如果使用div會變下一層 使用span標籤會將包起來的元素視為一行 -->
+      <span class="circle colorblack lefttop"></span>
+      <span class="circle colorblack rightbottom"></span>
+    </div>
+    <div class="box">
+      <span class="circle colorblack center"></span>
+      <span class="circle colorblack lefttop"></span>
+      <span class="circle colorblack rightbottom"></span>
+    </div>
+    <div class="box">
+      <span class="circle colorred lefttop"></span>
+      <span class="circle colorred rightbottom"></span>
+      <span class="circle colorred righttop"></span>
+      <span class="circle colorred leftbottom"></span>
+    </div>
+    <div class="box">
+      <span class="circle colorblack lefttop"></span>
+      <span class="circle colorblack rightbottom"></span>
+      <span class="circle colorblack righttop"></span>
+      <span class="circle colorblack leftbottom"></span>
+      <span class="circle colorblack center"></span>
+    </div>
+    <div class="box">
+      <span class="circle colorblack lefttop"></span>
+      <span class="circle colorblack rightbottom"></span>
+      <span class="circle colorblack righttop"></span>
+      <span class="circle colorblack leftbottom"></span>
+      <span class="circle colorblack rightcenter"></span>
+      <span class="circle colorblack leftcenter"></span>
+    </div>
+  </div>
+</body>
+
+</html>

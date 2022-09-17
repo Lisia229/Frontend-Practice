@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Star1</title>
+</head>
+
+<body>
+
+    <script>
+        let input = prompt("請輸入星星塔層數")
+        for (let i = 1; i <= input; i++) {
+            for (let x = 1; x <= input - i; x++) {
+                document.write("☆")
+            }
+            for (let y = 1; y <= 2 * i - 1; y++) {
+                document.write("★")
+            }
+            for (let x = 1; x <= input - i; x++) {
+                document.write("☆")
+            }
+            document.write("<br>")
+        }
+
+
+
+    </script>
+</body>
+
+</html>

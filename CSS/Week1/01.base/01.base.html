@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <!-- 第二種方式 link連結外部樣式表
+        1.優點可以減少CSS原始碼，不需要在每個文件重複CSS，檔案也比較小
+        2.專題或工作時，建議使用外部樣式表
+        3.外部樣式表也可能有被覆蓋的問題，因為瀏覽器解析網頁時，由上至下來解析樣式。
+  -->
+  <link rel="stylesheet" href="./style1.css">
+  <!-- 這份文件專屬的樣式 -->
+  <style>
+    /* 
+    選擇器{
+      屬性: 值;
+      屬性: 值;
+    }
+    */
+
+    /* 標籤(類型)選擇器  */
+    h1 {
+      color: brown;
+      background-color: lightpink;
+      font-size: 40px;
+    }
+
+    p {
+      color: cornflowerblue;
+    }
+
+    /* 群組選擇器 以逗號分開*/
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      color: green;
+      /* 後面的h1樣式會蓋掉前面的 */
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 第三種方式: style屬性樣式，一般會稱作行內樣式 
+  行內樣是優先權最高 表示該元素標籤專屬樣式 不會被style標籤或外部樣式表影響-->
+  
+  <h1 style="color:darkblue">CSS第一堂課</h1>
+  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+
+  <h1>CSS第一堂課</h1>
+  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+
+
+  <h1>CSS第一堂課</h1>
+  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+
+  <hr>
+
+  <h1>Hello World</h1>
+  <h2>Hello World</h2>
+  <h3>Hello World</h3>
+  <h4>Hello World</h4>
+  <h5>Hello World</h5>
+  <h6>Hello World</h6>
+
+</body>
+
+</html>

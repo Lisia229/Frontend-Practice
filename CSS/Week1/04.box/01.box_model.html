@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    body {
+      padding-bottom: 200px;
+    }
+
+    hr {
+      margin: 20px 0;
+    }
+
+    /* 設定一個盒子的寬高 產生內容區域(content area) */
+    /* 單位=> px em rem % vw vh */
+    .box1 {
+      width: 300px;
+      height: 300px;
+      background: pink;
+    }
+
+    .box2 {
+      width: 300px;
+      background: lightblue;
+    }
+
+    .box3 {
+      width: 300px;
+      height: 200px;
+      background: lightgreen;
+      /* auto自動偵測內容是否超出盒子 若超出 會自動產生卷軸
+        hidden 內容會被修剪 不會產生卷軸 超出範圍的內容會被隱藏
+        scroll 內容會被修剪 超出範圍會產生水平&垂直的捲軸 */
+      overflow: auto;
+    }
+
+    .box3>p {
+      width: 400px;
+    }
+
+    .box4 {
+      background: lightblue;
+      width: 300px;
+      /* 盒子上的外距 可為負值*/
+      margin-top: 50px;
+      margin-bottom: 50px;
+      margin-left: 50px;
+      margin-right: 50px;
+
+      /* 縮寫 四值 
+      top right bottom left */
+      margin: 50px 50px 50px 50px;
+
+      /* 雙值 縮寫 (上下 左右)*/
+      margin: 50px 50px;
+
+      /* 單值 */
+      margin: 50px;
+
+      /* 內距 (寫法和margin一樣)*/
+      padding: 20px;
+
+      /* 設定每個邊框值 */
+      /* border-top-width: 5px;
+      border-top-style: solid;
+      border-top-color: black;
+
+      border-right-width: 5px;
+      border-right-style: solid;
+      border-right-color: black;
+
+      border-bottom-width: 5px;
+      border-bottom-style: solid;
+      border-bottom-color: black;
+
+      border-left-width: 5px;
+      border-left-style: solid;
+      border-left-color: black; */
+
+      border-width: 5px;
+      border-style: solid;
+      border-color: cadetblue;
+
+      border-top: 5px solid blue;
+      border-right: 5px solid orange;
+      border-bottom: 5px solid red;
+      border-left: 5px solid cadetblue;
+
+      border: 5px solid lightseagreen;
+      /* border-color:transparent透明效果 */
+      /* border-strle種類可以設定 solid dashed  */
+      outline: 5px dashed lightblue;
+      /* 外框不會影響內文 */
+    }
+
+    .box5 {
+      width: 300px;
+      height: 300px;
+      background: mediumorchid;
+      margin-bottom: 20px;
+    }
+
+    .box6 {
+      width: 300px;
+      height: 300px;
+      background: mediumblue;
+      margin-top: 20px;
+    }
+
+    .box7 {
+      background: lightsalmon;
+      /* 內容區域 */
+      width: 300px;
+      /* 內容 */
+      padding-left: 10px;
+      padding-right: 10px;
+      /* 外距 */
+      margin-left: 10px;
+      margin-right: 10px;
+      /* 邊框 */
+      border-left: 5px solid black;
+      border-right: 5px solid black;
+
+      /* 計算總寬度
+      300+20+20+10=350
+      350*3=1050 */
+    }
+    .box8{
+      width: 300px;
+      height: 300px;
+      border: 10px solid #333;
+      /* 個別圓角 */
+      border-radius: 30px;
+      /* 雙值 第一個左上右上 第二個值右下左下 */
+      border-radius: 100px 30px;
+      /* 四值 左上右上右下左下 */
+      border-radius: 10px 20px 30px 40px;
+
+    }
+    .box9{
+      width: 300px;
+      height: 300px;
+      border: 10px solid #333;
+      border-radius: 50%;
+      /* 區塊等級的元素  擁有寬度 設定margin:auto會讓元素水平置中*/
+      margin: auto;
+    }
+  </style>
+
+</head>
+
+<body>
+  <h2>box1 畫一個盒子，設定寬 高 背景顏色</h2>
+  <div class="box1"></div>
+  <hr>
+  <h2>box2 不設定高度 高度會以內容高度為主</h2>
+  <div class="box2">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+  </div>
+  <hr>
+  <h2>box3設定高度 內容太多時</h2>
+  <div class="box3">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio porro sequi, unde soluta eos harum possimus,
+    consequuntur commodi voluptatibus omnis minima, aut mollitia esse quo quidem incidunt recusandae? Quaerat non nisi
+    harum, culpa aspernatur quod! Officiis soluta, asperiores, atque, cupiditate optio ullam perspiciatis quas ea
+    reiciendis deleniti doloremque nemo sint enim nesciunt maiores. Excepturi debitis modi placeat iusto quisquam
+
+    <div class="box3">
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id consectetur expedita ipsum fugit praesentium aut
+        inventore optio rerum voluptates voluptate!</p>
+    </div>
+  </div>
+  <hr>
+  <h2>box4 設定盒子的padding border margin</h2>
+  <div class="box4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque aut cumque laborum eveniet rerum
+    odit!fugit praesentium aut
+    inventore optio rerum voluptates voluptate!</div>
+  <hr>
+  <h2>box5 box6說明margin重疊現象 margin collapsing</h2>
+  <p>top&bottom會有重疊的現象 且以大的為主<br>水平的並不會重疊
+  </p>
+  <div class="box5"></div>
+  <div class="box6"></div>
+  <hr>
+  <h2>box7計算一個盒子的高 寬度</h2>
+  <div class="box7">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo odio sunt, dignissimos natus itaque
+    laboriosam adipisci alias soluta neque ullam.</div>
+
+    <hr>
+    <h2>border-radius圓角設定</h2>
+    <div class="box8"></div>
+
+    <hr>
+    <h2>圓形</h2>
+    <div class="box9"></div>
+</body>
+
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding-bottom: 100px;
+        }
+
+        .menu {
+            padding: 0;
+            /* margin: auto; */
+            /* width: 75%; */
+            list-style: none;
+            /* 主要為了去除幽靈空白 */
+            font-size: 0;
+            background: lightblue;
+            text-align: center;
+
+        }
+
+        .menu li {
+            /* display轉型 */
+            /* 外在行為:INLINE乖乖排列   內在行為block可以盒模型的屬性*/
+            display: inline-block;
+            background: lightblue;
+            /* 再將文字大小設定回來 */
+            font-size: 1rem;
+        }
+
+        .menu li a {
+            display: inline-block;
+            text-decoration: none;
+            background: pink;
+            padding: 1rem 2rem;
+        }
+
+        .menu li a:hover {
+            background-color: brown;
+            color: #000;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>區塊盒(元素)與行內盒(元素)</h1>
+    <P>CSS是盒子的世界，分為區塊盒(元素)與行內盒(元素)兩種基本型</P>
+
+    <hr>
+
+    <h3>請說出以下兩行的差異</h3>
+    <div>此行使用div.</div>
+    <span>此行使用span.</span>
+
+    <hr>
+
+    <h3>設定背景顏色後</h3>
+    <div style="background:gold;">此行使用div.(區塊元素)</div>
+    <span style="background:lightblue;">此行使用span.(行內元素)</span>
+
+    <hr>
+
+    <h2>區塊盒</h2>
+    <p>舉例:div h1 p ul li table...</p>
+
+    <ul>
+        <li>預設情況，會在正常流向佔據父元素的空間，也又是由左至右的空間，並且前後換行，無法與其他元素並排</li>
+        <li>可以正常使用盒模型width height magin padding</li>
+    </ul>
+
+    <div style="background:gold;">Lorem ipsum dolor sit amet.</div>
+    <div style="background:gold;">Lorem ipsum dolor sit amet.</div>
+    <div style="background:gold; width: 500px;">即使設定了寬度 看起來可以讓後方並排 但是並不會 依舊會佔據父元素的寬度並且前後換行.</div>
+    <div style="background:gold; width: 300px;">Lorem ipsum dolor sit amet.</div>
+
+    <hr>
+    <h2>行內盒</h2>
+    <p>舉例:span a em strong...</p>
+
+    <ul>
+        <li>行內盒只能擁有屬於自己內容的寬度空間</li>
+        <li>前後不會斷行本身內容多少寬度就多少，會乖乖在文件流向由左自右 由上而下(父元素空間農那不下時排列</li>
+        <li>注意注意，設定width hight都不會有作用</li>
+    </ul>
+
+    <span style="background:lightblue;">Lorem ipsum dolor sit alightblue</span>
+    <span style="background:lightblue;">Lorem ipsum dolor sit alightblue</span>
+    <span style="background:lightblue;">Lorem ipsum dolor sit alightblue</span>
+    <span style="background:lightblue;">Lorem ipsum dolor sit alightblue</span>
+    <span style="background:lightblue;">Lorem ipsum dolor sit amet!</span>
+    <span style="background:lightblue;">Lorem ipsum dolor sit alightblue</span>
+    <span style="background:lightblue;">Lorem ipsum dolor sit alightblue</span>
+    <span style="background:lightblue;">Lorem ipsum dolor sit alightblue</span>
+    <span style="background:lightblue;">Lorem ipsum dolor sit alightblue</span>
+    <span style="background:lightblue;">Lorem ipsum dolor sit amet!</span>
+
+    <hr>
+
+    <h3>嘗試設定行內元素的寬高</h3>
+    <P>結果沒作用!</P>
+    <span style="background: pink;">hello</span>
+
+    <hr>
+    <h2>製作橫向選單</h2>
+    <ul class="menu">
+        <li><a href="#">LINK</a></li>
+        <li><a href="#">LINK</a></li>
+        <li><a href="#">LINK</a></li>
+        <li><a href="#">LINK</a></li>
+        <li><a href="#">LINK</a></li>
+    </ul>
+    <hr>
+    <h2>圖片水平置中</h2>
+    <div style="background: pink; text-align: center; font-size: 0;">
+        <img src="https://picsum.photos/300/200/?random=10">
+        <img src="https://picsum.photos/300/200/?random=10">
+        <img src="https://picsum.photos/300/200/?random=10">
+    </div>
+
+<hr>
+<h2>不需要外容器</h2>
+<img src="https://picsum.photos/300/200/?random=10" style="display: block; margin:auto;">
+</body>
+
+</html>

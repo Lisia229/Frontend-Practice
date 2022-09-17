@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .container {
+      width: 960px;
+      background: lightblue;
+      border: 1px solid #000;
+      margin: auto;
+      padding: 20px;
+    }
+
+    h1 {
+      border-bottom: 1px solid #000;
+      margin-bottom: 20px;
+    }
+
+    p {
+      text-indent: 2rem;
+    }
+
+    .fixed {
+      padding: 10px;
+      background: pink;
+      width: 150px;
+      position: fixed;
+      left: 0;
+      bottom: 0;
+    }
+
+    .absolute {
+      width: 100px;
+      height: 100px;
+      border: 10px solid #000;
+      background: rgb(251, 255, 192);
+      position: absolute;
+      border-radius: 50%;
+      left: 100%;
+      top: 50%;
+      transform: translate(-100%, -50%);
+    }
+
+    .square {
+      width: 50px;
+      height: 50px;
+      background: rgb(255, 157, 0);
+      position: absolute;
+      left: 0;
+      top: 0;
+      transform: translate(50%, 50%);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>固定定位</h1>
+    <P>
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores nesciunt temporibus est aliquid, hic
+      mollitia quo ratione, omnis molestias, amet praesentium! Praesentium dolorum cum corrupti, sit nulla itaque
+      odit dolorem ratione saepe fuga similique soluta consectetur provident, voluptates veritatis possimus
+      blanditiis quibusdam fugiat. Iure sit, hic vero ducimus reprehenderit reiciendis facere aliquam sequi quis
+      nostrum consequuntur provident quasi facilis voluptas. Sed blanditiis minima ullam animi vitae tempore
+      nostrum fugit et, architecto quasi quos, saepe maxime quo. Et cumque voluptates architecto iusto eum labore
+      tempore harum perspiciatis minus vero molestias illum magni, in consequuntur amet ab error doloremque!
+      Numquam nemo eaque officia eum deserunt, laudantium at saepe sunt labore ea maxime commodi deleniti
+      blanditiis nisi ab aperiam error dolore vero. Id ipsam alias aliquid saepe ex. Quidem, voluptas ipsam rerum
+      voluptate similique quia illo numquam non laboriosam saepe ipsum eligendi, eius blanditiis et commodi veniam
+      accusantium, quasi possimus sed. Cupiditate natus suscipit, ex nulla sint, nihil quaerat soluta, unde nobis
+      nisi eum culpa labore accusamus adipisci expedita sunt obcaecati laudantium facilis ipsa quae mollitia quos
+      amet dolores! Nulla nisi, ipsam, sed architecto quae omnis qui voluptatum nesciunt eaque sequi mollitia
+      minus maxime. Quis consequuntur nisi alias doloremque explicabo nemo illum in, sit quod architecto sequi
+      dolore impedit voluptates delectus quam assumenda velit culpa et autem omnis. Repellendus placeat tempore
+      tenetur debitis atque, suscipit doloremque quae aperiam, cupiditate totam ratione veritatis eaque tempora
+      perspiciatis? Cum doloremque, ex minus, tenetur odio voluptatibus necessitatibus id eaque qui fugiat
+      incidunt in dolor aut nobis, delectus sequi asperiores omnis? Ipsa magni, dolorem nihil, tenetur minima
+      totam pariatur, dolore rerum deserunt sunt veniam aspernatur enim ut soluta? Cumque laboriosam deleniti
+      totam, quibusdam quod rerum autem natus itaque quisquam blanditiis ipsam, odio saepe dolorem illo aliquid
+      labore. Totam dolor corrupti, vel vitae placeat omnis? Dignissimos quibusdam omnis ex. lorem300
+    </P>
+    <P>
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores nesciunt temporibus est aliquid, hic
+      mollitia quo ratione, omnis molestias, amet praesentium! Praesentium dolorum cum corrupti, sit nulla itaque
+      odit dolorem ratione saepe fuga similique soluta consectetur provident, voluptates veritatis possimus
+      blanditiis quibusdam fugiat. Iure sit, hic vero ducimus reprehenderit reiciendis facere aliquam sequi quis
+      nostrum consequuntur provident quasi facilis voluptas. Sed blanditiis minima ullam animi vitae tempore
+      nostrum fugit et, architecto quasi quos, saepe maxime quo. Et cumque voluptates architecto iusto eum labore
+      tempore harum perspiciatis minus vero molestias illum magni, in consequuntur amet ab error doloremque!
+      Numquam nemo eaque officia eum deserunt, laudantium at saepe sunt labore ea maxime commodi deleniti
+      blanditiis nisi ab aperiam error dolore vero. Id ipsam alias aliquid saepe ex. Quidem, voluptas ipsam rerum
+      voluptate similique quia illo numquam non laboriosam saepe ipsum eligendi, eius blanditiis et commodi veniam
+      accusantium, quasi possimus sed. Cupiditate natus suscipit, ex nulla sint, nihil quaerat soluta, unde nobis
+      nisi eum culpa labore accusamus adipisci expedita sunt obcaecati laudantium facilis ipsa quae mollitia quos
+      amet dolores! Nulla nisi, ipsam, sed architecto quae omnis qui voluptatum nesciunt eaque sequi mollitia
+      minus maxime. Quis consequuntur nisi alias doloremque explicabo nemo illum in, sit quod architecto sequi
+      dolore impedit voluptates delectus quam assumenda velit culpa et autem omnis. Repellendus placeat tempore
+      tenetur debitis atque, suscipit doloremque quae aperiam, cupiditate totam ratione veritatis eaque tempora
+      perspiciatis? Cum doloremque, ex minus, tenetur odio voluptatibus necessitatibus id eaque qui fugiat
+      incidunt in dolor aut nobis, delectus sequi asperiores omnis? Ipsa magni, dolorem nihil, tenetur minima
+      totam pariatur, dolore rerum deserunt sunt veniam aspernatur enim ut soluta? Cumque laboriosam deleniti
+      totam, quibusdam quod rerum autem natus itaque quisquam blanditiis ipsam, odio saepe dolorem illo aliquid
+      labore. Totam dolor corrupti, vel vitae placeat omnis? Dignissimos quibusdam omnis ex. lorem300
+    </P>
+    <P>
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores nesciunt temporibus est aliquid, hic
+      mollitia quo ratione, omnis molestias, amet praesentium! Praesentium dolorum cum corrupti, sit nulla itaque
+      odit dolorem ratione saepe fuga similique soluta consectetur provident, voluptates veritatis possimus
+      blanditiis quibusdam fugiat. Iure sit, hic vero ducimus reprehenderit reiciendis facere aliquam sequi quis
+      nostrum consequuntur provident quasi facilis voluptas. Sed blanditiis minima ullam animi vitae tempore
+      nostrum fugit et, architecto quasi quos, saepe maxime quo. Et cumque voluptates architecto iusto eum labore
+      tempore harum perspiciatis minus vero molestias illum magni, in consequuntur amet ab error doloremque!
+      Numquam nemo eaque officia eum deserunt, laudantium at saepe sunt labore ea maxime commodi deleniti
+      blanditiis nisi ab aperiam error dolore vero. Id ipsam alias aliquid saepe ex. Quidem, voluptas ipsam rerum
+      voluptate similique quia illo numquam non laboriosam saepe ipsum eligendi, eius blanditiis et commodi veniam
+      accusantium, quasi possimus sed. Cupiditate natus suscipit, ex nulla sint, nihil quaerat soluta, unde nobis
+      nisi eum culpa labore accusamus adipisci expedita sunt obcaecati laudantium facilis ipsa quae mollitia quos
+      amet dolores! Nulla nisi, ipsam, sed architecto quae omnis qui voluptatum nesciunt eaque sequi mollitia
+      minus maxime. Quis consequuntur nisi alias doloremque explicabo nemo illum in, sit quod architecto sequi
+      dolore impedit voluptates delectus quam assumenda velit culpa et autem omnis. Repellendus placeat tempore
+      tenetur debitis atque, suscipit doloremque quae aperiam, cupiditate totam ratione veritatis eaque tempora
+      perspiciatis? Cum doloremque, ex minus, tenetur odio voluptatibus necessitatibus id eaque qui fugiat
+      incidunt in dolor aut nobis, delectus sequi asperiores omnis? Ipsa magni, dolorem nihil, tenetur minima
+      totam pariatur, dolore rerum deserunt sunt veniam aspernatur enim ut soluta? Cumque laboriosam deleniti
+      totam, quibusdam quod rerum autem natus itaque quisquam blanditiis ipsam, odio saepe dolorem illo aliquid
+      labore. Totam dolor corrupti, vel vitae placeat omnis? Dignissimos quibusdam omnis ex. lorem300
+    </P>
+    <P>
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores nesciunt temporibus est aliquid, hic
+      mollitia quo ratione, omnis molestias, amet praesentium! Praesentium dolorum cum corrupti, sit nulla itaque
+      odit dolorem ratione saepe fuga similique soluta consectetur provident, voluptates veritatis possimus
+      blanditiis quibusdam fugiat. Iure sit, hic vero ducimus reprehenderit reiciendis facere aliquam sequi quis
+      nostrum consequuntur provident quasi facilis voluptas. Sed blanditiis minima ullam animi vitae tempore
+      nostrum fugit et, architecto quasi quos, saepe maxime quo. Et cumque voluptates architecto iusto eum labore
+      tempore harum perspiciatis minus vero molestias illum magni, in consequuntur amet ab error doloremque!
+      Numquam nemo eaque officia eum deserunt, laudantium at saepe sunt labore ea maxime commodi deleniti
+      blanditiis nisi ab aperiam error dolore vero. Id ipsam alias aliquid saepe ex. Quidem, voluptas ipsam rerum
+      voluptate similique quia illo numquam non laboriosam saepe ipsum eligendi, eius blanditiis et commodi veniam
+      accusantium, quasi possimus sed. Cupiditate natus suscipit, ex nulla sint, nihil quaerat soluta, unde nobis
+      nisi eum culpa labore accusamus adipisci expedita sunt obcaecati laudantium facilis ipsa quae mollitia quos
+      amet dolores! Nulla nisi, ipsam, sed architecto quae omnis qui voluptatum nesciunt eaque sequi mollitia
+      minus maxime. Quis consequuntur nisi alias doloremque explicabo nemo illum in, sit quod architecto sequi
+      dolore impedit voluptates delectus quam assumenda velit culpa et autem omnis. Repellendus placeat tempore
+      tenetur debitis atque, suscipit doloremque quae aperiam, cupiditate totam ratione veritatis eaque tempora
+      perspiciatis? Cum doloremque, ex minus, tenetur odio voluptatibus necessitatibus id eaque qui fugiat
+      incidunt in dolor aut nobis, delectus sequi asperiores omnis? Ipsa magni, dolorem nihil, tenetur minima
+      totam pariatur, dolore rerum deserunt sunt veniam aspernatur enim ut soluta? Cumque laboriosam deleniti
+      totam, quibusdam quod rerum autem natus itaque quisquam blanditiis ipsam, odio saepe dolorem illo aliquid
+      labore. Totam dolor corrupti, vel vitae placeat omnis? Dignissimos quibusdam omnis ex. lorem300
+    </P>
+    <P>
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores nesciunt temporibus est aliquid, hic
+      mollitia quo ratione, omnis molestias, amet praesentium! Praesentium dolorum cum corrupti, sit nulla itaque
+      odit dolorem ratione saepe fuga similique soluta consectetur provident, voluptates veritatis possimus
+      blanditiis quibusdam fugiat. Iure sit, hic vero ducimus reprehenderit reiciendis facere aliquam sequi quis
+      nostrum consequuntur provident quasi facilis voluptas. Sed blanditiis minima ullam animi vitae tempore
+      nostrum fugit et, architecto quasi quos, saepe maxime quo. Et cumque voluptates architecto iusto eum labore
+      tempore harum perspiciatis minus vero molestias illum magni, in consequuntur amet ab error doloremque!
+      Numquam nemo eaque officia eum deserunt, laudantium at saepe sunt labore ea maxime commodi deleniti
+      blanditiis nisi ab aperiam error dolore vero. Id ipsam alias aliquid saepe ex. Quidem, voluptas ipsam rerum
+      voluptate similique quia illo numquam non laboriosam saepe ipsum eligendi, eius blanditiis et commodi veniam
+      accusantium, quasi possimus sed. Cupiditate natus suscipit, ex nulla sint, nihil quaerat soluta, unde nobis
+      nisi eum culpa labore accusamus adipisci expedita sunt obcaecati laudantium facilis ipsa quae mollitia quos
+      amet dolores! Nulla nisi, ipsam, sed architecto quae omnis qui voluptatum nesciunt eaque sequi mollitia
+      minus maxime. Quis consequuntur nisi alias doloremque explicabo nemo illum in, sit quod architecto sequi
+      dolore impedit voluptates delectus quam assumenda velit culpa et autem omnis. Repellendus placeat tempore
+      tenetur debitis atque, suscipit doloremque quae aperiam, cupiditate totam ratione veritatis eaque tempora
+      perspiciatis? Cum doloremque, ex minus, tenetur odio voluptatibus necessitatibus id eaque qui fugiat
+      incidunt in dolor aut nobis, delectus sequi asperiores omnis? Ipsa magni, dolorem nihil, tenetur minima
+      totam pariatur, dolore rerum deserunt sunt veniam aspernatur enim ut soluta? Cumque laboriosam deleniti
+      totam, quibusdam quod rerum autem natus itaque quisquam blanditiis ipsam, odio saepe dolorem illo aliquid
+      labore. Totam dolor corrupti, vel vitae placeat omnis? Dignissimos quibusdam omnis ex. lorem300
+    </P>
+    <P>
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores nesciunt temporibus est aliquid, hic
+      mollitia quo ratione, omnis molestias, amet praesentium! Praesentium dolorum cum corrupti, sit nulla itaque
+      odit dolorem ratione saepe fuga similique soluta consectetur provident, voluptates veritatis possimus
+      blanditiis quibusdam fugiat. Iure sit, hic vero ducimus reprehenderit reiciendis facere aliquam sequi quis
+      nostrum consequuntur provident quasi facilis voluptas. Sed blanditiis minima ullam animi vitae tempore
+      nostrum fugit et, architecto quasi quos, saepe maxime quo. Et cumque voluptates architecto iusto eum labore
+      tempore harum perspiciatis minus vero molestias illum magni, in consequuntur amet ab error doloremque!
+      Numquam nemo eaque officia eum deserunt, laudantium at saepe sunt labore ea maxime commodi deleniti
+      blanditiis nisi ab aperiam error dolore vero. Id ipsam alias aliquid saepe ex. Quidem, voluptas ipsam rerum
+      voluptate similique quia illo numquam non laboriosam saepe ipsum eligendi, eius blanditiis et commodi veniam
+      accusantium, quasi possimus sed. Cupiditate natus suscipit, ex nulla sint, nihil quaerat soluta, unde nobis
+      nisi eum culpa labore accusamus adipisci expedita sunt obcaecati laudantium facilis ipsa quae mollitia quos
+      amet dolores! Nulla nisi, ipsam, sed architecto quae omnis qui voluptatum nesciunt eaque sequi mollitia
+      minus maxime. Quis consequuntur nisi alias doloremque explicabo nemo illum in, sit quod architecto sequi
+      dolore impedit voluptates delectus quam assumenda velit culpa et autem omnis. Repellendus placeat tempore
+      tenetur debitis atque, suscipit doloremque quae aperiam, cupiditate totam ratione veritatis eaque tempora
+      perspiciatis? Cum doloremque, ex minus, tenetur odio voluptatibus necessitatibus id eaque qui fugiat
+      incidunt in dolor aut nobis, delectus sequi asperiores omnis? Ipsa magni, dolorem nihil, tenetur minima
+      totam pariatur, dolore rerum deserunt sunt veniam aspernatur enim ut soluta? Cumque laboriosam deleniti
+      totam, quibusdam quod rerum autem natus itaque quisquam blanditiis ipsam, odio saepe dolorem illo aliquid
+      labore. Totam dolor corrupti, vel vitae placeat omnis? Dignissimos quibusdam omnis ex. lorem300
+    </P>
+    <P>
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores nesciunt temporibus est aliquid, hic
+      mollitia quo ratione, omnis molestias, amet praesentium! Praesentium dolorum cum corrupti, sit nulla itaque
+      odit dolorem ratione saepe fuga similique soluta consectetur provident, voluptates veritatis possimus
+      blanditiis quibusdam fugiat. Iure sit, hic vero ducimus reprehenderit reiciendis facere aliquam sequi quis
+      nostrum consequuntur provident quasi facilis voluptas. Sed blanditiis minima ullam animi vitae tempore
+      nostrum fugit et, architecto quasi quos, saepe maxime quo. Et cumque voluptates architecto iusto eum labore
+      tempore harum perspiciatis minus vero molestias illum magni, in consequuntur amet ab error doloremque!
+      Numquam nemo eaque officia eum deserunt, laudantium at saepe sunt labore ea maxime commodi deleniti
+      blanditiis nisi ab aperiam error dolore vero. Id ipsam alias aliquid saepe ex. Quidem, voluptas ipsam rerum
+      voluptate similique quia illo numquam non laboriosam saepe ipsum eligendi, eius blanditiis et commodi veniam
+      accusantium, quasi possimus sed. Cupiditate natus suscipit, ex nulla sint, nihil quaerat soluta, unde nobis
+      nisi eum culpa labore accusamus adipisci expedita sunt obcaecati laudantium facilis ipsa quae mollitia quos
+      amet dolores! Nulla nisi, ipsam, sed architecto quae omnis qui voluptatum nesciunt eaque sequi mollitia
+      minus maxime. Quis consequuntur nisi alias doloremque explicabo nemo illum in, sit quod architecto sequi
+      dolore impedit voluptates delectus quam assumenda velit culpa et autem omnis. Repellendus placeat tempore
+      tenetur debitis atque, suscipit doloremque quae aperiam, cupiditate totam ratione veritatis eaque tempora
+      perspiciatis? Cum doloremque, ex minus, tenetur odio voluptatibus necessitatibus id eaque qui fugiat
+      incidunt in dolor aut nobis, delectus sequi asperiores omnis? Ipsa magni, dolorem nihil, tenetur minima
+      totam pariatur, dolore rerum deserunt sunt veniam aspernatur enim ut soluta? Cumque laboriosam deleniti
+      totam, quibusdam quod rerum autem natus itaque quisquam blanditiis ipsam, odio saepe dolorem illo aliquid
+      labore. Totam dolor corrupti, vel vitae placeat omnis? Dignissimos quibusdam omnis ex. lorem300
+    </P>
+  </div>
+  <div class="fixed">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae obcaecati sit est facere placeat quisquam iste
+      tempora. Accusamus, ipsum dolor!</p>
+  </div>
+  <div class="absolute">
+  </div>
+  <div class="square">
+  </div>
+</body>
+
+</html>

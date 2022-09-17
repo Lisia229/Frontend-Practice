@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 使用者能用 prompt() 輸入一個數字
+        // 印出到該數字的費氏數列  
+        // 特質是前兩項相加等於第三項，而這被稱作「費氏數列
+        // 如果輸入 22
+        // 0 1 1 2 3 5 8 13 21
+        //     next next+left1 
+
+        // 只有一個執行條件
+        // 先判斷是否符合條件，符合的話才執行程式碼，執行後後再判斷要不要執行下一次
+        // 用於不確定執行次數的迴圈
+
+        const num = prompt("請任意輸入一個數字")
+        var l2 = 0;
+        var l1 = 1;
+        var next = 0;
+        document.write(`${l2}     ${l1}     `)
+        while (l2 + l1 <= num) {
+            next = l2 + l1
+            l2 = l1
+            l1 = next
+            document.write(next + "   ")
+        }
+    </script>
+</body>
+
+</html>

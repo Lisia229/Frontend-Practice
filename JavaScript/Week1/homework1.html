@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomeWork</title>
+</head>
+
+<body>
+    <script>
+        let score = 0
+
+        const ans1 = confirm("台灣總統是蔡英文嗎？")
+        if (ans1) {
+            score += 20
+            alert("沒錯就是英文")
+        } else {
+            alert("不然你以為是誰")
+        }
+
+        const ans2 = confirm("西瓜是鹹的嗎？")
+        if (ans2) {
+            alert("你的西瓜可能壞了")
+        } else {
+            score += 20
+            alert("夏天最適合吃甜甜的西瓜！")
+        }
+
+        const ans3 = confirm("火車比高鐵快嗎？")
+        if (ans3) {
+            alert("妳是坐哪國的火車？")
+        } else {
+            score += 20
+            alert("高鐵真的很省時")
+        }
+
+        const ans4 = confirm("寫程式不輕鬆")
+        if (ans4) {
+            score += 20
+            alert("真的qaq")
+        } else {
+            alert("羨慕你一派輕鬆")
+        }
+
+        const ans5 = confirm("台北101是台灣最高的建築物嗎？")
+        if (ans5) {
+            score += 20
+            alert("最著名景點")
+        } else {
+            alert("噗噗 答錯了")
+        }
+        document.write(`你得到了 ${score}分`)
+
+    </script>
+</body>
+
+</html>

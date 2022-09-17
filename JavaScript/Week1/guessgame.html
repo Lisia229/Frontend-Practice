@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let count = 1
+        let num = 29
+        while (true) {
+            let answer = prompt(`第 ${count} 次猜測 請猜神秘數字`);
+            if (answer < 29) {
+                alert("太小瞜")
+            }
+            if (answer > 29) {
+                alert("太大了啦")
+            }
+            if (answer == num) {
+                alert("恭喜答對！")
+                break;
+            }
+            count++;
+        } document.write(`你總共猜了 ${count} 次`)
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    /*作業
+
+使用者可以輸入西元年、月、日，三個 prompt()
+顯示使用者輸入的是該年的第幾天
+
+以 3/5 為例，將前兩個月的天數加起來，再加上 5 天即可
+需考慮閏年 +1
+某些月份的天數是 30，某些月份的天數是 31
+parseInt(變數或是數字的文字) 可以把文字轉數字
+
+let、const 不可以重複宣告，var 可以，所以可能會造成後面影響前面的問題
+可否修改值：let、var 則可以修改值，或是一開始不定義值(undefined)，const 
+宣告時必須有值，並且不可修改，因此如定義是一個常數，若是 Object 時可以修改 Object 
+裡面的值
+    */
+    var year = parseInt(prompt("請輸入西元"))
+    if (year <= 0) {
+      alert("請輸入正確西元")
+      var year = parseInt(prompt("請輸入西元"))
+    }
+    var month = parseInt(prompt("請輸入月份"))
+    if (month > 12) {
+      alert("請輸入正確月份")
+      var month = parseInt(prompt("請輸入月份"))
+    }
+    var day = parseInt(prompt("請輸入日期"))
+    if (month == 1 || month == 3 || month == 5 || month == 7 || month == 8 || month == 10 || month == 12) {
+      if (day > 31 || day <= 0) {
+        alert("請輸入正確日期")
+        var day = parseInt(prompt("請輸入日期"))
+      }
+    }
+    if (month == 4 || month == 6 || month == 9 || month == 11) {
+      if (day > 30 || day <= 0) {
+        alert("請輸入正確日期")
+        var day = parseInt(prompt("請輸入日期"))
+      }
+    }
+    if (month == 2) {
+      if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) {
+        if (day > 29 || day <= 0) {
+          alert("請輸入正確日期")
+          var day = parseInt(prompt("請輸入日期"))
+        }
+      } else {
+        if (day > 28 || day <= 0) {
+          alert("請輸入正確日期")
+          var day = parseInt(prompt("請輸入日期"))
+        }
+      }
+    }
+    let days = day
+    for (i = 1; i < month; i++) {
+      if (i == 1 || i == 3 || i == 5 || i == 7 || i == 8 || i == 10 || i == 12) {
+        days += 31
+      }
+      if (i == 4 || i == 6 || i == 9 || i == 11) {
+        days += 30
+      }
+      if (i == 2) {
+        if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) {
+          days += 29
+        } else {
+          days += 28
+        }
+      }
+    }
+    document.write(`${month}月的${day}日是${year}的第${days}天`)
+
+  </script>
+</body>
+
+</html>

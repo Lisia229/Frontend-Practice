@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+    <style>
+        /* 可以搜尋google font */
+
+        body {
+            font-family: "微軟正黑體", monospace
+        }
+
+        /* 網頁文字預設大小 16px */
+        .font-style {
+            /* 字體家族 一般會在body做設定 */
+            font-family: 'Courier New', Courier, monospace;
+            /* 設定字體大小 */
+            font-size: 20px;
+            /* 設定斜體 */
+            font-style: italic;
+            /* 設定粗體 bold  bolder(100-900)  顯示都一樣 */
+            font-weight: bold;
+            /* 設定句子字體都變成大寫 但第一格字母又大一點點 */
+            font-variant: small-caps;
+        }
+
+
+        /* 根元素 :root 選擇到html  :root是偉類選擇器的一種 */
+        :root {
+            font-size: 16px;
+        }
+
+        /* <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet"> */
+
+        .google-font {
+            font-family: "Shadows Into Light";
+            font-size: 25px;
+        }
+
+
+        /* 自訂字形 需要字體檔案 */
+
+        @font-face {
+            /* 需要自定名稱  為src設定一個字形家族名稱 */
+            font-family: "myfont";
+            src: url("waltograph42.otf"), url("Ace\ Records.ttf"), url("Adine\ Kirnberg.ttf"), url("Antro_Vectra_Bolder.otf")
+        }
+
+        .font-set {
+            font-family: "myfont";
+            font-size: 50px;
+        }
+
+        .text-style {
+            /* 文字顏色 */
+            color: black;
+            /* text-align對齊: left, center , right*/
+            /* 設定文字以及inline(inline-block)的位置 */
+            text-align: left;
+
+            /* underline底線, overline上面的線, line-through刪除線, none都不要 */
+            text-decoration: none;
+
+            /* 縮排 可以正數(往右縮)也可以負數(往左縮)*/
+            /* 2rem/36px */
+            text-indent: 2rem;
+
+            /* 改字母全大寫uppercase 全小寫lowercase 開頭大寫capitalcase */
+            text-transform: capitalize;
+
+            /* 第一個px是水平位移量, 第二個px是垂直的位移量(往下正數 往上負數),
+            第三個px陰影的模糊半徑  */
+            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+
+            /* 文字間隔 */
+            letter-spacing: 1px;
+
+            /* 英文單字間隔 要有空格 比較適合用在英文 */
+            word-spacing: 2px;
+
+            /* 行與行之間的高度 */
+            line-height: 1;
+        }
+
+        .multi-text-shaow {
+            /* 多重文字陰影變化 */
+            font-size: 4rem;
+            text-shadow:
+                1px 1px 1px rgba(255, 255, 255, 1),
+                2px 2px 2px rgba(255, 0, 0, 1),
+                3px 3px 3px rgba(255, 150, 0, 1),
+                4px 4px 4px rgb(26, 54, 144);
+        }
+
+        /* 設定連結狀態 */
+        a:link {
+            color: hotpink;
+            text-decoration: none;
+            font-size: 20px;
+        }
+
+        a:visited {
+            /* 點擊過後的狀態 */
+            color: mediumvioletred;
+        }
+
+        a:hover {
+            /* 游標移入狀態 */
+            color: cornflowerblue;
+        }
+
+        a:active {
+            /* 點擊時狀態 */
+            font-size: 30px;
+            color: green;
+        }
+
+        html {
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>1.Font 樣式設定</h1>
+    <P class="font-style">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam, dignissimos architecto
+        repellendus fugiat non beatae in perferendis repellat omnis atque nemo quae rerum quia autem quaerat quod. Nam,
+        quisquam porro.</P>
+
+    <hr>
+
+    <h1>想找更多字體可以 <a href="https://fonts.google.com/">google font</a> </h1>
+    <p class="google-font">Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem quisquam laborum, nam
+        quam voluptatibus fugit itaque similique, incidunt ducimus voluptatum natus deserunt ad est neque molestiae
+        ipsa. Expedita, necessitatibus laborum.</p>
+    <hr>
+    <h2>自訂字型</h2>
+    <p>自訂字形好用網站<a href="https://fontawesome.com/">fontawesome</a></p>
+
+    <p class="font-set">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui beatae, tempora aspernatur ea sed
+    </p>
+
+    <hr>
+
+    <h1>2.Text樣式設定</h1>
+    <p class="text-style">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius nemo impedit dolore
+        perspiciatis consequuntur.</p>
+
+    <h2>多重文字陰影</h2>
+    <p class="multi-text-shaow">linda</p>
+
+    <hr>
+
+    <h1>3.連結顏色變化</h1>
+    <a href="#">Google</a>
+    <hr>
+
+    <h1>4.rem與em差異</h1>
+    <ul>
+        <li>文字預設字體大小為16px,也就是1rem</li>
+        <li></li>
+    </ul>
+    <h2>REM</h2>
+    <div style="font-size:1rem;">
+        font
+        <div style="font-size:2rem;">
+            font
+            <div style="font-size:3rem;">font</div>
+        </div>
+    </div>
+<hr>
+    <h2>EM</h2>
+    <div style="font-size:1em;">
+        font
+        <div style="font-size:2em;">
+            font
+            <div style="font-size:3em;">font</div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

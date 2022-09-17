@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        h1 {
+            color: coral;
+        }
+
+        .color {
+            color: blue;
+        }
+
+        .bg {
+            background-color: gold;
+        }
+
+        .font {
+            font-size: 50px;
+        }
+
+        .text-primary {
+            color: deepskyblue;
+        }
+
+        .text-secondary {
+            color: deeppink;
+        }
+
+        li {
+            color: cadetblue;
+        }
+
+        .avtive {
+            color: darkorchid;
+        }
+
+        #header {
+            color: mediumpurple;
+        }
+
+        #main {
+            color: brown;
+        }
+
+        #sidebar {
+            color: forestgreen;
+        }
+
+        #footer {
+            color: lightcoral;
+        }
+
+        /* 命名規則
+            -以.class或#id開頭
+            允許使用英文數字連字符號 和底線
+            必須是字元開始 不能用數字開頭
+            可以使用中文命名,但不要這樣做
+            有區分大小寫 
+        */
+
+        /* 半形空白為後代選擇器  */
+        nav p {
+            color: cadetblue;
+        }
+
+        /* >為子代選擇器 只選下一層 */
+        nav>p {
+            color: blue;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <h1>CSS的選擇器</h1>
+    <p>CSS有非常多種選擇器，幫助我們在撰寫樣式的時候，運用這些選擇選擇到目標</p>
+
+    <!-- class 可以加許多class進去 有重複使用的特性 使用率最高 -->
+    <h1 class="color bg font">Class選擇器</h1>
+    <p>class 可以加許多class進去 有重複使用的特性 使用率最高,bootstrap時候
+        可以看到大量樣是被設計成class
+    </p>
+    <ul>
+        <li>Lorem, ipsum dolor.</li>
+        <li>Lorem, ipsum dolor.</li>
+        <li class="avtive">Lorem, ipsum dolor.</li>
+        <li>Lorem, ipsum dolor.</li>
+        <li>Lorem, ipsum dolor.</li>
+    </ul>
+
+    <h2>重複使用時</h2>
+    <P>Lorem ipsum dolor <a class="text-primary" href="#">五條悟</a> sit amet consectetur adipisicing elit. Eius, pariatur.
+    </P>
+
+    <hr>
+
+    <h1>ID選擇器</h1>
+    <p>一份文件裡面只允許一個獨一無二的id名稱 具有唯一性 不能重複使用</p>
+    <p>通常作為網頁區塊名稱使用 或是JavaScript或jQuery操作元素的選擇器</p>
+    <p>對程式來說，ID是最簡單最快速最直接的選擇方式</p>
+    <div id="header">這是 header的區塊</div>
+    <div id="main">這是 main的區塊</div>
+    <div id="sidebar">這是 sidebar的區塊</div>
+    <div id="footer">這是 footer的區塊</div>
+
+    <h1>後代選擇器與子代選擇性
+    </h1>
+    <nav>
+        <p>Lorem, ipsum dolor.</p>
+        <div>
+            <p>Lorem, ipsum dolor.</p>
+        </div>
+    </nav>
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>使用顏色名稱</h1>
+    <p style="color:red">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+
+    <h2>使用HEX16進位色碼</h2>
+    <!-- 0~f => 0,1,2,3,4,5,6,7,8,9,A,B,C,D,E,F 
+        ex: 
+        ff0000=>紅色
+        00ff00=>綠色
+        0000ff=>藍色
+        000000=>黑色
+        ffffff=>白色
+
+        換算10進位
+        ff0000=>255 0 0
+        00ff00=>0 255 0
+        0000ff=>0 0 255
+        000000=>0 0 0
+        ffffff=>255 255 255
+    -->
+    <p style="color:#ff9d00">Lorem ipsum dolor sit amet consectetur.</p>
+    <!-- 每組若都相同，可以只寫一個來表示 -->
+    <p style="color:#ff0000">Lorem ipsum dolor sit amet consectetur.</p>
+    <p style="color:#f00">Lorem ipsum dolor sit amet consectetur.</p>
+
+    <h2>使用函式rgb()或rgba()</h2>
+    <!-- r,g,b逗點分開 -->
+    <p style="color:rgb(218, 206, 45)">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+    <!-- rgba的a指的是alpha的透明度 -->
+    <p style="color:rgba(53, 105, 16,0.5)">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, odio.</p>
+    <!-- 四值用空格分開 不使用逗點 -->
+    <p style="color:rgb(255 0 0/0.5)">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus, magni?</p>
+</body>
+
+</html>

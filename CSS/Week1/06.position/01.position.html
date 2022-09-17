@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            width: 75%;
+            margin: auto;
+            border: 1px solid black;
+            padding: 0 2px;
+            margin-bottom: 3rem;
+        }
+
+        .box1,
+        .box2,
+        .box3,
+        .box4 {
+            padding: 1rem;
+        }
+
+        .box1 {
+            background-color: lavender;
+        }
+
+        .box2 {
+            background-color: lightblue;
+        }
+
+        .box3 {
+            background-color: pink;
+        }
+
+        .box4 {
+            background-color: lightgoldenrodyellow;
+        }
+
+        .relative {
+            position: relative;
+        }
+
+        .top {
+            top: 0;
+        }
+
+        .bottom {
+            bottom: 0;
+        }
+
+        .right {
+            right: 0;
+        }
+
+        .left {
+            left: 0;
+        }
+
+        .absolute {
+            position: absolute;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>position:relative</h1>
+        <h2>當元素為相對定位時</h2>
+        <ul>
+            <li>使用位移屬性(top right bottom left)會以自身原來位子做位移，並且保留自身原來的空間。也就是說進入定位層也不會被其他元素佔據</li>
+            <li>沒有任何位移數，會留在原地不動，這種relative元素常作為absolute子元素位移目標的參考依據</li>
+        </ul>
+
+        <div class="box1">
+            <h1>box1</h1>
+            <p>市場價故事不是眼睛戰士，主營本週恢復，所有標題晶片設置星座白色，聰明把我當地新型服務執行時間我很經典種類同步核心，評價到處化工學術添加，進了我一公主在那裡全身見面自動全新移動喜愛螢幕是這樣筆記本。</p>
+        </div>
+        <div class="box2 relative" style="left:50px;">
+            <h1>box2</h1>
+            <p>市場價故事不是眼睛戰士，主營本週恢復，所有標題晶片設置星座白色，聰明把我當地新型服務執行時間我很經典種類同步核心，評價到處化工學術添加，進了我一公主在那裡全身見面自動全新移動喜愛螢幕是這樣筆記本。</p>
+        </div>
+
+        <div class="box3">
+            <h1>box3</h1>
+            <p>市場價故事不是眼睛戰士，主營本週恢復，所有標題晶片設置星座白色，聰明把我當地新型服務執行時間我很經典種類同步核心，評價到處化工學術添加，進了我一公主在那裡全身見面自動全新移動喜愛螢幕是這樣筆記本。</p>
+        </div>
+        <div class="box4">
+            <h1>box4</h1>
+            <p>市場價故事不是眼睛戰士，主營本週恢復，所有標題晶片設置星座白色，聰明把我當地新型服務執行時間我很經典種類同步核心，評價到處化工學術添加，進了我一公主在那裡全身見面自動全新移動喜愛螢幕是這樣筆記本。</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1>position:absolute</h1>
+        <h2>當元素為絕對定位時</h2>
+        <ul>
+            <li>該元素沒有任何位移屬性，該元素會脫離正常流向，原地移到定位曾，後方的元素會依據CSS流動特性地補上去</li>
+            <li>若祖先原組找不到定位(absolute relative fixed),最後會以初始容器根源素html作為位移目標</li>
+        </ul>
+
+        <div class="box1">
+            <h1>box1</h1>
+            <p>市場價故事不是眼睛戰士，主營本週恢復，所有標題晶片設置星座白色，聰明把我當地新型服務執行時間我很經典種類同步核心，評價到處化工學術添加，進了我一公主在那裡全身見面自動全新移動喜愛螢幕是這樣筆記本。</p>
+        </div>
+        <div class="box2 absolute" style="left: 10px; top:10px;">
+            <h1>box2</h1>
+            <p>市場價故事不是眼睛戰士，主營本週恢復，所有標題晶片設置星座白色，聰明把我當地新型服務執行時間我很經典種類同步核心，評價到處化工學術添加，進了我一公主在那裡全身見面自動全新移動喜愛螢幕是這樣筆記本。</p>
+        </div>
+
+        <div class="box3">
+            <h1>box3</h1>
+            <p>市場價故事不是眼睛戰士，主營本週恢復，所有標題晶片設置星座白色，聰明把我當地新型服務執行時間我很經典種類同步核心，評價到處化工學術添加，進了我一公主在那裡全身見面自動全新移動喜愛螢幕是這樣筆記本。</p>
+        </div>
+        <div class="box4">
+            <h1>box4</h1>
+            <p>市場價故事不是眼睛戰士，主營本週恢復，所有標題晶片設置星座白色，聰明把我當地新型服務執行時間我很經典種類同步核心，評價到處化工學術添加，進了我一公主在那裡全身見面自動全新移動喜愛螢幕是這樣筆記本。</p>
+        </div>
+    </div>
+</body>
+
+</html>
