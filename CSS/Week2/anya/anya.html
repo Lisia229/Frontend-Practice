@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .anya {
+      margin: 20px auto;
+      padding: 0;
+      width: 1000px;
+      height: 560px;
+      background-image: url(./anya.png), url(./scene.png), url(./css.jpg);
+      background-size: 80%, contain, 56%;
+      background-repeat: no-repeat;
+      background-position: bottom right 250px, center, top 21% left 50%;
+      position: relative;
+    }
+
+
+    .background {
+      width: 230px;
+      height: 75px;
+      background-color: white;
+      position: absolute;
+      border-radius: 20px;
+      line-height: 75px;
+      border: 1px solid white;
+      left: 40%;
+      bottom: 21%;
+      font-family: 微軟正黑體;
+      font-size: 30px;
+      text-align: center;
+      font-weight: 200;
+    }
+
+    .background::before {
+      position: absolute;
+      content: "";
+      border-right: 75px solid white;
+      border-top: 10px solid transparent;
+      border-bottom: 10px solid transparent;
+      right: 220px;
+      top: -6px;
+      transform: rotate(15deg);
+    }
+    
+    
+  </style>
+</head>
+
+<body>
+  <div class="anya">
+    <div class="background">阿尼亞要這個！</div>
+  </div>
+</body>
+
+</html>

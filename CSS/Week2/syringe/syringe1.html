@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .syringe {
+      width: 440px;
+      height: 100px;
+      background: white;
+      border: 1px solid rgb(213, 213, 213);
+      background-image: linear-gradient(0deg, #ffffff 0%, #c7c6c6b4 35%, #ffffff 70%);
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .syringe::before {
+      content: "";
+      width: 200px;
+      height: 100px;
+      background: white;
+      border: 1px solid rgb(213, 213, 213);
+      background-image: linear-gradient(0deg, #ffffaa 13%, #a5950377 35%, #ffffaa 67%);
+      position: absolute;
+      left: 240px;
+      top: -1px;
+    }
+
+    .syringe::after {
+      content: "";
+      width: 40px;
+      height: 100px;
+      background: black;
+      position: absolute;
+      left: 200px;
+    }
+
+    .syringe1 {
+            width: 60px;
+            height: 80px;
+            position: absolute;
+            border: 1px solid rgb(213, 213, 213);
+            background-image: linear-gradient(0deg, #ffffff 0%, #d8d8d8ed 35%, #ffffff 100%);
+            left: -62px;
+            top: 8px;
+        }
+
+        .syringe1::before {
+            content: "";
+            width: 40px;
+            height: 100px;
+            position: absolute;
+            border-radius: 5px;
+            border: 1px solid rgb(213, 213, 213);
+            background-image: linear-gradient(0deg, #ffffff 0%, #dddddd 35%, #ffffff 100%);
+            left: -36px;
+            top: -10px;
+        }
+
+        .syringe1::after {
+            content: "";
+            width: 40px;
+            height: 60px;
+            position: absolute;
+            border-radius: 5px;
+            border: 1px solid rgb(213, 213, 213);
+            background-image: linear-gradient(0deg, #ffffff 0%, #dddddd 35%, #ffffff 100%);
+            left: 500px;
+            z-index: -1;
+            top: 10px;
+        }
+
+        .line {
+            width: 440px;
+            height: 15px;
+            background-image: repeating-linear-gradient(90deg, transparent 0px 7px, gray 8px , transparent 9px 15px );
+            position: absolute;
+        }
+
+        .line::after {
+            content: "";
+            width: 95px;
+            height: 20px;
+            position: absolute;
+            background-image: linear-gradient(0deg, #ffffff 50%, #000000 56%, #ffffff 58%);
+            left: 481px;
+            top: 40px;
+        }
+
+    .text {
+      position: absolute;
+      font-family: 微軟正黑體;
+      color: rgb(178, 178, 178);
+      font-weight: bold;
+      font-size: 18px;
+      top: 75px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="syringe">
+    <div class="syringe1"></div>
+    <div class="line"></div>
+    <div class="text">Made in Taiwan</div>
+  </div>
+</body>
+
+</html>
