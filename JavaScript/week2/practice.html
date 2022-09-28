@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const number1 = prompt("請輸入數字")
+        const number2 = prompt("請輸入數字")
+
+        const regex = /^\d+$/g
+
+        if (number1.match(regex) || number2.match(regex)) {
+            const result = parseInt(number1) + parseInt(number2)
+            document.write(result)
+        } else {
+            alert("輸入錯誤")
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>

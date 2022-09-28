@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    numbers.forEach((value, index, arr) => {
+      // 不能直接用value改值
+      numbers[index] *= 2
+      console.log(value, index, arr)
+    })
+    console.log(numbers)
+
+    console.log(numbers.join('|'))
+
+    // 在陣列後新增值
+    numbers.push(21)
+    console.log(numbers)
+
+    // 在陣列前新增值
+    numbers.unshift(0)
+    console.log(numbers)
+
+    // 移除並回傳陣列最後一個元素
+    const numberLast = numbers.pop()
+    console.log(numbers, numberLast)
+
+    // 移除並回傳陣列第一個元素
+    const numberFirst = numbers.shift()
+    console.log(numbers, numberFirst)
+
+    // 刪除陣列索引並加入值，新值可以不加
+    // .splice(開始數字, 刪除數量, 新值1, 新值2...)
+    let fruits = ["Apple", "Banana", "Cherry"];
+    fruits.splice(1, 0, "Tomato");
+    console.log(fruits)
+    fruits.splice(0, 1, 'mango')
+    console.log(fruits)
+
+
+    // .slice(開始位置, 結束位置)
+    // 將開始到結束間的所有東西複製新的陣列
+    // 不會動到原本的陣列
+    const fruitsSliced = fruits.slice(1, 3)
+    console.log(fruitsSliced, fruits)
+
+    // 顛倒陣列
+    fruits.reverse()
+    console.log(fruits)
+
+    // 陣列連接，產生新的陣列 .concat
+    let array1 = ['a', 'b', 'c'];
+    let array2 = ['d', 'e', 'f'];
+    let array3 = array1.concat(array2);
+    console.log(array3)
+
+    // 陣列是否有包含指定的元素
+    const hasBanana = fruits.includes('Banana')
+    console.log(hasBanana)
+
+    // 陣列是否有包含指定的元素，回傳索引
+    const indexOfBanana = fruits.indexOf('Banana')
+    console.log(indexOfBanana)
+
+
+    // .some(function)
+    // 跟 foreach 一樣跑迴圈，function 必須要 return true 或 false
+    // 回傳是否有東西跑 function 時回傳 true
+    // 回傳布林值
+    const num = [100, 200, 300, 400, 500]
+    const hasMoreThan300 = num.some(num => {
+      return num > 300
+    })
+    console.log(hasMoreThan300)
+
+    // 有點類似some但every要每個都是true才會顯示true
+    const allMoreThan300 = num.every(num => {
+      return num > 300
+    })
+    console.log(allMoreThan300)
+
+    // 回傳第一個符合的值
+    const find300 = num.find(num => {
+      return num > 300
+    })
+    console.log(find300)
+
+    // 回傳第一個的索引值
+    const findIndex300 = num.findIndex(num => {
+      return num > 300
+    })
+    console.log(findIndex300)
+
+    // 回傳最後一個符合的值
+    const findLast300 = num.findLast(num => {
+      return num > 300
+    })
+    console.log(findLast300)
+
+    // 回傳最後一個符合的索引值
+    const findLastIndex300 = num.findLastIndex(num => {
+      return num > 300
+    })
+    console.log(findLastIndex300)
+
+    // 有搜尋的東西幾乎都用filter
+    // .filter() 可以過濾陣列後產生新的陣列
+    // true 代表保留，false 代表刪除
+    const filter300 = num.filter(num => {
+      return num > 300
+    })
+    console.log(filter300)
+
+    // .map() 可以運算陣列的每個值後產生新的陣列
+    // 最常使用在轉換格式
+    const map300 = num.map(num => {
+      return num * 2
+    })
+    console.log(map300)
+
+    const data = [
+      { name: 'John', age: '18' },
+      { name: 'Mary', age: '19' },
+      { name: 'Zack', age: '21' },
+      { name: 'Cindy', age: '20' },
+      { name: 'Linda', age: '22' },
+    ]
+    const mapName = data.map(item => {
+      item.age *= 2
+      item.job = 'Student'
+      return item
+    })
+    console.table(mapName)
+
+    // (function,起始值)
+    // 兩個參數 目前加多少 目前的值
+    const reduce300 = num.reduce((total, num) => {
+      console.log(total, num)
+      return total + num
+    })
+    console.log(reduce300)
+
+    const reduce500 = num.reduce((total, num) => {
+      console.log(total, num)
+      return total + num
+    }, 500)
+    console.log(reduce500)
+
+    // 排序陣列，預設是依第一個字排，順序是數字1~9，大寫 A~Z，小寫 A~Z
+    // a-b是正序排
+    // b-a是倒敘排
+    // 如果a-b>0 則a排在b後面
+    // 如果a-b<0 則a排在b前面
+    // 如果a-b=0 則ab位置不變
+    const num2 = [100, 500, 400, 200, 300, 800, 700, 100]
+
+    num2.sort((a, b) => {
+      console.log(a, b)
+      return a - b
+    })
+    console.log(num2)
+
+    num2.sort((a, b) => {
+      return b - a
+    })
+    console.log(num2)
+
+    // 排序陣列，預設是依第一個字排，順序是數字1~9，大寫 A~Z，小寫 A~Z
+    let texts = ['123', 'abc', 'Abcd', 'CDE', '789', 'ssde', '456']
+    // localeCompare比較數字元編碼順序
+    // a在b前是-1
+    // a在b後是1
+    // ab相同是0
+    texts.sort((a, b) => {
+      return a.localeCompare(b)
+    })
+    console.log(texts)
+
+    // 前端的中文排序很麻煩 不同語系的排序會不一樣
+    let texts2 = ['一', '四', '二', '五', '三', '七', '六', '八', '十', '九']
+
+    texts2.sort((a,b)=>{
+      return a.localeCompare(b,'zh-Hant-TW')
+    })
+    console.log(texts2)
+
+  </script>
+</body>
+
+</html>

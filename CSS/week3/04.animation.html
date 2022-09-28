@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .container {
+      width: 75%;
+      margin: auto;
+      padding: 1rem;
+      border: 1px solid #333;
+    }
+
+    .wrap {
+      border: 5px dashed #333;
+      margin: 50px;
+      padding: 50px 0;
+
+      position: relative;
+    }
+
+    .box {
+      width: 100px;
+      height: 100px;
+      background-color: black;
+      color: white;
+      line-height: 100px;
+      text-align: center;
+      font-size: 2rem;
+      border-radius: 10px;
+    }
+
+    /* 建立動畫 */
+    /* 步驟一 */
+    /* 建立影格@keyframes  設定動畫名稱(取名隨便)
+  以及from(0%)狀態 to(100%)狀態 
+*/
+    @keyframes animation {
+      /* from{
+    background-color: pink;
+  }
+
+  to{
+    background-color: lightblue;
+  } */
+
+      0% {
+        background-color: rgb(255, 101, 99);
+      }
+
+      15% {
+        background-color: rgb(255, 137, 59);
+      }
+
+      30% {
+        background-color: rgb(255, 250, 92);
+      }
+
+      45% {
+        background-color: greenyellow;
+      }
+
+      60% {
+        background-color: rgb(0, 123, 255);
+      }
+
+      75% {
+        background-color: aquamarine;
+      }
+
+      100% {
+        background-color: rgb(230, 92, 255);
+        transform: translate(50vw, 0);
+      }
+    }
+
+    .animation {
+      /* 動畫名稱 */
+      animation-name: animation;
+      /* 持續時間 */
+      animation-duration: 1s;
+      /* 播放次數 infinite無限播放  預設是1次*/
+      animation-iteration-count: 1;
+
+      animation-timing-function: linear;
+
+      /* 交替播放alternate(0%100%)
+    預設normal 往右 
+    reverse 往左
+    alternate-reverse 奇數反向播放(100%-0%)*/
+      /* animation-direction: normal; */
+
+      /* none=>會回到原本初始狀態 也就是原本的背景顏色
+  使用forwards=>會停在動畫的最後一幀 
+  會根據animation-direction的方項而改變
+  backwards=>當有設定delay的時候才發揮作用 會停留在0%的狀態
+  both=>起始&結束都在動畫狀態中
+  */
+      /* animation-fill-mode: forwards; */
+
+      /* 縮寫 */
+
+      animation: animation 2s infinite alternate;
+    }
+
+
+    .multiple{
+      /* animation-name: rotateIt, moveIt;
+      animation-duration: 3s,6s; */
+      /* 縮寫 */
+      animation: rotateIt 3s,moveIt 3s;
+      animation-iteration-count: infinite;
+    }
+
+    @keyframes rotateIt{
+
+      50%{
+        transform: rotate(360deg);
+      }
+    }
+
+    @keyframes moveIt{
+
+      50%{
+        margin-left: 500px;
+      }
+
+    }
+  </style>
+</head>
+
+
+<body>
+  <div class="container">
+    <h1>動畫animation</h1>
+    <p>動畫與轉場差異</p>
+    <h2>animation</h2>
+    <ul>
+      <li>可以設定關鍵影格(keyframes)控制動畫進度的狀態，產生複雜的動畫</li>
+      <li>網頁載入時，可以循環重複來回撥放等</li>
+    </ul>
+    <h2>transition</h2>
+    <ul>
+      <li>要有觸發條件，將兩種樣式狀態的改變，狀態通常為:hover :checked...等狀態</li>
+      <li>無法在網頁載入時自動發生，而且是一次性沒有循環效果，需要重新觸發</li>
+    </ul>
+    <div class="wrap">
+      <div class="box animation"></div>
+    </div>
+  </div>
+
+  <div class="container">
+    <h2>可套用多個動畫</h2>
+    <div class="wrap">
+      <div class="box multiple "></div>
+    </div>
+  </div>
+</body>
+
+</html>
