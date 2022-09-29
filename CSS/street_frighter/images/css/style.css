@@ -1,0 +1,311 @@
+/* 設定html,body抓到瀏覽器高度 */
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: 'Noto Sans TC', sans-serif;
+}
+
+/* 建立一個寬度一致水平的容器 */
+/* 圖片和我的最頂端的東西切齊，擁有一致性 */
+.container {
+  width: 75%;
+  margin: auto;
+}
+
+/* 讓高度滿版，將區塊與瀏覽器一致 */
+.h-100 {
+  height: 100%;
+}
+
+/* -------------------------------header 固定選單------------------------------- */
+
+#header {
+  width: 75%;
+  height: 60px;
+  position: fixed;
+  left: 50%;
+  transform: translate(-50%);
+  z-index: 1;
+  filter:
+    drop-shadow(0 0 5px rgba(0, 0, 0, 0.5)) drop-shadow(0 0 10px rgba(0, 0, 0, 0.5));
+}
+
+#header .menu {
+  width: 100%;
+  height: 60px;
+  font-size: 0;
+  text-align: center;
+  background: url(../images/nav-bg-full.jpg) repeat-x center;
+  /* 使用定位的時候記得要設定寬度 */
+  position: absolute;
+  top: 25px;
+}
+
+#header .menu::before {
+  content: '';
+  background: url(../images/nav-bg-left.png) no-repeat left top/cover;
+  width: 12px;
+  height: 60px;
+  position: absolute;
+  left: -10px;
+}
+
+#header .menu::after {
+  content: '';
+  background: url(../images/nav-bg-right.png) no-repeat right top/cover;
+  width: 12px;
+  height: 60px;
+  position: absolute;
+  right: -10px;
+}
+
+#header .menu li {
+  display: inline-block;
+  padding: 1rem 0;
+  font-size: 1rem;
+}
+
+#header .menu li a {
+  /* 和父元素li寬度一樣 padding可以使用不會溢出 */
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1.5rem;
+  transition: 0.5s;
+}
+
+#header .menu li a:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* 第三個li右側推移15%的空間 */
+#header .menu li:nth-child(3) {
+  /* 15%是依據menu寬的百分之15%
+  無論是top 還是 buttom */
+  margin-right: 15%;
+}
+
+#header .logo {
+  width: 15%;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  z-index: 1;
+}
+
+/* 圖片要符合父元素.logo的尺寸，設定寬度100% */
+#header .logo img {
+  width: 100%;
+}
+
+/* section01 回首頁  */
+
+#section01 {
+  background: url(../images/section01-bg.jpg) no-repeat center/cover;
+  position: relative;
+}
+
+#section01 .main-news {
+  width: 100%;
+  text-align: center;
+  top: 75%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+
+#section01 .main-news h1 {
+  font-size: 2.5rem;
+  font-style: italic;
+  color: yellow;
+  text-shadow:
+    0 0 5px rgba(0, 0, 0, 1),
+    0 0 10px rgba(0, 0, 0, 1),
+    0 0 15px rgba(0, 0, 0, 1);
+}
+
+#section02 {
+  background: url(../images/section02-bg.jpg) no-repeat center/cover;
+}
+
+#section02 .container {
+  height: 100%;
+  position: relative;
+}
+
+
+#section02 .row {
+  font-size: 0;
+  width: 100%;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#section02 .col {
+  /* 可重新計算box總寬度  對width包含了 padding border */
+  box-sizing: border-box;
+  color: white;
+  font-size: 1rem;
+  width: 50%;
+  padding: 5rem 1rem;
+  display: inline-block;
+  /* 只能用在inline-block裡面 */
+  vertical-align: middle;
+}
+
+#section02 .col h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+#section02 .col p {
+  line-height: 1.5;
+  text-indent: 2rem;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+}
+
+#section02 .col iframe {
+  width: 100%;
+  height: 300px;
+  border: 5px solid rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.8);
+}
+
+/* section03角色列表 */
+
+#section03 {
+  background: linear-gradient(45deg, #222 40%, #aaa 40%);
+}
+
+#section03 .col:nth-child(1) {
+  height: 65%;
+}
+
+#section03 .col:nth-child(2) {
+  height: 35%;
+}
+
+/* 上方角色資料 ---------------------*/
+#section03 .role_info>div {
+  display: none;
+  height: 100%;
+}
+
+/* 人物大圖 */
+#section03 .role_info .role {
+  box-sizing: border-box;
+  width: 50%;
+  height: 100%;
+  padding: 5rem 1.5rem 0;
+  /* =>padding: 5rem 1.5rem 0 1.5rem; */
+  float: left;
+}
+
+#section03 .role_info .role img {
+  width: 100%;
+  height: 100%;
+}
+
+/* 人物資料 */
+#section03 .role_info .info {
+  box-sizing: border-box;
+  width: 50%;
+  height: 100%;
+  padding: 14rem 1rem 5rem;
+  float: right;
+}
+
+
+#section03 .role_info .info h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+#section03 .role_info .info p {
+  padding: 1rem 0;
+  line-height: 1.2;
+}
+
+/* #section03 .role_info input{
+  display: none;
+} */
+
+#section03 .role_info input:checked+div {
+  display: block;
+}
+
+/* 下方角色清單 */
+
+#section03 .role_list {
+  font-size: 0;
+  text-align: center;
+}
+
+#section03 .role_list label {
+  width: 7%;
+  display: inline-block;
+  margin: 0 0 5px 0;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#section03 .role_list img {
+  width: 100%;
+}
+
+#section03 .role_list label:hover {
+  filter:
+    drop-shadow(0 0 5px yellow) drop-shadow(0 0 10px yellow);
+}
+
+/* 第四個之後都是目標，做樣式 */
+#section03 .role_list label:nth-child(4)~label {
+  filter: brightness(0.4);
+  cursor: auto;
+}
+
+
+/* footer */
+
+#footer {
+  background: black;
+  color: white;
+  padding: 2rem 0;
+}
+
+#footer .row {
+  overflow: hidden;
+}
+
+#footer .col {
+  width: 25%;
+  float: left;
+}
+
+#footer .card{
+  box-sizing: border;
+  padding: 1rem;
+}
+
+#footer h1{
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+#footer li{
+  line-height: 1.4;
+  padding-right: 1.5rem;
+}
+
+#footer .card h3{
+margin: 1rem 0;
+}
+
