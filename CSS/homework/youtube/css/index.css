@@ -1,0 +1,29 @@
+html,
+body {
+  height: 100%;
+}
+
+div#content.style-scope{
+  background-attachment: scroll;
+  box-sizing: border-box;
+  display: block;
+  font-size: 10px;
+  width: 100%;
+}
+
+div#container.style-scope{
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+div#container-2.search{
+  height: 60px;
+  padding: 0 16px;
+  align-items: center;
+}
+
+div#youtube.more{
+  position: absolute;
+  
+}
