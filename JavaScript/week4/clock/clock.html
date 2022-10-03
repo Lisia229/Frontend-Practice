@@ -105,58 +105,82 @@
       height: 6px;
       background: rgba(255, 255, 255, 0.671);
       position: absolute;
-      left: 150px;
+      left: 149px;
       top: 0;
       transform-origin: 0 150px;
     }
 
-    li:nth-child(1) {
+    #ul1 li:nth-child(1) {
       transform: rotate(0deg);
     }
 
-    li:nth-child(2) {
+    #ul1 li:nth-child(2) {
       transform: rotate(30deg);
     }
 
-    li:nth-child(3) {
+    #ul1 li:nth-child(3) {
       transform: rotate(60deg);
     }
 
-    li:nth-child(4) {
+    #ul1 li:nth-child(4) {
       transform: rotate(90deg);
     }
 
-    li:nth-child(5) {
+    #ul1 li:nth-child(5) {
       transform: rotate(120deg);
     }
 
-    li:nth-child(6) {
+    #ul1 li:nth-child(6) {
       transform: rotate(150deg);
     }
 
-    li:nth-child(7) {
+    #ul1 li:nth-child(7) {
       transform: rotate(180deg);
     }
 
-    li:nth-child(8) {
+    #ul1 li:nth-child(8) {
       transform: rotate(210deg);
     }
 
-    li:nth-child(9) {
+    #ul1 li:nth-child(9) {
       transform: rotate(240deg);
     }
 
-    li:nth-child(10) {
+    #ul1 li:nth-child(10) {
       transform: rotate(270deg);
     }
 
-    li:nth-child(11) {
+    #ul1 li:nth-child(11) {
       transform: rotate(300deg);
     }
 
-    li:nth-child(12) {
+    #ul1 li:nth-child(12) {
       transform: rotate(330deg);
     }
+
+    /* 數字 */
+    .scale {
+      width: 300px;
+      height: 300px;
+      border: 1px solid transparent;
+      border-radius: 50%;
+      position: absolute;
+    }
+
+    .scale div {
+      width: 200px;
+      height: 200px;
+      position: absolute;
+      color: white;
+      left: 50px;
+      top: 50px;
+      font-family: 'Silkscreen', cursive;
+    }
+
+    .scale span {
+      position: absolute;
+    }
+
 
     /* 鬧鐘 */
     #clock {
@@ -170,6 +194,8 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.5),
+      0 0 30px rgba(17, 49, 231, 0.5);
     }
 
     #clock::before {
@@ -200,8 +226,8 @@
     }
 
     #min {
-      width: 40%;
-      height: 10px;
+      width: 30%;
+      height: 8px;
       position: absolute;
       background: #73BEEB;
       top: 50%;
@@ -212,7 +238,7 @@
     }
 
     #second {
-      width: 45%;
+      width: 39%;
       height: 6px;
       position: absolute;
       background: #EB618C;
@@ -222,7 +248,6 @@
       border-radius: 5px;
       transform-origin: left center;
     }
-
 
 
     p {
@@ -278,12 +303,20 @@
       <li></li>
     </ul>
 
-    <ul id="ul2">
-      <li>1</li>
-      <li>5</li>
-      <li>6</li>
-      <li>9</li>
-    </ul>
+    <div class="scale">
+      <div><span>12</span></div>
+      <div><span>01</span></div>
+      <div><span>02</span></div>
+      <div><span>03</span></div>
+      <div><span>04</span></div>
+      <div><span>05</span></div>
+      <div><span>06</span></div>
+      <div><span>07</span></div>
+      <div><span>08</span></div>
+      <div><span>09</span></div>
+      <div><span>10</span></div>
+      <div><span>11</span></div>
+    </div>
   </div>
 
   <!-- 刻度 -->
@@ -306,9 +339,9 @@
     // 數字鬧鐘
     function showTime() {
       var date = new Date();
-      var h = date.getHours(); // 0 - 23
-      var m = date.getMinutes(); // 0 - 59
-      var s = date.getSeconds(); // 0 - 59
+      var h = date.getHours();
+      var m = date.getMinutes();
+      var s = date.getSeconds();
       var session = "AM";
 
       if (h == 0) {
@@ -348,9 +381,16 @@
     month = date.getMonth() + 1;
     day = date.getDate();
 
-    
     document.getElementById("yeardate").innerHTML = year + "/" + month + "/" + day;
 
+
+    // 刻度 數字
+    let scaleDivs = document.querySelectorAll('.scale div');
+    for (let i = 0; i < scaleDivs.length; i++) {
+      scaleDivs[i].style.transform = `rotate(${(i * 30) + 45}deg)`;
+      scaleDivs[i].firstChild.style.transform = `rotate(${(i * -30) - 45}deg)`;
+      console.log(scaleDivs[i]);
+    }
 
   </script>
 </body>
