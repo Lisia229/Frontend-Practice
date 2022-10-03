@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+
+    // 一般計時器
+
+    // 使用匿名函數
+    // setTimeout(() => {
+    //   alert("過三秒")
+    // }, 3000);
+
+
+    // // 呼叫外部function可以這樣
+    // const meg = () => {
+    //   alert("過三秒")
+    // }
+    // setTimeout(msg, 3000)
+    // msg後面不加() 
+
+    const msg = (ms, str) => {
+      alert(`過了${msg / 1000}秒`)
+    }
+    // secTimeout(function名,delay毫秒,傳入function參數)
+    const delayHi = setTimeout(msg, 3000, 3000, '早安')
+    clearTimeout(delayHi)
+    // 可以用clearTimeout把它清掉 但要先將setTimeout放到function裡
+
+
+    // // 86400000 代表什麼？
+    // setTimeout(someFunction, 86400000);
+
+    // // 86400000 是一天的毫秒數
+    // const MILLISECONDS_IN_A_DAY = 86400000;
+    // setTimeout(someFunction, MILLISECONDS_IN_A_DAY);
+
+  </script>
+</body>
+
+</html>

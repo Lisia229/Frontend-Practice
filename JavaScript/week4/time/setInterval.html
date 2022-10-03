@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <script>
+    // setInterval() 可以每隔一段時間執行指定的程式碼，使用方式和 setTimeout() 差不多清除重複計時器用的函式是 clearInterval()
+    const timer = setInterval(() => {
+      document.write('過了一秒<br>')
+    }, 1000)
+    setInterval(() => {
+      clearInterval(timer)
+    }, 5000)
+
+
+  </script>
+</body>
+
+</html>
