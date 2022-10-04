@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event</title>
+  <style>
+    #link {
+      font-size: 30px;
+    }
+
+  </style>
+
+
+</head>
+
+<body>
+  <a href="http://google.com" id="link">Google</a>
+  <p>按了<span id="key"></span>鍵</p>
+
+  <!-- step每次拖曳的值 value起始值 -->
+  <input type="range" name="" id="range" min="0" max="100" step="5" value="0">
+
+  <hr>
+  <!-- 簡單的email驗證(瀏覽器自帶驗證) -->
+  <input type="text" name="" id="input-text">
+  <br>
+  <p id="input-msg"></p>
+
+  <script>
+    const link = document.getElementById('link')
+    link.onclick = (event) => {
+      event.preventDefault()
+      console.log(event)
+      event.target.innerText = '不會跳頁'
+    }
+
+    const key = document.getElementById('key')
+    document.onkeydown = event => {
+      console.log(event)
+      key.innerText = event.key
+    }
+
+    // <!-- 簡單的email驗證(打錯會顯示錯誤) -->
+    const inputText = document.getElementById('input-text')
+    const inputMsg = document.getElementById('input-msg')
+    inputText.onfocus = () => {
+      console.log('focus')
+    }
+    inputText.onblur = () => {
+      console.log('blur')
+    }
+    inputText.oninput = () => {
+      console.log('input')
+    }
+
+    inputText.onchange = event => {
+      console.log('change')
+      const match = event.target.value.match(/[A-Za-z0-9]+@[A-Za-z0-9]+\.[A-Za-z0-9]+/g)
+      if(match){
+        inputMsg.style.color='green'
+        inputMsg.innerText='驗證成功'
+      } else{
+        inputMsg.style.color='red'
+        inputMsg.innerText='信箱格式錯誤'
+      }
+      // event target可以換成inputText
+    }
+
+  </script>
+</body>
+
+</html>

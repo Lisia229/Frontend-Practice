@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="
+  https://colanekojp.com.tw/upload/ckfiles/images/content-22e0708f-81831-lg.jpg" type="image/x-icon">
+  <title>fingerGuessingGame</title>
+  <style>
+    #game {
+      width: 100%;
+      height: 100px;
+      position: relative;
+    }
+
+    #game img {
+      width: 50px;
+      height: 50px;
+    }
+
+    #result {
+      padding: 10px;
+      border-radius: 20px;
+    }
+  </style>
+
+</head>
+
+<body>
+  <div id="game">
+    <button id="paper">
+      <img src="https://www.pinclipart.com/picdir/middle/51-511523_rock-paper-scissors-clipart.png" alt="">
+    </button>
+    <button id="stone">
+      <img
+        src="https://pngset.com/images/rock-paper-scissors-clipart-rock-paper-scissor-stencil-bowl-symbol-label-transparent-png-153543.png"
+        alt="">
+    </button>
+    <button id="scissors">
+      <img src="https://image.pngaaa.com/787/3313787-middle.png" alt="">
+    </button>
+    <hr>
+    <p>
+      WIN:<span id="win">0</span>
+      DRAW:<span id="draw">0</span>
+      LOSE:<span id="lose">0</span>
+    </p>
+
+    <div>
+      <ul id="result1">
+      </ul>
+    </div>
+  </div>
+
+  <script>
+    const game = document.getElementById('game')
+    const paper = document.getElementById('paper')
+    const stone = document.getElementById('stone')
+    const scissors = document.getElementById('scissors')
+    const result1 = document.getElementById('result1')
+    const winer = document.getElementById('win')
+    const drawer = document.getElementById('draw')
+    const loser = document.getElementById('lose')
+
+    let win = 0
+    let lose = 0
+    let draw = 0
+    let player = ""
+    let com = ""
+    let gestures = ['paper', 'scissors', 'stone']
+
+    const winTotal = (win) => {
+      return winer.innerText = win++
+    }
+
+    const drawTotal = (draw) => {
+      return drawer.innerText = draw++
+    }
+    // drawer.innerText = drawTotal(draw)
+
+    const loseTotal = (lose) => {
+      return loser.innerText = lose++
+    }
+
+
+
+    paper.onclick = () => {
+      player = 'paper'
+      com = gestures[Math.floor(Math.random() * 3)]
+
+      if (player == com) {
+        draw++
+        drawer.innerText = drawTotal(draw)
+        alert('平手')
+        result = '平手'
+      } else if (player == 'paper') {
+        if (com == 'stone') {
+          win++
+          winer.innerText = winTotal(win)
+          alert('贏了')
+          result = '贏了'
+        } else {
+          lose++
+          loser.innerText = loseTotal(lose)
+          alert('輸了')
+          result = '輸了'
+        }
+      } else if (player == 'scissors') {
+        if (com == 'paper') {
+          win++
+          winer.innerText = winTotal(win)
+          alert('贏了')
+          result = '贏了'
+        } else {
+          lose++
+          loser.innerText = loseTotal(lose)
+          alert('輸了')
+          result = '輸了'
+        }
+      } else if (player == 'stone') {
+        if (com == 'scissors') {
+          win++
+          winer.innerText = winTotal(win)
+          alert('贏了')
+          result = '贏了'
+        } else {
+          lose++
+          loser.innerText = loseTotal(lose)
+          alert('輸了')
+          result = '輸了'
+        }
+      }
+      return result1.innerHTML += `<li>你出${player},電腦出${com},${result}</li>`
+    }
+
+    stone.onclick = () => {
+      player = 'stone'
+      com = gestures[Math.floor(Math.random() * 3)]
+
+      if (player == com) {
+        draw++
+        drawer.innerText = drawTotal(draw)
+        alert('平手')
+        result = '平手'
+      } else if (player == 'paper') {
+        if (com == 'stone') {
+          win++
+          winer.innerText = winTotal(win)
+          alert('贏了')
+          result = '贏了'
+        } else {
+          lose++
+          loser.innerText = loseTotal(lose)
+          alert('輸了')
+          result = '輸了'
+        }
+      } else if (player == 'scissors') {
+        if (com == 'paper') {
+          win++
+          winer.innerText = winTotal(win)
+          alert('贏了')
+          result = '贏了'
+        } else {
+          lose++
+          loser.innerText = loseTotal(lose)
+          alert('輸了')
+          result = '輸了'
+        }
+      } else if (player == 'stone') {
+        if (com == 'scissors') {
+          win++
+          winer.innerText = winTotal(win)
+          alert('贏了')
+          result = '贏了'
+        } else {
+          lose++
+          loser.innerText = loseTotal(lose)
+          alert('輸了')
+          result = '輸了'
+        }
+      }
+      return result1.innerHTML += `<li>你出${player},電腦出${com},${result}</li>`
+    }
+
+    scissors.onclick = () => {
+      player = 'scissors'
+      com = gestures[Math.floor(Math.random() * 3)]
+      if (player == com) {
+        draw++
+        drawer.innerText = drawTotal(draw)
+        alert('平手')
+        result = '平手'
+      } else if (player == 'paper') {
+        if (com == 'stone') {
+          win++
+          winer.innerText = winTotal(win)
+          alert('贏了')
+          result = '贏了'
+        } else {
+          lose++
+          loser.innerText = loseTotal(lose)
+          alert('輸了')
+          result = '輸了'
+        }
+      } else if (player == 'scissors') {
+        if (com == 'paper') {
+          win++
+          winer.innerText = winTotal(win)
+          alert('贏了')
+          result = '贏了'
+        } else {
+          lose++
+          loser.innerText = loseTotal(lose)
+          alert('輸了')
+          result = '輸了'
+        }
+      } else if (player == 'stone') {
+        if (com == 'scissors') {
+          win++
+          winer.innerText = winTotal(win)
+          alert('贏了')
+          result = '贏了'
+        } else {
+          lose++
+          loser.innerText = loseTotal(lose)
+          alert('輸了')
+          result = '輸了'
+        }
+      }
+      return result1.innerHTML += `<li>你出${player},電腦出${com},${result}</li>`
+    }
+
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- 使用input裡面無法加圖片 用button可以 -->
+  <!-- 
+      <button>
+      <img src="https://avatars.githubusercontent.com/u/113668469?v=4" alt="">
+    </button> 
+  -->
+  <input type="button" value="按鈕" onclick="alert('Hi')">
+  <!-- 製作一個按了可以觸發數字往上增加 -->
+  <input type="button" value="0" onclick="this.value++">
+
+  <input type="button" value="喵" onclick="onMeowButtonClick()">
+  <!-- <audio src="./catAndSound/meow.mp3" controls id="meow"></audio> -->
+  <hr>
+
+  <input type="button" value="按鈕 btn" class="btn">
+  <input type="button" value="按鈕 btn" class="btn">
+  <input type="button" value="按鈕 btn" class="btn">
+  <input type="button" value="按鈕 btn" class="btn">
+  <input type="button" value="按鈕 btn" class="btn">
+
+  <br>
+  <br>
+
+  <input type="button" value="解除 btn 綁定" id="btn-unbind">
+
+  <script>
+    // const meow = document.getElementById('meow')
+
+    const onMeowButtonClick = () => {
+      const meow = new Audio()
+      meow.src = './catAndSound/meow.mp3'
+      meow.play()
+    }
+
+    const sayHi = () => {
+      alert('Hi')
+    }
+
+    // 事件綁定 getElementsByClassName 再+for迴圈
+    const btns = document.getElementsByClassName('btn')
+    for (const btn of btns) {
+      btn.addEventListener('click', onMeowButtonClick)
+      btn.addEventListener('click', sayHi)
+
+      // btn.onclick = () => {
+      //   onMeowButtonClick()
+      // }
+    }
+
+    const btnUnbind = document.getElementById('btn-unbind')
+    btnUnbind.onclick = () => {
+      for (const btn of btns) {
+        // btn.onclick = null
+        btn.removeEventListener('click', sayHi)
+        btn.removeEventListener('click', onMeowButtonClick)
+
+      }
+    }
+
+
+  </script>
+</body>
+
+</html>

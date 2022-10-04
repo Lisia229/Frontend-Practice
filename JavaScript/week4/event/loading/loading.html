@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loading</title>
+  <style>
+    #loading {
+      width: 100vw;
+      height: 100vh;
+      position: fixed;
+      background: #333;
+      color: white;
+      text-align: center;
+      display: table;
+      transition: opacity 3s;
+
+    }
+
+    #loading-content {
+      display: table-cell;
+      vertical-align: middle;
+    }
+
+    #img1 {
+      width: 150px;
+    }
+
+    #content img {
+      width: 1920px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- <a href="https://loading.io/">Loading.io</a> -->
+
+  <div id="loading">
+    <div id="loading-content">
+      <img src="./loading.svg" alt="" id="img1">
+      <h1>載入中...</h1>
+      <p id="loading-progress">0%</p>
+    </div>
+  </div>
+
+  <div id="content">
+    <img
+      src="https://images.unsplash.com/photo-1664784805210-9fa665e2b7e9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit"
+      alt="">
+    <img
+      src="https://images.unsplash.com/photo-1664705995217-e09ff60a7d6f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit"
+      alt="">
+    <img
+      src="https://images.unsplash.com/photo-1664574373158-8d05a46a8afa?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit"
+      alt="">
+  </div>
+  <script>
+    const loading = document.getElementById('loading')
+    const loadingProgress = document.getElementById('loading-progress')
+    const images = document.getElementsByTagName('img')
+    let loaded = 0
+    // document.onreadystatechange = () => {
+    //   console.log(document.readyState)
+    // }
+
+    window.onload = () => {
+      console.log('window onload')
+      loading.style.opacity = 0
+      setTimeout(() => {
+        loading.style.display = 'none'
+      }, 3000)
+    }
+
+
+    for (const image of images) {
+      image.onload = () => {
+        loaded++
+        loadingProgress.innerText = Math.round(loaded / images.length * 100) + '%'
+      }
+    }
+  </script>
+</body>
+
+</html>
