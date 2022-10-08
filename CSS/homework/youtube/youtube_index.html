@@ -7,27 +7,122 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title> YouTube</title>
   <link rel="icon" href="./icon/icons8-youtube-48.png" type="image/x-icon" />
-  <link rel="stylesheet" href="./css/index.css">
+  <link rel="stylesheet" href="./css/style2.css">
   <link rel="stylesheet" href="./css/reset.css">
 </head>
 
 <body>
-  <div id="content" class="style-scope">
-    <div id="container" class="style-scope">
-      <div id="container-2" class="search">
-        <div id="youtube" class="more">
-          <input id="search" type="text" placeholder="搜尋">
-          <input id="search2" type="image" src="./icon/icons8-search-50-2.png">
-          <input id="menu" type="image" src="./icon/icons8-menu-24.png">
-          <input id="youtubeIcon" type="image" src="./icon/YouTube＿LOGO-removebg-preview.png">
-          <input id="microphone" type="image" src="./icon/icons8-microphone-30.png">
-          <input id="more" type="image" src="./icon/icons8-more-25.png">
-          <input id="button" type="button" value="登入">
+  <!-- 右邊 -->
+  <div id="container">
+    <div id="container-left">
+      <div id="leftTop">
+        <input id="ytmenu" type="image" src="./icon/icons8-menu-24.png">
+        <a id="ytLogo" href="">
+          <img src="./icon/YouTube＿LOGO-removebg-preview.png" alt="">
+        </a>
+      </div>
+      <div id="leftMenu">
+        <div id="menuTop">
+          <ul>
+            <li><a href="" title="首頁">
+              <img src="./icon/home.png" alt="home">
+              <span>首頁</span> 
+            </a></li>
+            <li><a href="" title="探索">
+              <img src="./icon/explore.png" alt="explore">
+              <span>探索</span></a></li>
+            <li><a href="" title="Shorts">
+              <img src="./icon/short.png" alt="">
+              <span>Shorts</span></a></li>
+            <li><a href="" title="訂閱內容">
+              <img src="./icon/sub.png" alt="">
+              <span>訂閱內容</span></a></li>
+          </ul>
         </div>
-        
+        <div id="menu2">
+          <ul>
+            <li><a href="" title="媒體庫">
+              <img src="./icon/媒體庫.png" alt="媒體庫">
+              <span>媒體庫</span>
+            </a></li>
+            <li><a href="" title="觀看紀錄">
+              <img src="./icon/觀看紀錄.png" alt="觀看紀錄">
+              <span>觀看紀錄</span>
+            </a></li>
+          </ul>
+        </div>
+        <div id="menuAccount">
+          <span>登入帳戶即可對影片表示喜歡、發布留言及訂閱頻道。</span>
+          <br>
+          <a id="accountHref2"
+            href="https://accounts.google.com/v3/signin/identifier?dsh=S1745529068%3A1665217912871023&continue=https%3A%2F%2Fwww.youtube.com%2Fsignin%3Faction_handle_signin%3Dtrue%26app%3Ddesktop%26hl%3Dzh-TW%26next%3Dhttps%253A%252F%252Fwww.youtube.com%252F%253FthemeRefresh%253D1&ec=65620&hl=zh-TW&passive=true&service=youtube&uilel=3&flowName=GlifWebSignIn&flowEntry=ServiceLogin&ifkv=AQDHYWr-FKcuWDVhzfC6U8DFcI_7fKz1bFwC1xsaj2hbEWdBjHpvcxJ6gNxskZoF38MqTpkyzg0u0g">
+            <img id="account2" src="./icon/accountBlue-removebg-preview.png" alt="登入">
+            <span id="text2">登入</span>
+          </a>
+        </div>
+        <div id="menuExplore">
+          <div>探索</div>
+          <ul>
+            <li><a href="" title="音樂">音樂</a></li>
+            <li><a href="" title="體育">體育</a></li>
+            <li><a href="" title="遊戲">遊戲</a></li>
+            <li><a href="" title="電影">電影</a></li>
+            <li><a href="" title="新聞">新聞</a></li>
+            <li><a href="" title="直播">直播</a></li>
+            <li><a href="" title="360度影片">360度影片</a></li>
+          </ul>
+        </div>
+        <div id="menuYT"></div>
+        <div id="menuMore"></div>
+        <div id="menuSetting"></div>
+        <div id="menubutton"></div>
+      </div>
+    </div>
+    <!-- 左邊 -->
+    <div id="container-right">
+      <div id="top">
+        <div id="search">
+          <img id="search-icon" src="./icon/icons8-search-50-2.png" alt="">
+          <input type="search" id="search-text" placeholder=" 搜尋">
+          <i id="icon2B">
+            <a href="" title="搜尋">
+              <img id="search-icon2" src="./icon/icons8-search-50-2.png" alt="搜尋">
+            </a></i>
+          <div>
+            <a href="" title="使用語音搜尋">
+              <img id="micro" src="./icon/icons8-microphone-30.png" alt="使用語音搜尋">
+            </a>
+          </div>
+          <a id="accountHref"
+            href="https://accounts.google.com/v3/signin/identifier?dsh=S1745529068%3A1665217912871023&continue=https%3A%2F%2Fwww.youtube.com%2Fsignin%3Faction_handle_signin%3Dtrue%26app%3Ddesktop%26hl%3Dzh-TW%26next%3Dhttps%253A%252F%252Fwww.youtube.com%252F%253FthemeRefresh%253D1&ec=65620&hl=zh-TW&passive=true&service=youtube&uilel=3&flowName=GlifWebSignIn&flowEntry=ServiceLogin&ifkv=AQDHYWr-FKcuWDVhzfC6U8DFcI_7fKz1bFwC1xsaj2hbEWdBjHpvcxJ6gNxskZoF38MqTpkyzg0u0g">
+            <img id="account" src="./icon/accountBlue-removebg-preview.png" alt="登入">
+            <span id="text">登入</span>
+          </a>
+          <a href="" title="設定">
+            <img id="more" src="./icon/icons8-more-25.png" alt="更多">
+          </a>
+        </div>
+        <div id="littleButtom">
+          <ul id="menu">
+            <li> <a href="#all">全部</a></li>
+            <li><a href="#game">遊戲</a></li>
+            <li><a href="#music">音樂</a></li>
+            <li><a href="#live">直播中</a></li>
+            <li><a href="#animate">動畫</a></li>
+            <li><a href="#baseball">棒球</a></li>
+            <li><a href="#tourism">觀光</a></li>
+            <li><a href="#cook">烹飪</a></li>
+            <li><a href="#news">最新上傳</a></li>
+          </ul>
+        </div>
+        <div id="maincontainer">
+        </div>
       </div>
     </div>
   </div>
 </body>
+<script>
+
+</script>
 
 </html>

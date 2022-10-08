@@ -38,6 +38,10 @@ body {
   transform: translate(-50%, -50%);
 }
 
+#search:hover{
+  border-color: blue;
+}
+
 #search2 {
   position: absolute;
   width: 23px;
@@ -179,27 +183,27 @@ div#menu-more {
   font-size: 0;
   text-decoration: none;
   white-space: nowrap;
-  word-wrap:break-word;
+  word-wrap: break-word;
   color: white;
 }
 
 #menu-more .menu li {
   display: block;
   margin: 5px 5px 0 5px;
-  padding: 0.5rem 0;
-
+  /* padding: 20px 0 13px 0; */
 }
 
-#menu-more .menu li a {
+#menu-more .menu li input {
   /* 和父元素li寬度一樣 padding可以使用不會溢出 */
   display: block;
   color: white;
   text-decoration: none;
-  padding: 3rem 1rem 0 ;
   font-size: 12px;
+  /* padding: 3rem 0 0 0; */
 }
 
-#menu-more .menu li a:hover {
+
+#menu-more .menu li input:hover {
   background: rgba(255, 255, 255, 0.533);
   color: black;
 }
@@ -212,8 +216,46 @@ div#menu-more {
   top: 24px;
 }
 
-#homepage {
+#home {
+  width: 60px;
   position: absolute;
-  top: 20px;
+  top: 60px;
+  left: 8px;
+}
 
+#explore {
+  width: 60px;
+  position: absolute;
+  top: 120px;
+  left: 8px;
+}
+
+#shorts {
+  width: 60px;
+  position: absolute;
+  top: 180px;
+  left: 8px;
+}
+
+#sub {
+  width: 60px;
+  position: absolute;
+  top: 240px;
+  left: 8px;
+}
+
+#libary{
+  width: 65px;
+  position: absolute;
+  top: 300px;
+  left: 6px;
+}
+
+#contents{
+  width: 100%;
+  overflow: auto;
+  background: transparent;
+  margin-top: 24px;
+  padding: 0;
+  border: 0;
 }
