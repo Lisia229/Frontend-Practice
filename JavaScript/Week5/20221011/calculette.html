@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>calculette</title>
+  <style>
+    .textStyle {
+      text-align: right;
+    }
+
+    .border {
+      border: 1px solid black;
+    }
+
+    table {
+      width: 150px;
+      height: 200px;
+    }
+
+    td {
+      width: 50px;
+    }
+
+    .textStyle2 {
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <table border="1">
+    <tr class="textStyle">
+      <td colspan="4" id="text">0</td>
+    </tr>
+    <tr class="textStyle2">
+      <td>C</td>
+      <td>/</td>
+      <td>*</td>
+      <td>-</td>
+    </tr>
+    <tr class="textStyle2">
+      <td>7</td>
+      <td>8</td>
+      <td>9</td>
+      <td rowspan="2">+</td>
+    </tr>
+    <tr class="textStyle2">
+      <td>4</td>
+      <td>5</td>
+      <td>6</td>
+    </tr>
+    <tr class="textStyle2">
+      <td>1</td>
+      <td>2</td>
+      <td>3</td>
+      <td rowspan="2"> = </td>
+    </tr>
+    <tr class="textStyle2">
+      <td colspan="2">0</td>
+      <td>.</td>
+    </tr>
+  </table>
+
+  <script>
+    const text = document.getElementById('text')
+    const btns = document.querySelectorAll('td:not(#text)')
+
+    for (const btn of btns) {
+      btn.onclick = () => {
+        const btnText = btn.innerText
+        if (btnText === '=') {
+          text.innerText = eval(text.innerText)
+        } else if (btnText === 'C') {
+          text.innerText = '0'
+        } else {
+          if (text.innerText === '-' && isNaN(parseInt(btnText))) return
+          if (text.innerText !== '0') {
+            text.innerText += btnText
+          } else if (!['+', '*', '/'].includes(btnText)) {
+            text.innerText = btnText
+          }
+        }
+      }
+    }
+    document.onkeydown = event => {
+      const btnText = event.key
+      if (btnText === 'Enter' || btnText === '=') {
+        text.innerText = eval(text.innerText)
+      } else if (btnText === 'C') {
+        text.innerText = '0'
+      } else {
+        if (text.innerText === '-' && isNaN(parseInt(btnText))) return
+        if (text.innerText !== '0') {
+          text.innerText += btnText
+        } else if (!['+', '*', '/'].includes(btnText)) {
+          text.innerText = btnText
+        }
+      }
+    }
+  </script>
+</body>
+
+</html>
