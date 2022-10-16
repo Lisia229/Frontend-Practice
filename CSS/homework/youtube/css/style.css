@@ -80,20 +80,19 @@ body {
 
 #search-icon2 {
   position: absolute;
-  width: 40px;
+  width: 55px;
+  padding: 6px 15px;
   height: 35px;
   left: 57%;
   top: 10px;
   background: rgba(65, 65, 65, 0.5);
-  padding: 8.5px 20px;
-  z-index: 1;
 }
 
 #micro {
   position: absolute;
   width: 35px;
   height: 35px;
-  left: 60%;
+  left: 62%;
   top: 10px;
   border-radius: 50%;
   background: rgb(21, 21, 21);
@@ -134,7 +133,7 @@ body {
   top: 18px;
   width: 18px;
   height: 18px;
-  right: 6.5%;
+  right: 8%;
 }
 
 #menu {
@@ -184,7 +183,7 @@ body {
   position: absolute;
   left: 15%;
   top: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
 }
 
 #leftMenu {
@@ -458,22 +457,22 @@ body {
 }
 
 .row {
-  width:calc(100% - 130px);
+  width: calc(100% - 100px);
   padding-top: 135px;
   margin-left: 4%;
   margin-right: 4%;
 }
 
 .col {
-  width: 24.7%;
+  width: 24.6%;
   display: inline-block;
   vertical-align: top;
   /* display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr */
 }
 
-.col2{
-  width: 10.8%;
+.col2 {
+  width: 16%;
   display: inline-block;
   vertical-align: top;
 }
@@ -487,29 +486,29 @@ body {
 }
 
 .col:hover {
-  transform: scale(1.2);
-  transition-delay: 1.5s;
+  transform: scale(1.1);
+  /* transition-delay: 1s; */
   background: #111;
 }
 
-.shorts{
+.shorts {
   color: white;
   font-size: 25px;
   margin-bottom: 20px;
-  font-family: "Roboto","Arial",sans-serif;
+  font-family: "Roboto", "Arial", sans-serif;
 }
 
 
 
-.shorts img{
+.shorts img {
   width: 50px;
 }
 
-.content-size h2{
+.content-size h2 {
   color: white;
   line-height: 1;
   font-size: 16px;
-  font-family: "Roboto","Arial",sans-serif;
+  font-family: "Roboto", "Arial", sans-serif;
   font-weight: bolder;
   margin-top: 10px;
   overflow: hidden;
@@ -521,17 +520,18 @@ body {
   white-space: normal;
 }
 
-.content-size h3{
+.content-size h3 {
   color: rgb(130, 130, 130);
   line-height: 2rem;
   font-size: 14px;
+  white-space: nowrap;
 }
 
 .classimg {
   width: 100%;
 }
 
-.line-col{
+.line-col {
   width: 100%;
   height: 5px;
   background-color: rgb(55, 55, 55);
@@ -540,7 +540,7 @@ body {
   margin-bottom: 35px;
 }
 
-.line2-col{
+.line2-col {
   width: 100%;
   height: 5px;
   background-color: rgb(55, 55, 55);
@@ -578,7 +578,7 @@ body {
 
 .ytname {
   width: 80%;
-  font-family: "Roboto","Arial",sans-serif;
+  font-family: "Roboto", "Arial", sans-serif;
   padding-left: 10px;
   font-weight: bolder;
   color: rgb(190, 190, 190);
@@ -595,7 +595,7 @@ body {
 
 .accountsTime {
   width: 80%;
-  font-family: "Roboto","Arial",sans-serif;
+  font-family: "Roboto", "Arial", sans-serif;
   color: rgb(138, 138, 138);
   font-size: 12px;
   margin-left: 10px;
