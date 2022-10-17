@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="list">
+    <input type="button" value="點">
+    <ul>
+    </ul>
+  </div>
+  <input type="text" name="" id="text-input">
+  <p id="text"></p>
+
+  <div id="btngroup">
+    <input type="button" value="點">
+  </div>
+  <script src="./jquery-3.6.1.min.js"></script>
+  <script>
+    // .click(function(event){
+    //  $(this)指的是觸發事件的元素
+    // })
+    $('#list input[type=button]').click(function (event) {
+      const ul = $(this).siblings('ul')
+      // .prepend()裡面前面
+      // .append()裡面後面
+      // .insertBefore()外面前面
+      // .insertAfter()外面後面
+      // ()放html文字的話是新增 放取到的元素是移動位置
+      ul.prepend('<li>前面新的</li>')
+      ul.append('<li>後面新的</li>')
+      $('<p>外面前面新的</p>').insertBefore(ul)
+      $('<p>外面後面新的</p>').insertAfter(ul)
+    })
+
+    // .on(事件名稱, function(){
+    //  $(this)指的是觸發事件的元素
+    // })
+    $('#text-input').on('input', function () {
+      // .val()輸入的欄位是value
+      // ()沒東西是取值，有東西是改值
+      $('#text').text($(this).val())
+    })
+
+    // 後面新增的按鈕點擊無效 
+    // $('#btngroup input').click(function () {
+    //   $('#btngroup').append('<input type="button" value="點">')
+    // })
+
+    $('#btngroup').on('click', 'input', function (event) {
+      $('#btngroup').append('<input type="button" value="點">')
+    })
+
+  </script>
+</body>
+
+</html>

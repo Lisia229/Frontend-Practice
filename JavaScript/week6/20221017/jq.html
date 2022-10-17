@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .bg-black {
+      background-color: black;
+    }
+
+    .text-coral {
+      color: lightcoral;
+    }
+  </style>
+</head>
+
+<body>
+  <h1 id="title">標題</h1>
+  <p class="description">123</p>
+  <p class="description">456</p>
+  <div id="img">
+    <i>圖片</i>
+  </div>
+  <a id="link" href="http://google.com">Google</a>
+  <p class="text-red">123</p>
+  <p class="text-red">456</p>
+
+  <h2>123</h2>
+  <h2>456</h2>
+
+  <script src="./jquery-3.6.1.min.js"></script>
+  <script>
+    //$(CSS選擇器).text()
+    // ()小括號沒東西是取值，有東西是改值
+    console.log($('#title').text())
+    $('#title').text('早安你好')
+    console.log($('#title').text())
+
+    // 如果選擇器選中多個元素，取值會把全部連在一起，改值會全部一起改
+    console.log($('.description').text())
+    $('.description').text('AAABBB')
+    console.log($('.description').text())
+
+    // JQ用 .eq()指定第幾個
+    $('.description').eq(0).text('AAA')
+    $('.description').eq(1).text('BBB')
+    console.log($('.description').eq(0).text())
+    console.log($('.description').eq(1).text())
+
+    //$(CSS選擇器).html()
+    // ()小括號沒東西是取值，有東西是改值
+    // 用html換行的時候會有空白 可以用trim()把空白拿掉
+    console.log($('#img').html().trim())
+    $('#img').html('<img src="http://github.com/lisia229.png" width="100">')
+    console.log($('#img').html().trim())
+
+    //$(CSS選擇器).attr(屬性) ->屬性取值
+    //$(CSS選擇器).attr(屬性,值) ->屬性改值
+    console.log($('#link').attr('href'))
+    $('#link').attr('href', 'http://fb.com')
+    $('#link').text('FB')
+    console.log($('#link').attr('href'))
+
+    // $(CSS選擇器).CSS(樣式,值)->改樣式值
+    // $(CSS選擇器).CSS({樣式:值,樣式:值})->一次改多個樣式值
+    // $('.text-red').css('color', 'red')
+    // $('.text-red').css('font-size', '50px')
+    // $('.text-red').css('font-weight', 'bold')
+    $('.text-red').css({ color: 'red', fontSize: '50px', 'font-weight': 'bold' })
+    //  'font-weight'或 fontWeight 不能直接 font-weight因為-會變減號
+    //$(CSS選擇器).CSS(樣式,值)->取樣式值
+    console.log($('.text-red').css('color'))
+
+    //$(CSS選擇器).addClass(class名 空白分隔)->加class
+    //$(CSS選擇器).removeClass(class名 空白分隔)->移除class
+    //$(CSS選擇器).hasClass(class名 空白分隔)->有沒有class
+    //$(CSS選擇器).toggleClass(class名 空白分隔)->開關class
+    $('h2').addClass('text-coral bg-black')
+    $('h2').eq(0).removeClass('bg-black')
+    console.log($('h2').eq(0).hasClass('bg-black') ? '黑' : '白')
+    $('h2').eq(1).toggleClass('bg-black')
+
+
+  </script>
+</body>
+
+</html>

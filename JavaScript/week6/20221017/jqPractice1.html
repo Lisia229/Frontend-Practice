@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <input id="change-input" type="button" value="換">
+  <img id="change-img" src="./1126211.jpg" alt="" width="200">
+
+  <script src="./jquery-3.6.1.min.js"></script>
+
+  <script>
+    let img = true
+    $('#change-input').click(function () {
+      if ($('#change-img').attr('src').includes('1126211.jpg')) {
+        $('#change-img').attr('src', '1126221.jpg')
+      } else {
+        $('#change-img').attr('src', '1126211.jpg')
+      }
+      // if (img) {
+      //   $('#change-img').attr("src", "./1126221.jpg")
+      // } else {
+      //   $('#change-img').attr("src", "./1126211.jpg")
+      // }
+      // img = !img
+    })
+  </script>
+
+</body>
+
+</html>
