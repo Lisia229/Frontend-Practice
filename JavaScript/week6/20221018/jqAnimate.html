@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    img {
+      position: relative;
+    }
+  </style>
+</head>
+
+<body>
+  <input type="button" value="變大" id="btn1">
+  <input type="button" value="變小" id="btn">
+  <input type="button" value="移動" id="btn2">
+  <input type="button" value="移動" id="btn3">
+  <input type="button" value="停止" id="btn4">
+  <input type="button" value="淡入" id="btn5">
+  <input type="button" value="淡出" id="btn6">
+  <input type="button" value="半透明" id="btn7">
+  <input type="button" value="不透明" id="btn8">
+  <input type="button" value="滑入" id="btn10">
+  <input type="button" value="滑出" id="btn11">
+  <input type="button" value="重設" id="btn9">
+  <input type="button" value="切換淡入淡出" id="btn12">
+  <input type="button" value="切換滑入滑出" id="btn13">
+
+  <hr>
+  <img src="http://github.com/lisia229.png" alt="" id="img" width="100" height="100">
+  <script src="./jquery-3.6.1.min.js"></script>
+  <script>
+    $('#btn').click(function () {
+      $('#img').animate({
+        width: '100px',
+        height: '100px'
+      }, '3000', function () {
+        console.log('變小了')
+      })
+    })
+
+    $('#btn1').click(function () {
+      // .animate({樣式:值},動畫時間,function(){})
+      // 時間可以設定毫秒 fast slow
+      // 只能修改數字型態的css樣式
+      // 值可以直接指定或是相對+-
+      $('#img').animate({
+        width: '500px',
+        height: '500px'
+      }, '3000', function () {
+        console.log('變大了')
+      })
+    })
+
+    $('#btn2').click(function () {
+      $('#img').animate({
+        top: '+=50px',
+        left: '+=50px'
+      }, 1000, function () {
+        console.log('移動了')
+      })
+    })
+
+    $('#btn3').click(function () {
+      $('#img').animate({
+        top: '+=100px',
+      }, 1000, function () {
+        console.log('往下了')
+      }).animate({
+        left: '+=1000px'
+        // linear均速 原設有加減速       
+        // },1000,'linear',function(){
+      }, 1000, function () {
+        console.log('往右了')
+      })
+    })
+
+    $('#btn4').click(function () {
+      // .stop(是否停止之後的動畫，是否跳到目前動畫結束)
+      // 如果第二個設定true 第一個必須是true
+      $('#img').stop(true, false)
+    })
+
+    $('#btn5').click(function () {
+      // .fadeIn(時間,function)
+      // 都不給就是預設時間
+      $('#img').fadeIn(2000, function () {
+        console.log('淡入了')
+      })
+    })
+
+    $('#btn6').click(function () {
+      // .fadeOut(時間,function)
+      // 都不給就是預設時間
+      // 淡出後會display: none
+      $('#img').fadeOut(2000, function () {
+        console.log('淡出了')
+      })
+    })
+
+    $('#btn7').click(function () {
+      // .fadeOut(時間,不透明度,function)
+      $('#img').fadeTo(2000, 0.5)
+    })
+
+    $('#btn8').click(function () {
+      // .fadeTo(時間,不透明度,function)
+      $('#img').fadeTo(2000, 1)
+    })
+
+    $('#btn9').click(function () {
+      $('#img').removeAttr('style')
+    })
+
+    $('#btn10').click(function () {
+      $('#img').slideDown(1000)
+    })
+
+    $('#btn11').click(function () {
+      // 調整高度到0後display:none 會跑版 要注意
+      $('#img').slideUp(1000)
+    })
+
+    $('#btn12').click(function () {
+      $('#img').fadeToggle(1000)
+    })
+
+    $('#btn13').click(function () {
+      $('#img').slideToggle(1000)
+    })
+
+  </script>
+</body>
+
+</html>
