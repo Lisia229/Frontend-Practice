@@ -31,7 +31,7 @@ body {
 }
 
 
-#game {
+.game {
   width: 700px;
   height: 700px;
   background: url("../svg/bg.svg") no-repeat center/cover;
@@ -52,7 +52,7 @@ body {
 }
 
 .list {
-  width: 30vw;
+  width: 40vw;
   height: auto;
   border: 2px dotted white;
   margin: calc(40vh) auto;
@@ -111,7 +111,7 @@ body {
 .Introduction {
   color: white;
   background-color: rgb(46, 45, 45);
-  font-size: 15px;
+  font-size: 20px;
   padding: 10px;
   display: none;
 }
@@ -130,4 +130,13 @@ body {
   top: 10px;
   left: 10px;
   font-size: 25px;
+}
+
+.peoples{
+  z-index: 100;
+  width: 100px;
+  height: 100px;
+  background-size: contain;
+  position: absolute;
+  background-repeat: no-repeat;
 }
