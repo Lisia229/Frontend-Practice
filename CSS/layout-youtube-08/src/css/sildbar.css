@@ -1,0 +1,80 @@
+.sildbar__container {
+  position: fixed;
+  width: 240px;
+  height: calc(100vh - 56px);
+  top: 56px;
+  font-size: 14px;
+  overflow-y: auto;
+}
+.sildbar__container:hover {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.sildbar__container::-webkit-scrollbar {
+  display: none;
+}
+.sildbar__container:hover::-webkit-scrollbar {
+  display: block;
+}
+
+.sildbar--border {
+  width: 224px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  margin: 6px 0;
+}
+
+.sildbar__text {
+  padding: 8px 24px;
+  color: #606060;
+}
+
+.sildbar__navs {
+  width: 224px;
+  overflow: hidden;
+}
+.sildbar__navs__item {
+  margin: 0 12px;
+}
+.sildbar__navs__item--nav {
+  display: block;
+  padding: 10px 12px;
+  border-radius: 10px;
+}
+.sildbar__navs__item--nav:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+.sildbar__navs__item--nav--active {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.sildbar__navs__item--nav--icon {
+  margin-right: 24px;
+  width: 24px;
+  font-size: 24px;
+  vertical-align: middle;
+}
+
+.sildbar__login__container {
+  padding: 16px 26px 10px 26px;
+}
+.sildbar__login__text {
+  margin-bottom: 8px;
+}
+
+.sildbar__tags {
+  width: 224px;
+  font-size: 0;
+  padding: 8px 20px;
+}
+.sildbar__tags__tag {
+  display: inline-block;
+  font-size: 13px;
+  margin-right: 6px;
+}
+.sildbar__tags__tag--link {
+  color: rgb(96, 96, 96);
+}
+
+.sildbar__footer {
+  color: rgb(144, 144, 144);
+  padding: 8px 24px;
+}

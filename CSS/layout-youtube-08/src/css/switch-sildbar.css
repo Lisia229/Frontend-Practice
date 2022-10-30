@@ -1,0 +1,47 @@
+.switch__checkbox {
+  display: none;
+}
+.switch__checkbox:checked + .sildbar__container {
+  font-size: 12px;
+  text-align: center;
+}
+
+.switch__checkbox:checked + .sildbar__container .sildbar__navs {
+  width: 100px;
+}
+.switch__checkbox:checked
+  + .sildbar__container
+  .sildbar__navs__item--nav--icon {
+  display: block;
+  margin: auto;
+}
+.switch__checkbox:checked
+  + .sildbar__container
+  .sildbar__navs__item--nav--active {
+  background-color: white;
+}
+.switch__checkbox:checked
+  + .sildbar__container
+  .sildbar__navs__item--nav--active:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.switch__checkbox:checked + .sildbar__container .sildbar__smaillhidden {
+  display: none;
+  border: none;
+}
+.switch__checkbox:checked + .sildbar__container .sildbar--border {
+  border: none;
+  padding: 0;
+}
+
+.switch__checkbox:checked ~ .tags__container {
+  left: 100px;
+}
+
+.switch__checkbox:checked ~ .content__container {
+  margin-left: 150px;
+}
+.switch__checkbox:checked ~ .content__container .content__items__item {
+  width: 19%;
+}

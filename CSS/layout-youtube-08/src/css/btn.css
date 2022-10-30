@@ -1,0 +1,19 @@
+.btn__login {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  color: #065fd4;
+  padding: 5px 10px;
+  display: inline-block;
+  border-radius: 18px;
+  font-size: 14px;
+}
+.btn__login--icon {
+  font-size: 24px;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+.btn__login--text {
+  vertical-align: middle;
+}
+.btn__login:hover {
+  background-color: #def1ff;
+}
