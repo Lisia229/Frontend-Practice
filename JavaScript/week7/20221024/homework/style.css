@@ -1,0 +1,142 @@
+#background {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  font-family: 'Kalam';
+  background: black;
+}
+
+#gamestart {
+  width: 100%;
+  height: 50%;
+  position: relative;
+  text-align: center;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+/* 將 .typing-txt-block 背景圖的圖片以及高度設定好 */
+.typing-txt-block {
+  height: 70vh;
+  display: block;
+  background-image: url(https://p1-tt.byteimg.com/origin/pgc-image/901c206f68df45a1b75f83527524cdfb?from=pc);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* 接下來設定控制背景圖片 .bg-animation 的動態效果 */
+.typing-txt-block.bg-animation {
+  -webkit-animation: bg-animation 20s ease-in-out infinite;
+  animation: bg-animation 20s ease-in-out infinite;
+}
+
+/* -- 背景圖片上下位移 */
+@keyframes bg-animation {
+  0% {
+    background-position: top;
+  }
+
+  50% {
+    background-position: bottom;
+  }
+
+  100% {
+    background-position: top;
+  }
+}
+
+/* 利用 position 的觀念，將文字區塊垂直置中在圖片正中央 */
+.typing-txt-block .container h1 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+  letter-spacing: 5px;
+  color: transparent;
+  font-weight: bolder;
+  font-size: 30px;
+  font-family: 'Kalam';
+}
+
+/* 再利用偽元素 ::before ，將要呈現的文字顯示以及輸入文字動態效果的 css 樣式寫入 */
+.typing-txt-block .container h1::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  color: black;
+  overflow: hidden;
+  border-right: 1px solid #ffffff;
+  animation: type 3s steps(18), blink 0.5s infinite alternate;
+  -webkit-animation: type 3s steps(18), blink 0.5s infinite alternate;
+  white-space: nowrap;
+}
+
+/* type 的動畫設定： */
+/* -- 在 3 秒內將文字寬度以 18 格從 0% ~ 100% 顯示，只播放一次。 */
+@keyframes type {
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+
+/* 
+blink 的動畫設定：
+ -- 每 0.5s 顯示輸入的閃爍線，並無限播放閃爍線顏色(從透明變為白色) */
+@keyframes blink {
+  from {
+    border-color: transparent;
+  }
+
+  to {
+    border-color: #ffffff;
+  }
+}
+
+#btn a{
+  text-shadow: 3px 2px 1px #9daef5;
+  font-size: 30px;
+  text-decoration: none;
+  font-family: 'Kalam';
+  position: absolute;
+  left: 50%;
+  top: 65%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  border: 0;
+  color: white;
+  background: transparent;
+}
+
+/* 懸停樣式 */
+#btn a:hover {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+/* 遊戲開始 */
+#startgame{
+  background: black;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  font-family: 'Kalam';
+  text-align: center;
+}
+

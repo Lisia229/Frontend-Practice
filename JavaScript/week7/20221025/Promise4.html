@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    const wait = (ms, ok) => {
+      return new Promise((resolve, reject) => {
+        setTimeout(() => {
+          if (ok) resolve(`過了${ms}毫秒`)
+          else reject(new Error(`錯誤，過了${ms}毫秒`))
+        }, ms)
+      })
+    }
+
+    // Promise.all(Promise陣列)
+    // 陣列內都成功才會,then()
+    // 只要陣列有一個先reject就會直接跳到catch
+    Promise.all([wait(2000, true), wait(5000, true)])
+      .then(results => {
+        console.log(results)
+      })
+      .catch(error => {
+        console.log(error)
+      })
+
+    // Promise.race(Promise陣列)
+    // 回傳第一個成功的resolve就到,then() reject就到catch
+      Promise.race([wait(2000, false),wait(2000, true), wait(5000, true)])
+      .then(results => {
+        console.log(results)
+      })
+      .catch(error => {
+        console.log(error)
+      })
+  </script>
+</body>
+
+</html>
