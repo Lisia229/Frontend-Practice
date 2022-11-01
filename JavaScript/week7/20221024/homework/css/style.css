@@ -106,32 +106,57 @@ blink 的動畫設定：
   }
 }
 
-#btn a{
-  text-shadow: 3px 2px 1px #9daef5;
-  font-size: 30px;
-  text-decoration: none;
-  font-family: 'Kalam';
+#menu {
   position: absolute;
-  left: 50%;
-  top: 65%;
-  transform: translate(-50%, -50%);
+  top: 100%;
+  left: 30%;
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
-  border: 0;
-  color: white;
-  background: transparent;
+  transform: translate(-50%, -50%);
 }
 
-/* 懸停樣式 */
-#btn a:hover {
-  color: black;
-  text-decoration: none;
+#menu1{
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+
+#menu2{
+  position: absolute;
+  top: 100%;
+  left: 70%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+
+
+#menu img:hover {
+  box-shadow: 0px 0px 15px rgb(13, 132, 19),
+  0px 0px 15px rgb(129, 233, 10);
+  cursor: pointer;
+}
+
+#menu1 img:hover {
+  box-shadow: 0px 0px 15px rgb(14, 93, 140),
+  0px 0px 15px rgb(10, 200, 233);
+  cursor: pointer;
+}
+
+#menu2 img:hover {
+  box-shadow: 0px 0px 15px rgb(179, 167, 5),
+  0px 0px 15px rgb(251, 255, 2);
   cursor: pointer;
 }
 
 
 /* 遊戲開始 */
-#startgame{
+#startgame {
   background: black;
   width: 100vw;
   height: 100vh;
@@ -140,3 +165,99 @@ blink 的動畫設定：
   text-align: center;
 }
 
+#gamecontent {
+  width: 1300px;
+  height: 700px;
+  margin: auto;
+}
+
+.card {
+  width: 200px;
+  height: 300px;
+  position: relative;
+  float: left;
+  margin: 20px 29.5px;
+  transition: transform 1s;
+  /* 設定子元素在 3D 空間內 */
+  transform-style: preserve-3d;
+}
+
+.card-front {
+  width: 200px;
+  height: 300px;
+  background-image: url(../images/1M.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  /* 設定隱藏背面 */
+  backface-visibility: hidden;
+}
+
+.card-back {
+  width: 100%;
+  height: 100%;
+  background-image: url('https://i.imgur.com/k19uJRS.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  transform: rotateY(180deg);
+  /* 設定隱藏背面 */
+  backface-visibility: hidden;
+}
+
+.card-close {
+  transform: rotateY(180deg);
+}
+
+.mask {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: rgb(0, 0, 0);
+  opacity: 0.8;
+  z-index: 10000;
+  text-align: center;
+}
+
+.list {
+  width: 35vw;
+  height: auto;
+  border: 2px dotted white;
+  margin: calc(30vh) auto;
+  padding: 10px;
+}
+
+.list h2 {
+  color: white;
+  margin: 30px auto;
+  height: 50px;
+  line-height: 50px;
+}
+
+.list a {
+  text-decoration: none;
+  font-weight: bolder;
+  display: block;
+  color: white;
+  font-family: '俐方體11號';
+}
+
+.list a:hover {
+  color: black;
+}
+
+.list h2:hover {
+  background-color: gray;
+  color: black;
+  cursor: pointer;
+}
+
+.btn img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
