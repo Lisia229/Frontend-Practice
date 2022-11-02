@@ -4,7 +4,7 @@ $(".mask").hide();
 let score = 0
 
 // 產生卡片
-for (let i = 0; i < 10; i++) {
+for (let i = 0; i < 12; i++) {
   $('#gamecontent').append(`
     <div class="card card-close">
       <div class="card-front"></div>
@@ -15,7 +15,7 @@ for (let i = 0; i < 10; i++) {
 for (let i = 0; i < $('.card').length; i++) {
   // 決定數字
   const num = i % ($('.card').length / 2) + 1
-  $('.card').eq(i).find('.card-front').css('background-image', `url(./images/${num}M.jpg)`)
+  $('.card').eq(i).find('.card-front').css('background-image', `url(./images/${num}S.jpg)`)
   $('.card').eq(i).attr('data-num', num)
 
   // 打散

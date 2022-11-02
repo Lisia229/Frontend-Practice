@@ -115,7 +115,7 @@ blink 的動畫設定：
   transform: translate(-50%, -50%);
 }
 
-#menu1{
+#menu1 {
   position: absolute;
   top: 100%;
   left: 50%;
@@ -125,7 +125,7 @@ blink 的動畫設定：
 }
 
 
-#menu2{
+#menu2 {
   position: absolute;
   top: 100%;
   left: 70%;
@@ -137,20 +137,26 @@ blink 的動畫設定：
 
 
 #menu img:hover {
+  width: 250px;
+  height: 250px;
   box-shadow: 0px 0px 15px rgb(13, 132, 19),
-  0px 0px 15px rgb(129, 233, 10);
+    0px 0px 15px rgb(129, 233, 10);
   cursor: pointer;
 }
 
 #menu1 img:hover {
+  width: 250px;
+  height: 250px;
   box-shadow: 0px 0px 15px rgb(14, 93, 140),
-  0px 0px 15px rgb(10, 200, 233);
+    0px 0px 15px rgb(10, 200, 233);
   cursor: pointer;
 }
 
 #menu2 img:hover {
+  width: 250px;
+  height: 250px;
   box-shadow: 0px 0px 15px rgb(179, 167, 5),
-  0px 0px 15px rgb(251, 255, 2);
+    0px 0px 15px rgb(251, 255, 2);
   cursor: pointer;
 }
 
@@ -163,12 +169,16 @@ blink 的動畫設定：
   overflow: hidden;
   font-family: 'Kalam';
   text-align: center;
+  position: relative;
+  display: flex;
+  align-items: center;
 }
 
 #gamecontent {
   width: 1300px;
   height: 700px;
   margin: auto;
+  position: relative;
 }
 
 .card {
@@ -197,7 +207,7 @@ blink 的動畫設定：
 .card-back {
   width: 100%;
   height: 100%;
-  background-image: url('https://i.imgur.com/k19uJRS.jpg');
+  background-image: url('../images/k19uJRS.jpg');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -217,8 +227,9 @@ blink 的動畫設定：
   right: 0;
   left: 0;
   bottom: 0;
-  background: rgb(0, 0, 0);
-  opacity: 0.8;
+  /* background: rgb(0, 0, 0); */
+  background: url(../images/mononoke031.jpg) no-repeat center/cover;
+  opacity: 0.5;
   z-index: 10000;
   text-align: center;
 }
@@ -226,13 +237,13 @@ blink 的動畫設定：
 .list {
   width: 35vw;
   height: auto;
-  border: 2px dotted white;
-  margin: calc(30vh) auto;
+  border: 4px dotted black;
+  margin: calc(25vh) auto;
   padding: 10px;
 }
 
 .list h2 {
-  color: white;
+  color: black;
   margin: 30px auto;
   height: 50px;
   line-height: 50px;
@@ -242,7 +253,7 @@ blink 的動畫設定：
   text-decoration: none;
   font-weight: bolder;
   display: block;
-  color: white;
+  color: black;
   font-family: '俐方體11號';
 }
 
@@ -251,7 +262,7 @@ blink 的動畫設定：
 }
 
 .list h2:hover {
-  background-color: gray;
+  background-color: white;
   color: black;
   cursor: pointer;
 }
@@ -260,4 +271,10 @@ blink 的動畫設定：
   width: 200px;
   height: 200px;
   border-radius: 50%;
+}
+
+#con:hover{
+  background-color: rgb(180, 50, 14);
+  color: black;
+  cursor: pointer;
 }
