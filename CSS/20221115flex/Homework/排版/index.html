@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      font-family: 'arial';
+    }
+
+    .container {
+      width: 100vw;
+      height: 100vh;
+      background: url(./images/bg-full.jpg) no-repeat center/cover;
+      /* 設置背景混和模式為相乘模式 */
+      background-blend-mode: multiply;
+      /* 透明度 0.6 的黑色半透明遮罩 */
+      background-color: rgba(0, 0, 0, 0.6);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .row {
+      width: 75%;
+      height: 75%;
+      display: flex;
+      background: black;
+      flex-direction: column;
+      flex-wrap: wrap;
+      border: 1px solid rgb(98, 98, 98);
+    }
+
+    .col1 {
+      width: 50%;
+      height: 100%;
+      background: url(./images/main.jpg) no-repeat center/cover;
+      /* 設置背景混和模式為相乘模式 */
+      background-blend-mode: multiply;
+      /* 透明度 0.6 的黑色半透明遮罩 */
+      background-color: rgba(0, 0, 0, 0.5);
+      justify-content: center;
+      color: white;
+      text-align: center;
+      display: flex;
+    }
+
+    .col1-2 {
+      padding: 0 40px;
+    }
+
+    .col1 img {
+      width: 35%;
+      margin: 10px;
+      margin: auto;
+      padding-top: 90px;
+    }
+
+    .col2 {
+      width: 50%;
+      height: 50%;
+      background: rgb(190, 190, 190);
+      align-items: center;
+      display: flex;
+      flex-direction: row;
+    }
+
+    .col2-2 {
+      padding-left: 30px;
+    }
+
+    .col2 img {
+      width: 50%;
+      height: 100%;
+      align-items: flex-end;
+    }
+
+    .col3 {
+      width: 50%;
+      height: 50%;
+      align-items: center;
+      background: url(./images/tifa.png) no-repeat;
+      background-position: left bottom;
+      display: flex;
+      justify-content: center;
+      background-size: 40%;
+      color: white;
+    }
+
+    .col3-2 {
+      padding-left: 12rem;
+      padding-right: 3rem;
+
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col1">
+        <div class="col1-2">
+          <img src="./images/ps4-ff7.png" alt="">
+          <h1>AVAILABLE NOW</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis necessitatibus ex architecto harum,
+            id
+            iusto illum nemo modi? Distinctio aut vel voluptate alias modi non numquam obcaecati architecto, laborum
+            deleniti.</p>
+        </div>
+      </div>
+      <div class="col2">
+        <div class="col2-2">
+          <h1>Cloud</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur at quos praesentium aspernatur quam. Vitae
+            adipisci minima explicabo veritatis dolorem! Fugiat quam et illum odio totam quaerat iure fugit eius!</p>
+        </div>
+        <img src="./images/cloud.png" class="align-right" alt="">
+      </div>
+      <div class="col3">
+        <div class="col3-2">
+          <h1>Tifa</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur at quos praesentium aspernatur quam. Vitae
+            adipisci minima explicabo veritatis dolorem! Fugiat quam et illum odio totam quaerat iure fugit eius!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

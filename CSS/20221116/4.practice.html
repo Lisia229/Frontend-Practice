@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      transition: 1s;
+    }
+
+    img {
+      width: 100%;
+      vertical-align: middle;
+    }
+
+    h3 {
+      margin: 0.5rem 0;
+    }
+
+    .container {
+      width: 100%;
+      padding: 0 15px;
+      margin: auto;
+    }
+
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .col {
+      width: 100%;
+      border: 1px solid #333;
+      padding: 15px;
+
+
+      /* 注意!!!如果col裡面設定了margin
+      下面設定值的時候就要記得扣掉 1.5% * 2 = 3% */
+      margin: 1.5%;
+    }
+
+    @media(min-width: 576px) {
+
+      .col {
+        width: 47%;
+      }
+    }
+
+    @media(min-width: 768px) {
+      .col {
+        width: 30%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <img src="https://picsum.photos/800/600/?andom=1">
+        <h3>人士一點團</h3>
+        <p>鏡頭玩家建設上一頁是啊這麼多，最多有了因為女子轉換投資，拿。</p>
+      </div>
+      <div class="col">
+        <img src="https://picsum.photos/800/600/?andom=1">
+        <h3>人士一點團</h3>
+        <p>鏡頭玩家建設上一頁是啊這麼多，最多有了因為女子轉換投資，拿。</p>
+      </div>
+      <div class="col">
+        <img src="https://picsum.photos/800/600/?andom=1">
+        <h3>人士一點團</h3>
+        <p>鏡頭玩家建設上一頁是啊這麼多，最多有了因為女子轉換投資，拿。</p>
+      </div>
+      <div class="col">
+        <img src="https://picsum.photos/800/600/?andom=1">
+        <h3>人士一點團</h3>
+        <p>鏡頭玩家建設上一頁是啊這麼多，最多有了因為女子轉換投資，拿。</p>
+      </div>
+      <div class="col">
+        <img src="https://picsum.photos/800/600/?andom=1">
+        <h3>人士一點團</h3>
+        <p>鏡頭玩家建設上一頁是啊這麼多，最多有了因為女子轉換投資，拿。</p>
+      </div>
+      <div class="col">
+        <img src="https://picsum.photos/800/600/?andom=1">
+        <h3>人士一點團</h3>
+        <p>鏡頭玩家建設上一頁是啊這麼多，最多有了因為女子轉換投資，拿。</p>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
