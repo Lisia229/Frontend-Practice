@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // pending 還沒發生或等待中，你還不知道考試結果
+    // resolved 順利通過考試，拿到零用錢
+    // rejected 沒讀書考不好，沒有零用錢
+    // Promise 就跟單字的意思一樣，就是承諾
+    // 當承諾達成時，執行 .then() 內的程式，若有錯誤則執行 .catch() 內的程式
+    const pass = true
+    const willEatPizza = new Promise((resolve, reject) => {
+      if (pass) {
+        resolve('恭喜')
+      } else {
+        reject(new Error('QQ'))
+      }
+    })
+
+    willEatPizza
+    // promise成功時執行 .then()
+
+      .then(result => {
+        console.log(result);
+      })
+      // promise失敗時執行 .catch()
+      .catch(error=>{
+        console.log(error)
+      })
+      // 不管Promise成功失敗都執行 .finally()
+      .finally(()=>{
+        console.log('Promise結果')
+      })
+  </script>
+</body>
+
+</html>

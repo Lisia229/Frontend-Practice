@@ -1,0 +1,991 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>layout-youtube</title>
+    <link rel="stylesheet" href="./src/css/style.css" />
+  </head>
+  <body>
+    <header class="header__container">
+      <div class="header__logo">
+        <label for="switch"
+          ><i class="fa-solid fa-bars header__logo--icon"></i
+        ></label>
+        <a href="#">
+          <img
+            src="./src/img/svg/logo.svg"
+            alt="youtube"
+            title="youtube"
+            class="header__logo--logo"
+          />
+          <span class="header__logo__link--text">TW</span>
+        </a>
+      </div>
+      <div class="header__search">
+        <input
+          type="text"
+          placeholder="搜尋"
+          class="header__search__content--input"
+        />
+        <i
+          class="fa-solid fa-magnifying-glass header__search__content--icon"
+        ></i>
+        <span class="header__search__content__iconblack">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </span>
+        <a href="#" class="header__search--icon" title="使用語音搜尋">
+          <i class="fa-solid fa-microphone"></i>
+        </a>
+      </div>
+      <div class="header__login">
+        <a href="#">
+          <i class="fa-solid fa-ellipsis-vertical header__login--icon"></i>
+        </a>
+        <a href="#" class="btn__login">
+          <i class="fa-regular fa-circle-user btn__login--icon"></i>
+          <span class="btn__login--text">登入</span>
+        </a>
+      </div>
+    </header>
+    <input type="checkbox" id="switch" class="switch__checkbox" />
+    <div class="sildbar__container">
+      <nav class="sildbar__navs">
+        <ul>
+          <li class="sildbar__navs__item">
+            <a
+              href="#"
+              class="sildbar__navs__item--nav sildbar__navs__item--nav--active"
+              ><i class="fa-solid fa-house sildbar__navs__item--nav--icon"></i
+              >首頁
+            </a>
+          </li>
+          <li class="sildbar__navs__item">
+            <a href="#" class="sildbar__navs__item--nav"
+              ><i
+                class="fa-regular fa-compass sildbar__navs__item--nav--icon"
+              ></i
+              >探索</a
+            >
+          </li>
+          <li class="sildbar__navs__item">
+            <a href="`#" class="sildbar__navs__item--nav"
+              ><i class="fa-solid fa-ticket sildbar__navs__item--nav--icon"></i
+              >Shorts</a
+            >
+          </li>
+          <li class="sildbar__navs__item">
+            <a href="#" class="sildbar__navs__item--nav"
+              ><i
+                class="fa-brands fa-youtube sildbar__navs__item--nav--icon"
+              ></i
+              >訂閱內容</a
+            >
+          </li>
+          <li class="sildbar__navs__item">
+            <a href="#" class="sildbar__navs__item--nav"
+              ><i
+                class="fa-regular fa-file-audio sildbar__navs__item--nav--icon"
+              ></i
+              >媒體庫</a
+            >
+          </li>
+          <li class="sildbar__navs__item">
+            <a href="#" class="sildbar__navs__item--nav"
+              ><i
+                class="fa-solid fa-clock-rotate-left sildbar__navs__item--nav--icon"
+              ></i
+              >觀看紀錄</a
+            >
+          </li>
+        </ul>
+      </nav>
+      <div class="sildbar--border"></div>
+      <div class="sildbar__smaillhidden">
+        <div class="sildbar__login__container">
+          <p class="sildbar__login__text">
+            登入帳戶即可對影片表示喜歡、發布留言及訂閱頻道。
+          </p>
+          <a href="#" class="btn__login">
+            <i class="fa-regular fa-circle-user btn__login--icon"></i>
+            <span class="btn__login--text">登入</span>
+          </a>
+        </div>
+        <div class="sildbar--border"></div>
+        <p class="sildbar__text">探索</p>
+        <nav class="sildbar__navs">
+          <ul>
+            <li class="sildbar__navs__item">
+              <a href="#" class="sildbar__navs__item--nav"
+                ><i class="fa-solid fa-music sildbar__navs__item--nav--icon"></i
+                >音樂</a
+              >
+            </li>
+            <li class="sildbar__navs__item">
+              <a href="#" class="sildbar__navs__item--nav"
+                ><i
+                  class="fa-solid fa-trophy sildbar__navs__item--nav--icon"
+                ></i
+                >體育</a
+              >
+            </li>
+            <li class="sildbar__navs__item">
+              <a href="#" class="sildbar__navs__item--nav"
+                ><i class="fas fa-gamepad sildbar__navs__item--nav--icon"></i
+                >遊戲</a
+              >
+            </li>
+            <li class="sildbar__navs__item">
+              <a href="#" class="sildbar__navs__item--nav"
+                ><i class="fa-solid fa-video sildbar__navs__item--nav--icon"></i
+                >電影</a
+              >
+            </li>
+            <li class="sildbar__navs__item">
+              <a href="#" class="sildbar__navs__item--nav"
+                ><i
+                  class="fab fa-hacker-news sildbar__navs__item--nav--icon"
+                ></i
+                >新聞</a
+              >
+            </li>
+            <li class="sildbar__navs__item">
+              <a href="#" class="sildbar__navs__item--nav"
+                ><i class="fas fa-chart-bar sildbar__navs__item--nav--icon"></i
+                >直播</a
+              >
+            </li>
+            <li class="sildbar__navs__item">
+              <a href="#" class="sildbar__navs__item--nav"
+                ><i
+                  class="fas fa-circle-notch sildbar__navs__item--nav--icon"
+                ></i
+                >360度影片</a
+              >
+              <div class="sildbar--border"></div>
+            </li>
+            <li class="sildbar__navs__item">
+              <a href="#" class="sildbar__navs__item--nav"
+                ><i
+                  class="fas fa-plus-circle sildbar__navs__item--nav--icon"
+                ></i
+                >瀏覽頻道</a
+              >
+              <div class="sildbar--border"></div>
+            </li>
+          </ul>
+        </nav>
+        <p class="sildbar__text">更多 YouTube 功能</p>
+        <nav class="sildbar__navs">
+          <ul>
+            <li class="sildbar__navs__item">
+              <a href="#" class="sildbar__navs__item--nav">
+                <img
+                  src="./src/img/svg/premium.svg"
+                  alt="Premium"
+                  title="Premium"
+                  class="sildbar__navs__item--nav--icon"
+                />
+                YouTube Premium
+              </a>
+            </li>
+            <li class="sildbar__navs__item">
+              <a href="#" class="sildbar__navs__item--nav">
+                <img
+                  src="./src/img/svg/music.svg"
+                  alt="Music"
+                  title="Music"
+                  class="sildbar__navs__item--nav--icon"
+                />YouTube Music
+              </a>
+            </li>
+            <li class="sildbar__navs__item">
+              <a href="#" class="sildbar__navs__item--nav">
+                <img
+                  src="./src/img/svg/kids.svg"
+                  alt="Kids"
+                  title="Kids"
+                  class="sildbar__navs__item--nav--icon"
+                />YouTube Kids
+              </a>
+            </li>
+            <li class="sildbar__navs__item">
+              <a href="#" class="sildbar__navs__item--nav">
+                <img
+                  src="./src/img/svg/tv.svg"
+                  alt="TV"
+                  title="TV"
+                  class="sildbar__navs__item--nav--icon"
+                />
+                YouTube TV
+              </a>
+              <div class="sildbar--border"></div>
+            </li>
+            <li class="sildbar__navs__item">
+              <a href="#" class="sildbar__navs__item--nav">
+                <i class="fas fa-cog sildbar__navs__item--nav--icon"></i>
+                設定</a
+              >
+            </li>
+            <li class="sildbar__navs__item">
+              <a href="#" class="sildbar__navs__item--nav"
+                ><i class="far fa-flag sildbar__navs__item--nav--icon"></i
+                >檢舉紀錄</a
+              >
+            </li>
+            <li class="sildbar__navs__item">
+              <a href="#" class="sildbar__navs__item--nav"
+                ><i
+                  class="far fa-question-circle sildbar__navs__item--nav--icon"
+                ></i
+                >說明</a
+              >
+            </li>
+            <li class="sildbar__navs__item">
+              <a href="#" class="sildbar__navs__item--nav"
+                ><i
+                  class="fas fa-exclamation-circle sildbar__navs__item--nav--icon"
+                ></i
+                >提供意見</a
+              >
+              <div class="sildbar--border"></div>
+            </li>
+          </ul>
+        </nav>
+        <ul class="sildbar__tags">
+          <li class="sildbar__tags__tag">
+            <a href="#" class="sildbar__tags__tag--link">簡介</a>
+          </li>
+          <li class="sildbar__tags__tag">
+            <a href="#" class="sildbar__tags__tag--link">媒體</a>
+          </li>
+          <li class="sildbar__tags__tag">
+            <a href="#" class="sildbar__tags__tag--link">版權</a>
+          </li>
+          <li class="sildbar__tags__tag">
+            <a href="#" class="sildbar__tags__tag--link">與我們聯絡</a>
+          </li>
+          <li class="sildbar__tags__tag">
+            <a href="#" class="sildbar__tags__tag--link">創作者</a>
+          </li>
+          <li class="sildbar__tags__tag">
+            <a href="#" class="sildbar__tags__tag--link">廣告</a>
+          </li>
+          <li class="sildbar__tags__tag">
+            <a href="#" class="sildbar__tags__tag--link">開發人員</a>
+          </li>
+        </ul>
+        <ul class="sildbar__tags">
+          <li class="sildbar__tags__tag">
+            <a href="#" class="sildbar__tags__tag--link">條款</a>
+          </li>
+          <li class="sildbar__tags__tag">
+            <a href="#" class="sildbar__tags__tag--link">隱私權</a>
+          </li>
+          <li class="sildbar__tags__tag">
+            <a href="#" class="sildbar__tags__tag--link">政策與安全性</a>
+          </li>
+          <li class="sildbar__tags__tag">
+            <a href="#" class="sildbar__tags__tag--link">YouTube運作方式</a>
+          </li>
+          <li class="sildbar__tags__tag">
+            <a href="#" class="sildbar__tags__tag--link">測試新功能</a>
+          </li>
+        </ul>
+        <div class="sildbar__footer">
+          <p>&copy; 2022 Google LLC</p>
+        </div>
+      </div>
+    </div>
+    <div class="tags__container">
+      <ul class="tags__content">
+        <li class="tags--tag tags--tag--active">全部</li>
+        <li class="tags--tag">音樂</li>
+        <li class="tags--tag">直播中</li>
+        <li class="tags--tag">遊戲</li>
+        <li class="tags--tag">棒球</li>
+        <li class="tags--tag">動畫</li>
+        <li class="tags--tag">旅遊勝地</li>
+        <li class="tags--tag">烹飪</li>
+        <li class="tags--tag">自然</li>
+        <li class="tags--tag">視覺藝術</li>
+        <li class="tags--tag">動作冒險遊戲</li>
+        <li class="tags--tag">最新上傳</li>
+      </ul>
+    </div>
+    <div class="content__container">
+      <div class="content__items">
+        <div class="content__items__item">
+          <a href="#">
+            <div class="content__items__item__imgblack">
+              <img
+                src="./src/img/video-cover/01.webp"
+                alt="淡江學生美食遊"
+                title="淡江學生美食遊"
+                class="content__items__item__imgblack--img"
+              />
+              <p class="content__items__item__imgblack--time">15:33</p>
+            </div>
+            <div class="content__items__item__content">
+              <img
+                src="./src/img/user/01.jpg"
+                alt="user"
+                title="user"
+                class="content__items__item__content--img"
+              />
+              <i
+                class="fa-solid fa-ellipsis-vertical content__items__item__content--icon"
+              ></i>
+              <div class="content__items__item__content__textblock">
+                <p class="content__items__item__content__textblock--text">
+                  淡江人帶路🔥學生回憶銅板美食之旅！超羨慕淡水人的😭！！！好吃雞肉飯、淡大必吃臭豆腐、蝦捲｜韓勾ㄟ金針菇
+                  찐쩐꾸
+                </p>
+                <p class="content__items__item__content--user">
+                  韓勾ㄟ金針菇 찐쩐꾸
+                  <img
+                    src="./src/img/svg/certification.svg"
+                    alt="certification"
+                    class="content__items__item__content--user--icon"
+                  />
+                </p>
+                <p class="content__items__item__viewtime">
+                  觀看次數：3.9萬次
+                  <span class="content__items__item__viewtime--icon"
+                    >1 小時前</span
+                  >
+                </p>
+              </div>
+            </div>
+            <div class="content__items__item__btns">
+              <button class="content__items__item__btns--btn">
+                <i
+                  class="fa-regular fa-clock content__items__item__btns--btn--icon"
+                ></i
+                >稍後觀看
+              </button>
+              <button class="content__items__item__btns--btn">
+                <i
+                  class="fa-solid fa-bars-staggered content__items__item__btns--btn--icon"
+                ></i>
+                加入等撥清單
+              </button>
+            </div>
+          </a>
+        </div>
+        <div class="content__items__item">
+          <a href="#">
+            <div class="content__items__item__imgblack">
+              <img
+                src="./src/img/video-cover/02.webp"
+                alt="2022八,九月的新歌"
+                title="2022八,九月的新歌"
+                class="content__items__item__imgblack--img"
+              />
+              <p class="content__items__item__imgblack--time">1:54:58</p>
+            </div>
+            <div class="content__items__item__content">
+              <img
+                src="./src/img/user/02.jpg"
+                alt="user"
+                title="user"
+                class="content__items__item__content--img"
+              />
+              <i
+                class="fa-solid fa-ellipsis-vertical content__items__item__content--icon"
+              ></i>
+              <div class="content__items__item__content__textblock">
+                <p class="content__items__item__content__textblock--text">
+                  2022八,九月的新歌【無廣告】A-Lin - 摯友 \ WiFi歪歪 - 就忘了吧
+                  \ #陳忻玥 - 煙幕 \ #從前說 - 小阿七 #柳程馭 - 就好了\ 蕭秉治 -
+                  毒藥 \ 捨不得又如何❤️
+                </p>
+                <p class="content__items__item__content--user">
+                  抖音合集 - Tik Tok Collection
+                </p>
+                <p class="content__items__item__viewtime">
+                  觀看次數：7.9萬次
+                  <span class="content__items__item__viewtime--icon"
+                    >直播時間 3 小時前</span
+                  >
+                </p>
+              </div>
+            </div>
+            <div class="content__items__item__btns">
+              <button class="content__items__item__btns--btn">
+                <i
+                  class="fa-regular fa-clock content__items__item__btns--btn--icon"
+                ></i
+                >稍後觀看
+              </button>
+              <button class="content__items__item__btns--btn">
+                <i
+                  class="fa-solid fa-bars-staggered content__items__item__btns--btn--icon"
+                ></i>
+                加入等撥清單
+              </button>
+            </div>
+          </a>
+        </div>
+        <div class="content__items__item">
+          <a href="#">
+            <div class="content__items__item__imgblack">
+              <img
+                src="./src/img/video-cover/03.webp"
+                alt="捕手把球棒踢到壘線上？我的幾個看法"
+                title="捕手把球棒踢到壘線上？我的幾個看法"
+                class="content__items__item__imgblack--img"
+              />
+              <p class="content__items__item__imgblack--time">2:31</p>
+            </div>
+            <div class="content__items__item__content">
+              <img
+                src="./src/img/user/03.jpg"
+                alt="user"
+                title="user"
+                class="content__items__item__content--img"
+              />
+              <i
+                class="fa-solid fa-ellipsis-vertical content__items__item__content--icon"
+              ></i>
+              <div class="content__items__item__content__textblock">
+                <p class="content__items__item__content__textblock--text">
+                  捕手把球棒踢到壘線上？我的幾個看法
+                </p>
+                <p class="content__items__item__content--user">
+                  台南Josh
+                  <img
+                    src="./src/img/svg/certification.svg"
+                    alt="certification"
+                    class="content__items__item__content--user--icon"
+                  />
+                </p>
+
+                <p class="content__items__item__viewtime">
+                  觀看次數：10萬次
+                  <span class="content__items__item__viewtime--icon"
+                    >11 小時前</span
+                  >
+                </p>
+              </div>
+            </div>
+            <div class="content__items__item__btns">
+              <button class="content__items__item__btns--btn">
+                <i
+                  class="fa-regular fa-clock content__items__item__btns--btn--icon"
+                ></i
+                >稍後觀看
+              </button>
+              <button class="content__items__item__btns--btn">
+                <i
+                  class="fa-solid fa-bars-staggered content__items__item__btns--btn--icon"
+                ></i>
+                加入等撥清單
+              </button>
+            </div>
+          </a>
+        </div>
+        <div class="content__items__item">
+          <a href="#">
+            <div class="content__items__item__imgblack">
+              <img
+                src="./src/img/video-cover/04.webp"
+                alt="「橘色惡魔」活力演出  「瑪利歐跳」Q爆【一刀未剪看新聞】"
+                title="「橘色惡魔」活力演出  「瑪利歐跳」Q爆【一刀未剪看新聞】"
+                class="content__items__item__imgblack--img"
+              />
+              <p class="content__items__item__imgblack--time">13:18</p>
+            </div>
+            <div class="content__items__item__content">
+              <img
+                src="./src/img/user/04.jpg"
+                alt="user"
+                title="user"
+                class="content__items__item__content--img"
+              />
+              <i
+                class="fa-solid fa-ellipsis-vertical content__items__item__content--icon"
+              ></i>
+              <div class="content__items__item__content__textblock">
+                <p class="content__items__item__content__textblock--text">
+                  「橘色惡魔」活力演出 「瑪利歐跳」Q爆【一刀未剪看新聞】
+                </p>
+                <p class="content__items__item__content--user">
+                  台視新聞 TTV NEWS
+                  <img
+                    src="./src/img/svg/certification.svg"
+                    alt="certification"
+                    class="content__items__item__content--user--icon"
+                  />
+                </p>
+
+                <p class="content__items__item__viewtime">
+                  觀看次數：26萬次
+                  <span class="content__items__item__viewtime--icon"
+                    >20 小時前</span
+                  >
+                </p>
+              </div>
+            </div>
+            <div class="content__items__item__btns">
+              <button class="content__items__item__btns--btn">
+                <i
+                  class="fa-regular fa-clock content__items__item__btns--btn--icon"
+                ></i
+                >稍後觀看
+              </button>
+              <button class="content__items__item__btns--btn">
+                <i
+                  class="fa-solid fa-bars-staggered content__items__item__btns--btn--icon"
+                ></i>
+                加入等撥清單
+              </button>
+            </div>
+          </a>
+        </div>
+        <div class="content__items__item">
+          <a href="#">
+            <div class="content__items__item__imgblack">
+              <img
+                src="./src/img/video-cover/05.webp"
+                alt="二手機車行收購 水很深！？新車落地就掉三萬調表基本的！買二手機車要怎麼看！"
+                title="二手機車行收購 水很深！？新車落地就掉三萬調表基本的！買二手機車要怎麼看！"
+                class="content__items__item__imgblack--img"
+              />
+              <p class="content__items__item__imgblack--time">16:23</p>
+            </div>
+            <div class="content__items__item__content">
+              <img
+                src="./src/img/user/05.jpg"
+                alt="user"
+                title="user"
+                class="content__items__item__content--img"
+              />
+              <i
+                class="fa-solid fa-ellipsis-vertical content__items__item__content--icon"
+              ></i>
+              <div class="content__items__item__content__textblock">
+                <p class="content__items__item__content__textblock--text">
+                  二手機車行收購
+                  水很深！？新車落地就掉三萬調表基本的！買二手機車要怎麼看！
+                </p>
+                <p class="content__items__item__content--user">
+                  康康嘴機車
+                  <img
+                    src="./src/img/svg/certification.svg"
+                    alt="certification"
+                    class="content__items__item__content--user--icon"
+                  />
+                </p>
+
+                <p class="content__items__item__viewtime">
+                  觀看次數：5.6萬次
+                  <span class="content__items__item__viewtime--icon"
+                    >3 天前</span
+                  >
+                </p>
+              </div>
+            </div>
+            <div class="content__items__item__btns">
+              <button class="content__items__item__btns--btn">
+                <i
+                  class="fa-regular fa-clock content__items__item__btns--btn--icon"
+                ></i
+                >稍後觀看
+              </button>
+              <button class="content__items__item__btns--btn">
+                <i
+                  class="fa-solid fa-bars-staggered content__items__item__btns--btn--icon"
+                ></i>
+                加入等撥清單
+              </button>
+            </div>
+          </a>
+        </div>
+        <div class="content__items__item">
+          <a href="#">
+            <div class="content__items__item__imgblack">
+              <img
+                src="./src/img/video-cover/06.webp"
+                alt="10/10 中信 VS 樂天 全場精華"
+                title="10/10 中信 VS 樂天 全場精華"
+                class="content__items__item__imgblack--img"
+              />
+              <p class="content__items__item__imgblack--time">11:07</p>
+            </div>
+            <div class="content__items__item__content">
+              <img
+                src="./src/img/user/06.jpg"
+                alt="user"
+                title="user"
+                class="content__items__item__content--img"
+              />
+              <i
+                class="fa-solid fa-ellipsis-vertical content__items__item__content--icon"
+              ></i>
+              <div class="content__items__item__content__textblock">
+                <p class="content__items__item__content__textblock--text">
+                  10/10 中信 VS 樂天 全場精華
+                </p>
+                <p class="content__items__item__content--user">CPBL 中華職棒</p>
+                <p class="content__items__item__viewtime">
+                  觀看次數：12萬次
+                  <span class="content__items__item__viewtime--icon"
+                    >12 小時前</span
+                  >
+                </p>
+              </div>
+            </div>
+            <div class="content__items__item__btns">
+              <button class="content__items__item__btns--btn">
+                <i
+                  class="fa-regular fa-clock content__items__item__btns--btn--icon"
+                ></i
+                >稍後觀看
+              </button>
+              <button class="content__items__item__btns--btn">
+                <i
+                  class="fa-solid fa-bars-staggered content__items__item__btns--btn--icon"
+                ></i>
+                加入等撥清單
+              </button>
+            </div>
+          </a>
+        </div>
+        <div class="content__items__item">
+          <a href="#">
+            <div class="content__items__item__imgblack">
+              <img
+                src="./src/img/video-cover/07.webp"
+                alt="《機動戰士鋼彈 水星的魔女》第2話 (繁中字幕 | 日語原聲)【Ani-One】"
+                title="二手機車行收購 水很深！？新車落地就掉三萬調表基本的！買二手機車要怎麼看！"
+                class="content__items__item__imgblack--img"
+              />
+              <p class="content__items__item__imgblack--time">24:07</p>
+            </div>
+            <div class="content__items__item__content">
+              <img
+                src="./src/img/user/07.jpg"
+                alt="user"
+                title="user"
+                class="content__items__item__content--img"
+              />
+              <i
+                class="fa-solid fa-ellipsis-vertical content__items__item__content--icon"
+              ></i>
+              <div class="content__items__item__content__textblock">
+                <p class="content__items__item__content__textblock--text">
+                  《機動戰士鋼彈 水星的魔女》第2話 (繁中字幕 |
+                  日語原聲)【Ani-One】
+                </p>
+                <p class="content__items__item__content--user">
+                  Ani-One中文官方動畫頻道
+                </p>
+
+                <p class="content__items__item__viewtime">
+                  觀看次數：24萬次
+                  <span class="content__items__item__viewtime--icon"
+                    >1 天前</span
+                  >
+                </p>
+              </div>
+            </div>
+            <div class="content__items__item__btns">
+              <button class="content__items__item__btns--btn">
+                <i
+                  class="fa-regular fa-clock content__items__item__btns--btn--icon"
+                ></i
+                >稍後觀看
+              </button>
+              <button class="content__items__item__btns--btn">
+                <i
+                  class="fa-solid fa-bars-staggered content__items__item__btns--btn--icon"
+                ></i>
+                加入等撥清單
+              </button>
+            </div>
+          </a>
+        </div>
+        <div class="content__items__item">
+          <a href="#">
+            <div class="content__items__item__imgblack">
+              <img
+                src="./src/img/video-cover/08.webp"
+                alt="夏日音樂🌿治愈音樂，鎮定神經系統，愉悅心靈🌿“森林之聲”亞歷山德拉"
+                title="夏日音樂🌿治愈音樂，鎮定神經系統，愉悅心靈🌿“森林之聲”亞歷山德拉"
+                class="content__items__item__imgblack--img"
+              />
+              <p class="content__items__item__imgblack--time">11:54:59</p>
+            </div>
+            <div class="content__items__item__content">
+              <img
+                src="./src/img/user/08.jpg"
+                alt="user"
+                title="user"
+                class="content__items__item__content--img"
+              />
+              <i
+                class="fa-solid fa-ellipsis-vertical content__items__item__content--icon"
+              ></i>
+              <div class="content__items__item__content__textblock">
+                <p class="content__items__item__content__textblock--text">
+                  夏日音樂🌿治愈音樂，鎮定神經系統，愉悅心靈🌿“森林之聲”亞歷山德拉
+                </p>
+                <p class="content__items__item__content--user">
+                  Love YourSelf
+                  <img
+                    src="./src/img/svg/certification.svg"
+                    alt="certification"
+                    class="content__items__item__content--user--icon"
+                  />
+                </p>
+
+                <p class="content__items__item__viewtime">
+                  觀看次數：85萬次
+                  <span class="content__items__item__viewtime--icon"
+                    >3 個月前</span
+                  >
+                </p>
+              </div>
+            </div>
+            <div class="content__items__item__btns">
+              <button class="content__items__item__btns--btn">
+                <i
+                  class="fa-regular fa-clock content__items__item__btns--btn--icon"
+                ></i
+                >稍後觀看
+              </button>
+              <button class="content__items__item__btns--btn">
+                <i
+                  class="fa-solid fa-bars-staggered content__items__item__btns--btn--icon"
+                ></i>
+                加入等撥清單
+              </button>
+            </div>
+          </a>
+        </div>
+        <div class="content__items__item">
+          <a href="#">
+            <div class="content__items__item__imgblack">
+              <img
+                src="./src/img/video-cover/09.webp"
+                alt="我去看房子了!只要台幣600萬!京都市中心能買到怎樣的公寓？日本的房價真的太低啦....【日本買房記🏠EP.2】"
+                title="我去看房子了!只要台幣600萬!京都市中心能買到怎樣的公寓？日本的房價真的太低啦....【日本買房記🏠EP.2】"
+                class="content__items__item__imgblack--img"
+              />
+              <p class="content__items__item__imgblack--time">17:44</p>
+            </div>
+            <div class="content__items__item__content">
+              <img
+                src="./src/img/user/09.jpg"
+                alt="user"
+                title="user"
+                class="content__items__item__content--img"
+              />
+              <i
+                class="fa-solid fa-ellipsis-vertical content__items__item__content--icon"
+              ></i>
+              <div class="content__items__item__content__textblock">
+                <p class="content__items__item__content__textblock--text">
+                  我去看房子了!只要台幣600萬!京都市中心能買到怎樣的公寓？日本的房價真的太低啦....【日本買房記🏠EP.2】
+                </p>
+                <p class="content__items__item__content--user">
+                  MaoMao TV
+                  <img
+                    src="./src/img/svg/certification.svg"
+                    alt="certification"
+                    class="content__items__item__content--user--icon"
+                  />
+                </p>
+
+                <p class="content__items__item__viewtime">
+                  觀看次數：94萬次
+                  <span class="content__items__item__viewtime--icon"
+                    >4 個月前</span
+                  >
+                </p>
+              </div>
+            </div>
+            <div class="content__items__item__btns">
+              <button class="content__items__item__btns--btn">
+                <i
+                  class="fa-regular fa-clock content__items__item__btns--btn--icon"
+                ></i
+                >稍後觀看
+              </button>
+              <button class="content__items__item__btns--btn">
+                <i
+                  class="fa-solid fa-bars-staggered content__items__item__btns--btn--icon"
+                ></i>
+                加入等撥清單
+              </button>
+            </div>
+          </a>
+        </div>
+        <div class="content__items__item">
+          <a href="#">
+            <div class="content__items__item__imgblack">
+              <img
+                src="./src/img/video-cover/10.webp"
+                alt="貝加龐克6個分身有什麼秘密？伊姆為什麼要清除貝加龐克？未來之國篇三大隱藏劇情線！海賊王1062話細節伏筆分析！"
+                title="貝加龐克6個分身有什麼秘密？伊姆為什麼要清除貝加龐克？未來之國篇三大隱藏劇情線！海賊王1062話細節伏筆分析！"
+                class="content__items__item__imgblack--img"
+              />
+              <p class="content__items__item__imgblack--time">15:00</p>
+            </div>
+            <div class="content__items__item__content">
+              <img
+                src="./src/img/user/10.jpg"
+                alt="user"
+                title="user"
+                class="content__items__item__content--img"
+              />
+              <i
+                class="fa-solid fa-ellipsis-vertical content__items__item__content--icon"
+              ></i>
+              <div class="content__items__item__content__textblock">
+                <p class="content__items__item__content__textblock--text">
+                  貝加龐克6個分身有什麼秘密？伊姆為什麼要清除貝加龐克？未來之國篇三大隱藏劇情線！海賊王1062話細節伏筆分析！
+                </p>
+                <p class="content__items__item__content--user">
+                  作業本
+                  <img
+                    src="./src/img/svg/certification.svg"
+                    alt="certification"
+                    class="content__items__item__content--user--icon"
+                  />
+                </p>
+
+                <p class="content__items__item__viewtime">
+                  觀看次數：6.4萬次
+                  <span class="content__items__item__viewtime--icon"
+                    >14 小時前</span
+                  >
+                </p>
+              </div>
+            </div>
+            <div class="content__items__item__btns">
+              <button class="content__items__item__btns--btn">
+                <i
+                  class="fa-regular fa-clock content__items__item__btns--btn--icon"
+                ></i
+                >稍後觀看
+              </button>
+              <button class="content__items__item__btns--btn">
+                <i
+                  class="fa-solid fa-bars-staggered content__items__item__btns--btn--icon"
+                ></i>
+                加入等撥清單
+              </button>
+            </div>
+          </a>
+        </div>
+        <div class="content__items__item">
+          <a href="#">
+            <div class="content__items__item__imgblack">
+              <img
+                src="./src/img/video-cover/11.webp"
+                alt="修復一把丟失的舊刀。不可思議的把手！"
+                title="修復一把丟失的舊刀。不可思議的把手！"
+                class="content__items__item__imgblack--img"
+              />
+              <p class="content__items__item__imgblack--time">13:42</p>
+            </div>
+            <div class="content__items__item__content">
+              <img
+                src="./src/img/user/11.jpg"
+                alt="user"
+                title="user"
+                class="content__items__item__content--img"
+              />
+              <i
+                class="fa-solid fa-ellipsis-vertical content__items__item__content--icon"
+              ></i>
+              <div class="content__items__item__content__textblock">
+                <p class="content__items__item__content__textblock--text">
+                  修復一把丟失的舊刀。不可思議的把手！
+                </p>
+                <p class="content__items__item__content--user">
+                  Restoration In The Back Room
+                </p>
+                <p class="content__items__item__viewtime">
+                  觀看次數：123萬次
+                  <span class="content__items__item__viewtime--icon"
+                    >5 個月前</span
+                  >
+                </p>
+              </div>
+            </div>
+            <div class="content__items__item__btns">
+              <button class="content__items__item__btns--btn">
+                <i
+                  class="fa-regular fa-clock content__items__item__btns--btn--icon"
+                ></i
+                >稍後觀看
+              </button>
+              <button class="content__items__item__btns--btn">
+                <i
+                  class="fa-solid fa-bars-staggered content__items__item__btns--btn--icon"
+                ></i>
+                加入等撥清單
+              </button>
+            </div>
+          </a>
+        </div>
+        <div class="content__items__item">
+          <a href="#">
+            <div class="content__items__item__imgblack">
+              <img
+                src="./src/img/video-cover/12.webp"
+                alt="錯認近百年，失蹤的太陽系真正的第九大行星，其實是它？【文昭思緒飛揚189期】"
+                title="錯認近百年，失蹤的太陽系真正的第九大行星，其實是它？【文昭思緒飛揚189期】"
+                class="content__items__item__imgblack--img"
+              />
+              <p class="content__items__item__imgblack--time">15:28</p>
+            </div>
+            <div class="content__items__item__content">
+              <img
+                src="./src/img/user/12.jpg"
+                alt="user"
+                title="user"
+                class="content__items__item__content--img"
+              />
+              <i
+                class="fa-solid fa-ellipsis-vertical content__items__item__content--icon"
+              ></i>
+              <div class="content__items__item__content__textblock">
+                <p class="content__items__item__content__textblock--text">
+                  錯認近百年，失蹤的太陽系真正的第九大行星，其實是它？【文昭思緒飛揚189期】
+                </p>
+                <p class="content__items__item__content--user">
+                  文昭思緒飛揚 - Wen Zhao Studio
+                </p>
+                <p class="content__items__item__viewtime">
+                  觀看次數：25萬次
+                  <span class="content__items__item__viewtime--icon"
+                    >9 天前</span
+                  >
+                </p>
+              </div>
+            </div>
+            <div class="content__items__item__btns">
+              <button class="content__items__item__btns--btn">
+                <i
+                  class="fa-regular fa-clock content__items__item__btns--btn--icon"
+                ></i
+                >稍後觀看
+              </button>
+              <button class="content__items__item__btns--btn">
+                <i
+                  class="fa-solid fa-bars-staggered content__items__item__btns--btn--icon"
+                ></i>
+                加入等撥清單
+              </button>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

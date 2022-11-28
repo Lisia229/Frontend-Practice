@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    //  請寫一個 function，判斷傳入的數字是不是質數
+    // 並使用該 function 列出 1 ~ 100 間的所有質數
+    // 質數特性
+
+    // 不能被大於 2 且小於自身平方根的數整除
+    // 只能被 1 和自身整除，不能被 2 到 (num-1) 整除
+
+    const primeNumber = num => {
+      for (let i = 2; i <= Math.sqrt(num); i++) {
+        if (num % i === 0) return false
+      }
+      return true
+    }
+
+    for (let i = 1; i <= 100; i++) {
+      if (primeNumber(i)) document.write(i + '<br>')
+    }
+  </script>
+</body>
+
+</html>

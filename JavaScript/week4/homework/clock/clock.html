@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clock</title>
+  <link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    /* star */
+    * {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+
+    li {
+      list-style: none;
+    }
+
+    :root {
+      --twinkle-duration: 4s;
+    }
+
+    .stars-wrapper {
+      position: relative;
+      pointer-events: none;
+      width: 100vw;
+      height: 100vh;
+      background: -webkit-gradient(linear, left top, left bottom, from(#16161d), color-stop(#1f1f3a), to(#3b2f4a));
+      background: linear-gradient(#16161d, #1f1f3a, #3b2f4a);
+      overflow: hidden;
+    }
+
+    .stars {
+      overflow: hidden;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      -webkit-animation: twinkle var(--twinkle-duration) ease-in-out infinite;
+      animation: twinkle var(--twinkle-duration) ease-in-out infinite;
+    }
+
+    .stars:nth-child(2) {
+      -webkit-animation-delay: calc(var(--twinkle-duration) * -0.33);
+      animation-delay: calc(var(--twinkle-duration) * -0.33);
+    }
+
+    .stars:nth-child(3) {
+      -webkit-animation-delay: calc(var(--twinkle-duration) * -0.66);
+      animation-delay: calc(var(--twinkle-duration) * -0.66);
+    }
+
+    @-webkit-keyframes twinkle {
+      25% {
+        opacity: 0;
+      }
+    }
+
+    @keyframes twinkle {
+      25% {
+        opacity: 0;
+      }
+    }
+
+    .star {
+      fill: white;
+    }
+
+    .star:nth-child(3n) {
+      opacity: 0.8;
+    }
+
+    .star:nth-child(7n) {
+      opacity: 0.6;
+    }
+
+    .star:nth-child(13n) {
+      opacity: 0.4;
+    }
+
+    .star:nth-child(19n) {
+      opacity: 0.2;
+    }
+
+    body {
+      margin: 0;
+      background: black;
+    }
+
+    /* 刻度 */
+    #ul1 {
+      width: 300px;
+      height: 300px;
+      border: 1px solid transparent;
+      border-radius: 50%;
+      position: absolute;
+    }
+
+    #ul1 li {
+      width: 6px;
+      height: 6px;
+      background: rgba(255, 255, 255, 0.671);
+      position: absolute;
+      left: 149px;
+      top: 0;
+      transform-origin: 0 150px;
+    }
+
+    #ul1 li:nth-child(1) {
+      transform: rotate(0deg);
+    }
+
+    #ul1 li:nth-child(2) {
+      transform: rotate(30deg);
+    }
+
+    #ul1 li:nth-child(3) {
+      transform: rotate(60deg);
+    }
+
+    #ul1 li:nth-child(4) {
+      transform: rotate(90deg);
+    }
+
+    #ul1 li:nth-child(5) {
+      transform: rotate(120deg);
+    }
+
+    #ul1 li:nth-child(6) {
+      transform: rotate(150deg);
+    }
+
+    #ul1 li:nth-child(7) {
+      transform: rotate(180deg);
+    }
+
+    #ul1 li:nth-child(8) {
+      transform: rotate(210deg);
+    }
+
+    #ul1 li:nth-child(9) {
+      transform: rotate(240deg);
+    }
+
+    #ul1 li:nth-child(10) {
+      transform: rotate(270deg);
+    }
+
+    #ul1 li:nth-child(11) {
+      transform: rotate(300deg);
+    }
+
+    #ul1 li:nth-child(12) {
+      transform: rotate(330deg);
+    }
+
+    /* 數字 */
+    .scale {
+      width: 300px;
+      height: 300px;
+      border: 1px solid transparent;
+      border-radius: 50%;
+      position: absolute;
+    }
+
+    .scale div {
+      width: 200px;
+      height: 200px;
+      position: absolute;
+      color: white;
+      left: 50px;
+      top: 50px;
+      font-family: 'Silkscreen', cursive;
+    }
+
+    .scale span {
+      position: absolute;
+    }
+
+
+    /* 鬧鐘 */
+    #clock {
+      background: rgba(0, 0, 0, 0.5);
+      width: 300px;
+      height: 300px;
+      margin: auto;
+      position: absolute;
+      border-radius: 50%;
+      /* 垂直置中  150是因為高度為300要置中的話需要除以2*/
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.5),
+      0 0 30px rgba(17, 49, 231, 0.5);
+    }
+
+    #clock::before {
+      content: '';
+      width: 40px;
+      height: 40px;
+      background-image: url(./image/icons8-satoru-gojo-48.png);
+      background-size: contain;
+      border-radius: 50%;
+      position: absolute;
+      top: 51%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+    }
+
+
+    #hour {
+      width: 20%;
+      height: 10px;
+      position: absolute;
+      background: #ffe54f;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 5px;
+      transform-origin: left center;
+    }
+
+    #min {
+      width: 30%;
+      height: 8px;
+      position: absolute;
+      background: #73BEEB;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 5px;
+      transform-origin: left center;
+    }
+
+    #second {
+      width: 39%;
+      height: 6px;
+      position: absolute;
+      background: #EB618C;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 5px;
+      transform-origin: left center;
+    }
+
+
+    p {
+      margin: 0;
+      padding: 0;
+    }
+
+    .clock {
+      position: absolute;
+      top: 80%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #ffffff;
+      font-size: 60px;
+      font-family: 'Silkscreen', cursive;
+      letter-spacing: 7px;
+    }
+
+    #yeardate {
+      position: absolute;
+      top: 90%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #ffffff;
+      font-size: 20px;
+      font-family: 'Silkscreen', cursive;
+      letter-spacing: 7px;
+    }
+  </style>
+</head>
+
+<body>
+
+
+  <div class="stars-wrapper star"></div>
+  <!-- 鬧鐘 -->
+  <div id="clock">
+    <div id="hour"></div>
+    <div id="min"></div>
+    <div id="second"></div>
+    <ul id="ul1">
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+
+    <div class="scale">
+      <div><span>12</span></div>
+      <div><span>01</span></div>
+      <div><span>02</span></div>
+      <div><span>03</span></div>
+      <div><span>04</span></div>
+      <div><span>05</span></div>
+      <div><span>06</span></div>
+      <div><span>07</span></div>
+      <div><span>08</span></div>
+      <div><span>09</span></div>
+      <div><span>10</span></div>
+      <div><span>11</span></div>
+    </div>
+  </div>
+
+  <!-- 刻度 -->
+  <div id='yeardate'></div>
+
+  <!-- 數字鬧鐘 -->
+  <div id="MyClockDisplay" class="clock" onload="showTime()"></div>
+  <script>
+    const hour = document.getElementById('hour')
+    const min = document.getElementById('min')
+    const second = document.getElementById('second')
+
+    setInterval(() => {
+      const date = new Date()
+      hour.style.transform = `rotate(${date.getHours() * 30 - 90}deg)`
+      min.style.transform = `rotate(${date.getMinutes() * 6 - 90}deg)`
+      second.style.transform = `rotate(${date.getSeconds() * 6 - 90}deg)`
+    }, 1000);
+
+    // 數字鬧鐘
+    function showTime() {
+      var date = new Date();
+      var h = date.getHours();
+      var m = date.getMinutes();
+      var s = date.getSeconds();
+      var session = "AM";
+
+      if (h == 0) {
+        h = 12;
+      }
+
+      if (h > 12) {
+        h = h - 12;
+        session = "PM";
+      }
+
+      h = (h < 10) ? "0" + h : h;
+      m = (m < 10) ? "0" + m : m;
+      s = (s < 10) ? "0" + s : s;
+
+      var time = h + ":" + m + ":" + s + " " + session;
+      document.getElementById("MyClockDisplay").innerText = time;
+      document.getElementById("MyClockDisplay").textContent = time;
+
+      setTimeout(showTime, 1000);
+
+    }
+
+    showTime();
+
+    // 星星背景
+    for (var i = 0; i < 3; i++) {
+      var svg = document.createElementNS("http://www.w3.org/2000/svg", "svg"); svg.setAttribute("class", "stars"); svg.setAttribute("width", "100%"); svg.setAttribute("height", "100%"); svg.setAttribute("preserveAspectRatio", "none"); for (let j = 0; j < 120; j++) {
+        var circle = document.createElementNS("http://www.w3.org/2000/svg", "circle"); circle.setAttribute("class", "star"); circle.setAttribute("cx", r(0, 100) + "%"); circle.setAttribute("cy", r(0, 100) + "%"); circle.setAttribute("r", r(0, 2)); svg.appendChild(circle);
+      } document.getElementsByClassName("stars-wrapper")[0].appendChild(svg);
+    } function r(m, n) {
+      return (Math.random() * (n - m) + m).toFixed(2);
+    }
+
+    date = new Date();
+    year = date.getFullYear();
+    month = date.getMonth() + 1;
+    day = date.getDate();
+
+    document.getElementById("yeardate").innerHTML = year + "/" + month + "/" + day;
+
+
+    // 刻度 數字
+    let scaleDivs = document.querySelectorAll('.scale div');
+    for (let i = 0; i < scaleDivs.length; i++) {
+      scaleDivs[i].style.transform = `rotate(${(i * 30) + 45}deg)`;
+      scaleDivs[i].firstChild.style.transform = `rotate(${(i * -30) - 45}deg)`;
+      console.log(scaleDivs[i]);
+    }
+
+  </script>
+</body>
+
+</html>

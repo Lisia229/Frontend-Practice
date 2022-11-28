@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="text-group">
+    <input type="text" name="" id="text-content">
+    <input type="button" value="新增" id="text-button">
+    <ul id="text">
+    </ul>
+  </div>
+  <script src="./jquery-3.6.1.min.js"></script>
+  <script>
+    $('#text-group input[type=button]').click(function (event) {
+      const ul = $(this).siblings('#text')
+      const text = $('#text-content').val()
+      ul.append(`<li>${text}<input type="button" class="del" value="X"></li>`)
+      $('#text-content').val('')
+
+      $('#text').on('click', '.del', function () {
+        $(this).parent().remove()
+      })
+    })
+  </script>
+</body>
+
+</html>

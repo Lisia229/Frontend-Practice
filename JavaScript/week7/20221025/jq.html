@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js'
+    integrity='sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=='
+    crossorigin='anonymous'></script>
+
+  <script>
+    // $.get(url,成功時的function,回來的資料類型)
+    // $.get('https://kktix.com/events.json', function (deta) {
+    //   console.log(deta.title)
+    // }, 'json')
+
+    // $.ajax({
+    //   url: 'https://kktix.com/events.json',
+    //   method: 'get',
+    //   detaType: 'json',
+    //   success(deta) {
+    //     console.log(deta.title)
+    //   },
+    //   error(xhr, textStatus, error) {
+    //     // jq包裝後的xhr物件
+    //     console.log(xhr)
+    //     // 文字的錯誤狀態 可能是error timeout abort等
+    //     console.log(textStatus)
+    //     // 回傳的錯誤
+    //     console.log(error)
+    //   }
+    // })
+
+    $.post('https://jsonplaceholder.typicode.com/users', {
+      name: 'aaa',
+      email: 'aaa@gmail.com'
+    }, function (data) {
+      console.log(data)
+    }, 'json')
+
+    $.ajax({
+      url: 'https://jsonplaceholder.typicode.com/users',
+      method: 'post',
+      detaType: 'json',
+      data: {
+        name: 'aaa',
+        email: 'aaa@gmail.com'
+      },
+      success(deta) {
+        console.log(deta.title)
+      },
+      error(xhr, textStatus, error) {
+        // jq包裝後的xhr物件
+        console.log(xhr)
+        // 文字的錯誤狀態 可能是error timeout abort等
+        console.log(textStatus)
+        // 回傳的錯誤
+        console.log(error)
+      }
+    })
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkerboard</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+
+    body {
+      display: flex;
+      align-content: center;
+      justify-content: center;
+      height: cale(100vh - 50px);
+      width: 100vw;
+      margin-top: 50px;
+    }
+
+    .container {
+      margin-top: 20px;
+      width: 550px;
+      height: 635px;
+      border: 2px solid #000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .row {
+      width: 480px;
+      height: 540px;
+      border: 1px solid #000;
+      margin: auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start
+    }
+
+    .text-vertical {
+      -webkit-writing-mode: vertical-lr;
+      writing-mode: vertical-lr;
+      font-family: '標楷體';
+      font-size: 1.7rem;
+      padding: 0 1.5rem;
+    }
+
+    .col-line::before {
+      content: "";
+      position: absolute;
+      left: 2px;
+      top: -55px;
+      width: 116px;
+      height: 116px;
+      box-sizing: border-box;
+      border-bottom: 1px solid #000;
+      transform-origin: bottom center;
+      transform: rotateZ(45deg) scale(1.414)
+    }
+
+    .col-line::after {
+      content: "";
+      position: absolute;
+      left: -1px;
+      top: -55px;
+      width: 116px;
+      height: 116px;
+      box-sizing: border-box;
+      border-bottom: 1px solid #000;
+      transform-origin: bottom center;
+      transform: rotateZ(135deg) scale(1.414)
+    }
+
+    .col {
+      width: 58px;
+      height: 58px;
+      border: 1px solid #000;
+    }
+
+    .col-line {
+      width: 58px;
+      height: 58px;
+      border: 1px solid #000;
+      position: relative;
+    }
+
+    .col-line2 {
+      width: 58px;
+      height: 58px;
+      border: 1px solid #000;
+      position: relative;
+    }
+
+
+
+    .col-line2::before {
+      content: "";
+      position: absolute;
+      left: 0px;
+      top: -118px;
+      width: 116px;
+      height: 116px;
+      box-sizing: border-box;
+      border-bottom: 1px solid #000;
+      transform-origin: bottom center;
+      transform: rotateZ(45deg) scale(1.414)
+    }
+
+    .col-line2::after {
+      content: "";
+      position: absolute;
+      left: 1px;
+      top: -119px;
+      width: 116px;
+      height: 116px;
+      box-sizing: border-box;
+      border-bottom: 1px solid #000;
+      transform-origin: bottom center;
+      transform: rotateZ(135deg) scale(1.414)
+    }
+
+    .col-1 {
+      width: 239px;
+      height: 58px;
+      border-top: 1px solid #000;
+      border-bottom: 1px solid #000;
+      border-left: 1px solid #000;
+      text-align: center;
+      line-height: 58px;
+      font-size: 2rem;
+      font-family: '標楷體';
+    }
+
+    .col-2 {
+      width: 239px;
+      height: 58px;
+      border-top: 1px solid #000;
+      border-bottom: 1px solid #000;
+      border-right: 1px solid #000;
+      text-align: center;
+      line-height: 58px;
+      font-size: 2rem;
+      font-family: '標楷體';
+    }
+
+    .row-2 {
+      width: 550px;
+      height: 600px;
+      position: absolute;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .col2 {
+      width: 49px;
+      height: 49px;
+      margin: 5px;
+      border-radius: 50%;
+      background: white;
+      border: 1px solid #000;
+      text-align: center;
+      line-height: 49px;
+      font-family: '標楷體';
+      font-size: 2rem;
+    }
+
+    .color-red {
+      color: red;
+    }
+
+    .col2-1 {
+      width: 550px;
+      height: 50px;
+    }
+
+    .col2-2 {
+      width: 60px;
+      height: 60px;
+    }
+  </style>
+</head>
+
+<body>
+  <span class="text-vertical">棋盤裡，車無輪，馬無韁，叫聲將軍提防提防</span>
+  <div class="container">
+    <div class="row">
+      <div class="col"></div>
+      <div class="col"></div>
+      <div class="col"></div>
+      <div class="col-line"></div>
+      <div class="col"></div>
+      <div class="col"></div>
+      <div class="col"></div>
+      <div class="col"></div>
+
+      <div class="col"></div>
+      <div class="col"></div>
+      <div class="col"></div>
+      <div class="col"></div>
+      <div class="col"></div>
+      <div class="col"></div>
+      <div class="col"></div>
+      <div class="col"></div>
+
+      <div class="col"></div>
+      <div class="col"></div>
+      <div class="col"></div>
+      <div class="col"></div>
+      <div class="col"></div>
+      <div class="col"></div>
+      <div class="col"></div>
+      <div class="col"></div>
+
+      <div class="col"></div>
+      <div class="col"></div>
+      <div class="col"></div>
+      <div class="col"></div>
+      <div class="col"></div>
+      <div class="col"></div>
+      <div class="col"></div>
+      <div class="col"></div>
+
+      <div class="col-1">楚河</div>
+      <div class="col-2">漢界</div>
+
+
+      <div class="col"></div>
+      <div class="col"></div>
+      <div class="col"></div>
+      <div class="col"></div>
+      <div class="col"></div>
+      <div class="col"></div>
+      <div class="col"></div>
+      <div class="col"></div>
+
+      <div class="col"></div>
+      <div class="col"></div>
+      <div class="col"></div>
+      <div class="col"></div>
+      <div class="col"></div>
+      <div class="col"></div>
+      <div class="col"></div>
+      <div class="col"></div>
+
+      <div class="col"></div>
+      <div class="col"></div>
+      <div class="col"></div>
+      <div class="col"></div>
+      <div class="col"></div>
+      <div class="col"></div>
+      <div class="col"></div>
+      <div class="col"></div>
+
+      <div class="col"></div>
+      <div class="col"></div>
+      <div class="col"></div>
+      <div class="col-line2"></div>
+      <div class="col"></div>
+      <div class="col"></div>
+      <div class="col"></div>
+      <div class="col"></div>
+      <div class="list-2"></div>
+    </div>
+    <div class="row-2">
+      <div class="col2">車</div>
+      <div class="col2">馬</div>
+      <div class="col2">象</div>
+      <div class="col2">士</div>
+      <div class="col2">將</div>
+      <div class="col2">士</div>
+      <div class="col2">象</div>
+      <div class="col2">馬</div>
+      <div class="col2">車</div>
+
+      <div class="col2-1"></div>
+
+      <div class="col2-2"></div>
+      <div class="col2">包</div>
+      <div class="col2-2"></div>
+      <div class="col2-2"></div>
+      <div class="col2-2"></div>
+      <div class="col2-2"></div>
+      <div class="col2-2"></div>
+      <div class="col2">包</div>
+      <div class="col2-2"></div>
+
+      <div class="col2">卒</div>
+      <div class="col2-2"></div>
+      <div class="col2">卒</div>
+      <div class="col2-2"></div>
+      <div class="col2">卒</div>
+      <div class="col2-2"></div>
+      <div class="col2">卒</div>
+      <div class="col2-2"></div>
+      <div class="col2">卒</div>
+
+      <div class="col2-1"></div>
+      <div class="col2-1"></div>
+
+      <div class="col2 color-red">兵</div>
+      <div class="col2-2"></div>
+      <div class="col2 color-red">兵</div>
+      <div class="col2-2"></div>
+      <div class="col2 color-red">兵</div>
+      <div class="col2-2"></div>
+      <div class="col2 color-red">兵</div>
+      <div class="col2-2"></div>
+      <div class="col2 color-red">兵</div>
+
+      <div class="col2-2"></div>
+      <div class="col2 color-red">炮</div>
+      <div class="col2-2"></div>
+      <div class="col2-2"></div>
+      <div class="col2-2"></div>
+      <div class="col2-2"></div>
+      <div class="col2-2"></div>
+      <div class="col2 color-red">炮</div>
+      <div class="col2-2"></div>
+
+      <div class="col2-1"></div>
+
+      <div class="col2 color-red">俥</div>
+      <div class="col2 color-red">傌</div>
+      <div class="col2 color-red">相</div>
+      <div class="col2 color-red">仕</div>
+      <div class="col2 color-red">帥</div>
+      <div class="col2 color-red">仕</div>
+      <div class="col2 color-red">相</div>
+      <div class="col2 color-red">傌</div>
+      <div class="col2 color-red">俥</div>
+    </div>
+  </div>
+  <span class="text-vertical">圖畫裡，龍不吟，虎不嘯，小小書僮可笑可笑</span>
+</body>
+
+</html>

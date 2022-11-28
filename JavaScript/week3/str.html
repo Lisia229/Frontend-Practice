@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let text = '   abcDef jieo hew lwLL'
+        // 移除文字前後空白
+        // str.trim();
+        text = text.trim()
+        console.log(text)
+
+        // 文字轉大寫
+        text = text.toUpperCase()
+        console.log(text)
+
+        // 文字轉小寫
+        text = text.toLowerCase()
+        console.log(text)
+
+        // 如果後面都是字串 可以直接連接
+        text = text.trim().toUpperCase()
+        console.log(text)
+
+        // includes是否有包含指定文字，回傳 true 或 false
+        let hello = '外賣 咖哩拌飯 咖哩蓋飯'
+
+        let hasCurry = hello.includes("咖哩")
+        if (hasCurry) console.log('有咖哩')
+        else console.log('沒咖哩')
+
+        //  match(regex)
+        // 有找到匯回傳陣列 沒找到會回傳null
+        let matchCurry = hello.match(/咖哩/g)
+        if (matchCurry) console.log('有match咖哩')
+        else console.log('沒match咖哩')
+        // 回傳陣列
+        console.log(matchCurry)
+
+
+        let matchAllCurry = hello.match(/咖哩/g)
+        console.log(matchAllCurry)
+        for (const match of matchAllCurry) {
+            console.log(match)
+        }
+
+        // .indexOf(文字, 開始位置)，找出開始位置後第幾個字出現搜尋文字
+        let indexCurry = hello.indexOf('咖哩')
+        console.log(indexCurry)
+
+        let xmas = 'Today is Xmas, Happy Xmas'
+        let xmasReplace = xmas.replace('Xmas', 'Christmas')
+        console.log(xmasReplace)
+        let xmasReplaceRegex = xmas.replace(/Xmas/g, 'Christmas')
+        console.log(xmasReplaceRegex)
+        // 預設只有第一個會被取代
+        // 如果要設定多個 要用Regex 
+
+
+        let email = 'My email is abcd@aasd.com'
+        let emailreplace = email.replace(/([a-zA-Z1-9]+)@([a-zA-Z1-9]+)\.com/g, '我的信箱是 $1@$2.tw')
+        console.log(emailreplace)
+
+
+        let text3 = 'abcdefg'
+        let text3sub = text3.substr(2, 3)
+        //                        ( 開始位子,長度)
+        console.log(text3sub)
+        let text3substring = text3.substring(2, 5)
+        // (開始位子,結束)
+        // 不包含結束
+        console.log(text3substring)
+        let text3slice = text3.slice(-6, -2)
+        // (開始位子,結束)
+        // 不包含結束
+        console.log(text3slice)
+
+
+        let text3int = parseInt(text3)
+        console.log(text3int)
+        console.log(text3int === NaN)
+        console.log(isNaN(text3int))
+
+        // 文字轉陣列
+        let filename = 'aaa.bbb.jpg'
+        let filenameext = filename.split('.').at(-1)
+        // 陣列.pop是把最後一個東西移出回傳
+        console.log(filenameext)
+
+    </script>
+</body>
+
+</html>

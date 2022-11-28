@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- RWD相關的meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>響應式網頁設計</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      box-sizing: border-box;
+      transition: 1s;
+    }
+
+    :root {
+      font-size: calc(0.75rem + 1.125rem);
+      /* css原生變數 */
+      --primary: #0d6efd;
+      --secondary: #6c757d;
+      --success: #198754;
+      --info: #0dcaf0;
+      --warning: #ffc107;
+      --danger: #dc3545;
+    }
+
+    body {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: url("http://picsum.photos/1920/1080/?random=1") no-repeat center/cover;
+    }
+
+    .container {
+      background: #fff;
+      width: 95%;
+      margin: 1rem auto;
+      padding: 15px;
+      border: 1px solid #000;
+    }
+
+    h1 {
+      color: var(--warning);
+      background-color: var(--success);
+      margin-bottom: 1rem;
+    }
+
+    li {
+      margin-bottom: 0.5rem;
+    }
+
+    @media (min-width:576px) {
+      /* 當你的裝置尺寸達到576px以上時開始會去吃裡面的樣式 */
+    }
+
+    
+
+    @media (min-width:576px)and(max-width:768px) {
+      /* 當你的裝置尺寸達到576px-768px以上時開始會去吃裡面的樣式 */
+    }
+
+    @media (min-width:576px) {
+
+      /* 0-575 */
+      /* 當你的裝置尺寸達到576px以上時開始會去吃裡面的樣式 */
+      h1 {
+        color: yellow;
+        background: darkmagenta;
+      }
+
+      .container {
+        border: 3px dashed #000;
+      }
+
+      body {
+        background: url("http://picsum.photos/1920/1080/?random=2") no-repeat center/cover;
+      }
+    }
+
+    @media (min-width:768px) {
+      /* 當你的裝置尺寸達到768px以上時開始會去吃裡面的樣式 */
+      h1 {
+        color: yellow;
+        background: green;
+      }
+
+      .container {
+        width: 80%;
+        border: 6px dashed rgb(255, 205, 3);
+      }
+
+      body {
+        background: url("http://picsum.photos/1920/1080/?random=3") no-repeat center/cover;
+      }
+    }
+
+    @media (min-width:992px) {
+      /* 當你的裝置尺寸達到768px以上時開始會去吃裡面的樣式 */
+      h1 {
+        color: rgb(255, 0, 85);
+        background: rgb(37, 179, 230);
+      }
+
+      .container {
+        width: 80%;
+        border: 6px solid rgb(255, 3, 163);
+        box-shadow: 0 0 50px 25px rgba(0,0,0,0.5);
+      }
+
+      body {
+        background: url("http://picsum.photos/1920/1080/?random=4") no-repeat center/cover;
+      }
+
+  
+    }
+
+    .sidebar{
+      display: block;
+    }
+
+    .isShow{
+      display: inline-block;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>響應式網頁設計 <span class="isShow">(Responsive web design)</span> </h1>
+    <ul>
+      <li>1.響應式網頁設計，讓內容如水般能適應各種形狀的容器，能在每個裝置尺寸正常瀏覽</li>
+      <li>2.媒體查詢的斷點(breakpoint)為不同裝置尺寸設定通過的位置點，當通過設定位置點套用該尺寸樣式</li>
+      <li>3.使用相對單位設定寬高或大小(rem % vh vw)字體大小使用rem 容器width hight使用%</li>
+      <li>4.先寫小尺寸 行動裝置優先漸進增強的概念，一種基於小尺寸開始思考內容的設計模式</li>
+      <li>5.  576px > 768px > 992px</li>
+    </ul>
+  </div>
+  <div class="sidebar">
+    轉貼市政府，一致一番，日記很快蔬菜接受妻子，提出了欣賞疾病時尚真正中壢輕易權限線上身份，只好不大感謝我是擁有居然玩具，圖象原來擔心他是歐洲走勢，那裡記者格式謝謝經營看了男人傳說會在上漲，用途路線一定全新變成能學到，全面儘管物理推動推廣尋找戰略請求，距離是。
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #imgs {
+      position: absolute;
+    }
+
+    #imgs img {
+      width: 350px;
+      float: left;
+    }
+
+    #gallery {
+      width: 350px;
+      height: 450px;
+      position: relative;
+      overflow: hidden;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 可見範圍 -->
+  <div id="gallery">
+    <div id="imgs">
+      <!-- 將圖片都包在一起 -->
+      <img src="https://upload.wikimedia.org/wikipedia/zh/e/e7/Chainsaw_Man_Volume_1_Cover.jpg" alt="">
+      <img src="https://p2.bahamut.com.tw/B/2KU/59/3981f5f7d4664823be8d8716941ic7v5.JPG" alt="">
+      <img
+        src="https://kbimages1-a.akamaihd.net/eb13b4f0-f971-4ff5-8762-79f0c2a2eadb/1200/1200/False/4Xi-PrGTpjCwG6p2jSGsUQ.jpg"
+        alt="">
+      <img src="https://cdn.readmoo.com/cover/60/9076g46_460x580.jpg?v=1628215473" alt="">
+      <img src="https://image.gamebase.com.tw/gb_img/8/004/222/4222768.jpg" alt="">
+    </div>
+  </div>
+  <br>
+  <!-- 兩個按鈕控制左右 -->
+  <input type="button" value="&lt;" id="left">
+  <input type="button" value="&gt;" id="right">
+  <script src="./jquery-3.6.1.min.js"></script>
+  <script>
+    let now = 0 // 現在是第一張
+
+    // 自動去算有多少張圖片
+    const total = $('img').length
+    $('#imgs').css('width', total * 350 + 'px')
+
+    // 目前張數+1去計算left多少 因為往右 所以*-1
+    $('#right').click(function () {
+      if (now < total - 1) {
+        now++
+        const left = now * 350 * -1
+        // $('#imgs').animate({ left: left + 'px' })
+        // 可以設定成有點q彈的模式
+        $('#imgs').stop(true, true).animate({ left: left - 25 + 'px' }).animate({ left: left + 'px' })
+      }
+    })
+
+    $('#left').click(function () {
+      if (now > 0) {
+        now--
+        const left = now * 350 * -1
+        // $('#imgs').animate({ left: left + 'px' })
+        $('#imgs').stop(true, true).animate({ left: left + 25 + 'px' }).animate({ left: left + 'px' })
+      }
+    })
+  </script>
+</body>
+
+</html>

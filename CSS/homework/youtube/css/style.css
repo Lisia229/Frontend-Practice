@@ -1,0 +1,602 @@
+html,
+body {
+  height: 100%;
+  background: #111;
+  margin-bottom: 20px;
+}
+
+#container {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+
+#container-left {
+  position: fixed;
+  width: 240px;
+  height: auto;
+  background: rgba(33, 33, 33, 0.974);
+}
+
+#container-right {
+  position: fixed;
+  left: 240px;
+  width: calc(100% - 240px);
+  height: 100vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+
+}
+
+#top {
+  position: fixed;
+  width: calc(100% - 250px);
+  height: 110px;
+  background: rgba(33, 33, 33, 0.974);
+}
+
+#search {
+  width: 100%;
+  height: 55px;
+  border-bottom: 1px solid rgba(106, 106, 106, 0.5);
+}
+
+#littleButtom {
+  width: 100%;
+  height: 54px;
+  border-bottom: 1px solid rgba(107, 107, 107, 0.5);
+}
+
+#search-text {
+  position: absolute;
+  border: 1px solid rgba(65, 65, 65, 0.5);
+  background: rgb(24, 24, 24);
+  width: 32%;
+  height: 35px;
+  left: 25%;
+  top: 10px;
+  font-size: 16px;
+  text-align: inherit;
+  border-radius: 1px;
+  color: white;
+}
+
+#search input:focus {
+  outline: none;
+  border-color: rgb(63, 110, 196);
+  z-index: -1;
+  padding-left: 35px;
+}
+
+
+
+#search-icon {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  left: 25.5%;
+  top: 17px;
+}
+
+#search-icon2 {
+  position: absolute;
+  width: 55px;
+  padding: 6px 15px;
+  height: 35px;
+  left: 57%;
+  top: 10px;
+  background: rgba(65, 65, 65, 0.5);
+}
+
+#micro {
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  left: 62%;
+  top: 10px;
+  border-radius: 50%;
+  background: rgb(21, 21, 21);
+  padding: 8px;
+}
+
+#accountHref {
+  position: absolute;
+  width: 83px;
+  height: 35px;
+  right: 1%;
+  top: 10px;
+  border: 1px solid rgb(0, 138, 197);
+  border-radius: 2px;
+  line-height: 35px;
+  text-decoration: none;
+  color: rgb(0, 138, 197);
+  font-size: 14px;
+  font-family: 微軟正黑體;
+  text-align: center;
+}
+
+#account {
+  width: 30px;
+  height: 30px;
+  margin-top: 3px;
+  left: 8px;
+  position: absolute;
+}
+
+#text {
+  float: right;
+  width: 48px;
+}
+
+#more {
+  position: absolute;
+  top: 18px;
+  width: 18px;
+  height: 18px;
+  right: 8%;
+}
+
+#menu {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+#menu li {
+  display: inline-block;
+  margin: 5px 5px 0 5px;
+  padding: 0.5rem 0;
+}
+
+#menu li a {
+  text-decoration: none;
+  display: block;
+  color: white;
+  padding: 0.5rem 0.6rem;
+  border-radius: 20px;
+  font-size: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.202);
+  transition: 0.5s;
+  background: rgba(94, 94, 94, 0.459);
+}
+
+
+#menu li a:hover {
+  opacity: 1;
+  background: rgba(159, 159, 159, 0.459);
+}
+
+
+#leftTop {
+  width: 100%;
+  height: 55px;
+  text-align: center;
+  position: relative;
+}
+
+#ytLogo {
+  position: absolute;
+  left: 23%;
+}
+
+#ytmenu {
+  position: absolute;
+  left: 15%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#leftMenu {
+  width: 100%;
+  height: 97vh;
+  overflow: scroll;
+}
+
+/* 調整卷軸 */
+/* 捲軸底色 */
+#leftMenu::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+#container-right::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* 捲軸寬度 */
+#leftMenu::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: transparent;
+}
+
+#container-right::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: transparent;
+}
+
+#leftMenu:hover::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: rgb(124, 124, 124);
+}
+
+#container-right:hover::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: rgb(124, 124, 124);
+}
+
+/* 捲軸本體顏色 */
+#leftMenu::-webkit-scrollbar {
+  width: 8px;
+  background: transparent;
+}
+
+#container-right::-webkit-scrollbar {
+  width: 8px;
+  background: transparent;
+}
+
+/*  */
+
+#menuTop {
+  border-bottom: 1px solid rgba(66, 66, 66, 0.5);
+  padding: 15px 5px 15px 5px;
+}
+
+#menu2 {
+  border-bottom: 1px solid rgba(66, 66, 66, 0.5);
+  padding: 9px 5px 9px 5px;
+}
+
+#menuExplore {
+  border-bottom: 1px solid rgba(66, 66, 66, 0.5);
+  padding: 9px 5px 9px 5px;
+}
+
+#menuYT {
+  border-bottom: 1px solid rgba(66, 66, 66, 0.5);
+  padding: 10px 5px 10px 0;
+}
+
+#menuMore {
+  border-bottom: 1px solid rgba(66, 66, 66, 0.5);
+  padding: 10px 5px 10px 0;
+}
+
+#menuSetting {
+  border-bottom: 1px solid rgba(66, 66, 66, 0.5);
+  padding: 10px 5px 10px 0;
+}
+
+#menubutton {
+  padding: 10px 5px 10px 0;
+  height: 150px;
+}
+
+#menubutton {
+  padding: 15px 5px 8px 0;
+}
+
+#menuSetting ul li,
+#menuMore ul li,
+#menuYT ul li,
+#menuTop ul li,
+#menu2 ul li {
+  position: relative;
+}
+
+
+#menuExplore ul li {
+  width: 225px;
+  height: 40px;
+  position: relative;
+}
+
+#menuExplore ul li a {
+  height: 39px;
+  display: block;
+  width: 240px;
+  text-decoration: none;
+  color: white;
+}
+
+#menuSetting ul li a,
+#menuMore ul li a,
+#menuYT ul li a,
+#menu2 ul li a,
+#menuTop ul li a {
+  display: block;
+  width: 240px;
+  height: 40px;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+
+#menuSetting ul li a:hover,
+#menuMore ul li a:hover,
+#menuYT ul li a:hover,
+#menuExplore ul li a:hover,
+#menu2 ul li a:hover,
+#menuTop ul li a:hover {
+  background: rgba(145, 145, 145, 0.5);
+}
+
+#menuSetting ul li img,
+#menuMore ul li img,
+#menuYT ul li img,
+#menu2 ul li img,
+#menuTop ul li img {
+  width: 55px;
+  padding-left: 10px;
+}
+
+#menuExplore ul li img {
+  width: 25px;
+  height: 25px;
+  padding: 4px;
+  background: #333;
+  border-radius: 50%;
+  margin-top: 4px;
+  margin-left: 15px;
+}
+
+
+#menuTitleY,
+#menuEtitle {
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  padding-left: 17px;
+  padding-top: 10px;
+  padding-bottom: 15px;
+  font-size: 14px;
+}
+
+
+#menuExplore ul li span,
+#menu2 ul li span,
+#menuTop ul li span {
+  position: absolute;
+  top: 11px;
+  left: 70px;
+  font-size: 14px;
+  font-family: "Roboto", "Arial", sans-serif;
+}
+
+#menuSetting ul li span,
+#menuMore ul li span,
+#menuYT ul li span {
+  width: 200px;
+  height: 40px;
+  position: absolute;
+  top: 11px;
+  left: 70px;
+  font-size: 14px;
+  font-family: "Roboto", "Arial", sans-serif;
+  margin-top: 6px;
+}
+
+#menubutton a {
+  color: rgb(255, 255, 255);
+  font-weight: 500;
+  font-size: 13px;
+  font-family: "Roboto", "Arial", sans-serif;
+  margin-top: 6px;
+  text-decoration: none;
+}
+
+#a1,
+#a2,
+#a3,
+#a4 {
+  color: rgb(255, 255, 255);
+  font-weight: 500;
+  padding-left: 20px;
+  font-size: 13px;
+  font-family: "Roboto", "Arial", sans-serif;
+  margin-top: 6px;
+  text-decoration: none;
+}
+
+#menubutton span {
+  font-size: 12px;
+  font-weight: 400;
+  font-family: "Roboto", "Arial", sans-serif;
+  color: rgb(255, 255, 255);
+  padding-left: 20px;
+}
+
+#menuAccount {
+  width: 200px;
+  border-bottom: 1px solid rgba(66, 66, 66, 0.5);
+  padding: 15px 10px 15px 20px;
+  color: white;
+  font-size: 14px;
+  position: relative;
+}
+
+#accountHref2 {
+  border: 1px solid rgb(0, 138, 197);
+  text-decoration: none;
+  color: rgb(0, 138, 197);
+  border-radius: 2px;
+  display: block;
+  width: 90px;
+  height: 34px;
+  margin-top: 15px;
+}
+
+#accountHref2 span {
+  color: rgb(0, 138, 197);
+}
+
+#account2 {
+  width: 30px;
+  height: 30px;
+  margin-left: 9px;
+  margin-top: 1px;
+}
+
+#text2 {
+  padding: 6px;
+  margin-right: 4px;
+  position: absolute;
+}
+
+
+#menubutton span,
+#menuAccount span {
+  line-height: 20px;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+.line {
+  border-bottom: 2px solid gray;
+}
+
+.row {
+  width: calc(100% - 100px);
+  padding-top: 135px;
+  margin-left: 4%;
+  margin-right: 4%;
+}
+
+.col {
+  width: 24.6%;
+  display: inline-block;
+  vertical-align: top;
+  /* display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr */
+}
+
+.col2 {
+  width: 16%;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.content-size {
+  padding: 0px 8px 40px 8px;
+}
+
+.content-size a {
+  text-decoration: none;
+}
+
+.col:hover {
+  transform: scale(1.1);
+  /* transition-delay: 1s; */
+  background: #111;
+}
+
+.shorts {
+  color: white;
+  font-size: 25px;
+  margin-bottom: 20px;
+  font-family: "Roboto", "Arial", sans-serif;
+}
+
+
+
+.shorts img {
+  width: 50px;
+}
+
+.content-size h2 {
+  color: white;
+  line-height: 1;
+  font-size: 16px;
+  font-family: "Roboto", "Arial", sans-serif;
+  font-weight: bolder;
+  margin-top: 10px;
+  overflow: hidden;
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  /*行數*/
+  -webkit-box-orient: vertical;
+  white-space: normal;
+}
+
+.content-size h3 {
+  color: rgb(130, 130, 130);
+  line-height: 2rem;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.classimg {
+  width: 100%;
+}
+
+.line-col {
+  width: 100%;
+  height: 5px;
+  background-color: rgb(55, 55, 55);
+  border-radius: 5px;
+  margin-top: 10px;
+  margin-bottom: 35px;
+}
+
+.line2-col {
+  width: 100%;
+  height: 5px;
+  background-color: rgb(55, 55, 55);
+  border-radius: 5px;
+  margin-top: 10px;
+  margin-bottom: 48px;
+}
+
+.smallimg {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  margin-top: 15px;
+  margin-bottom: 60px;
+  float: left;
+}
+
+.title {
+  width: 80%;
+  color: white;
+  font-family: "Roboto", "Arial", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+  padding-top: 15px;
+  padding-left: 10px;
+  overflow: hidden;
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  /*行數*/
+  -webkit-box-orient: vertical;
+  white-space: normal;
+}
+
+.ytname {
+  width: 80%;
+  font-family: "Roboto", "Arial", sans-serif;
+  padding-left: 10px;
+  font-weight: bolder;
+  color: rgb(190, 190, 190);
+  font-size: 12px;
+  margin-left: 10px;
+  overflow: hidden;
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 1;
+  /*行數*/
+  -webkit-box-orient: vertical;
+  white-space: normal;
+}
+
+.accountsTime {
+  width: 80%;
+  font-family: "Roboto", "Arial", sans-serif;
+  color: rgb(138, 138, 138);
+  font-size: 12px;
+  margin-left: 10px;
+}

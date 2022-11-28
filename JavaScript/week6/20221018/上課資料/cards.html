@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #imgs {
+      height: 300px;
+      overflow: hidden;
+    }
+
+    img {
+      float: left;
+      width: 350px;
+      height: 400px;
+      margin-top: 200px;
+
+    }
+  </style>
+</head>
+
+<body>
+  <div id="imgs">
+    <!-- 將圖片都包在一起 -->
+    <img src="https://upload.wikimedia.org/wikipedia/zh/e/e7/Chainsaw_Man_Volume_1_Cover.jpg" alt="">
+    <img src="https://p2.bahamut.com.tw/B/2KU/59/3981f5f7d4664823be8d8716941ic7v5.JPG" alt="">
+    <img
+      src="https://kbimages1-a.akamaihd.net/eb13b4f0-f971-4ff5-8762-79f0c2a2eadb/1200/1200/False/4Xi-PrGTpjCwG6p2jSGsUQ.jpg"
+      alt="">
+    <img src="https://cdn.readmoo.com/cover/60/9076g46_460x580.jpg?v=1628215473" alt="">
+    <img src="https://image.gamebase.com.tw/gb_img/8/004/222/4222768.jpg" alt="">
+  </div>
+  <!-- 兩個按鈕控制左右 -->
+  <script src="./jquery-3.6.1.min.js"></script>
+  <script>
+    // hover(滑鼠移入時,滑鼠移出時)
+    // .hover(mouseenter, mouseout)
+    $('img').hover(function () {
+      $(this).animate({ marginTop: 0 })
+      $(this).prev().stop().animate({ marginTop: 100 })
+      $(this).next().stop().animate({ marginTop: 100 })
+    }, function () {
+      $('img').stop().animate({ marginTop: 200 })
+    })
+  </script>
+</body>
+
+</html>

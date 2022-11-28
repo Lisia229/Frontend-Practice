@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Propagation事件冒泡</title>
+  <style>
+    #in {
+      width: 300px;
+      height: 300px;
+      background: pink;
+      position: absolute;
+      top: 100px;
+      left: 100px;
+
+    }
+
+    #out {
+      width: 500px;
+      height: 500px;
+      position: relative;
+      margin: auto;
+      background: rgb(255, 63, 197);
+    }
+  </style>
+</head>
+
+<body>
+  <div id="out">
+    <div id="in"></div>
+  </div>
+  <script>
+    const outDiv = document.querySelector('#out')
+    const inDiv = document.querySelector('#in')
+
+    outDiv.onclick = () => {
+      console.log('out')
+    }
+    inDiv.onclick = () => {
+      event.stopPropagation()
+      console.log('in')
+    }
+
+  </script>
+</body>
+
+</html>

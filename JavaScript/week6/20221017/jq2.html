@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="list">
+    <ul>
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+    </ul>
+  </div>
+
+  <hr>
+  <div id="list2">
+    <ul>
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+    </ul>
+    <p>asd</p>
+  </div>
+
+  <hr>
+
+  <p class="text"></p>
+  <p class="text"></p>
+  <p class="text"></p>
+
+  <hr>
+
+  <div id="list3">
+    <ul>
+      <li>1</li>
+      <li>2</li>
+      <li id="list3-li3">3</li>
+      <li>4</li>
+      <li>5</li>
+    </ul>
+  </div>
+
+  <hr>
+
+  <script src="./jquery-3.6.1.min.js"></script>
+  <script>
+    // .find(選擇器) 在指定的東西裡找指定的東西，找裡面多層
+    $('#list').find('li').eq(1).css('color', 'red')
+
+    // .children(選擇器) 在指定的東西裡找指定的東西，找下一層，不指定選擇器就是全部
+    $('#list2').children('li').eq(1).css('color', 'red')
+    $('#list2').children('p').css('color', 'red')
+    $('#list2').children().css('background', 'gray')
+
+    // each(function(索引){
+    //  $(this) 代表迴圈跑到的元素
+    // })
+    // 所以需要用迴圈去跑ul的第二個li才會變
+
+    // $('ul').each(function () {
+    //   $(this).children('li').eq(1).css({ color: 'pink', fontStyle: 'italic' })
+    // })
+
+    $('.text').each(function (i) {
+      $(this).text(i)
+    })
+
+    const list3li3 = $('#list3-li3')
+    // .prev()同一層的前一個
+    // .prevAll()同一層的前面所有 ()可以放選擇器過濾
+    // .next()同一層的後一個
+    // .nextAll()同一層的後面所有 ()可以放選擇器過濾
+    // .siblings()同一層其他所有  ()可以放選擇器過濾
+
+    list3li3.prev().css('color', 'red')
+    list3li3.prevAll().css('background', 'lightpink')
+    list3li3.next().css('color', 'blue')
+    list3li3.nextAll().css('background', 'lightblue')
+    list3li3.siblings().css('font-weight', 'bold')
+
+    // .parent()上層
+    // .parents()上層所有
+    // .closest(選擇器)上層符合選擇器的第一個
+
+    list3li3.parent().css('background', 'lightyellow')
+    list3li3.parents().css('font-size', '40px')
+    list3li3.closest('div').css('text-align', 'center')
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>parallax</title>
+
+  <style>
+    body {
+      margin: 0;
+      background-size: auto 110%;
+      background-position: center center;
+      background-image: url(https://media.gq.com.tw/photos/60c1f912b3a84dd7fd5e1109/master/pass/4Yz2Ang.png);
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+    }
+
+    #content {
+      width: 97vw;
+      height: 500vh;
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="content"></div>
+  <!-- 視差 -->
+  <script>
+    window.onscroll = () => {
+      const top = document.documentElement.scrollTop
+      const maxHeight = window.innerHeight
+      document.body.style.backgroundPosition = `center -${top / maxHeight * 10}px`
+    }
+  </script>
+</body>
+
+</html>

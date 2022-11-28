@@ -1,0 +1,526 @@
+html,
+body {
+  height: 100%;
+  background: #111;
+  margin-bottom: 20px;
+}
+
+#container {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+
+#container-left {
+  position: fixed;
+  width: 240px;
+  height: auto;
+  background: rgba(33, 33, 33, 0.974);
+}
+
+#container-right {
+  position: fixed;
+  left: 240px;
+  width: 100%;
+  height: 100vh;
+}
+
+#top {
+  position: fixed;
+  width: 100%;
+  height: 110px;
+  background: rgba(33, 33, 33, 0.974);
+}
+
+#search {
+  width: 100%;
+  height: 55px;
+  border-bottom: 1px solid rgba(106, 106, 106, 0.5);
+}
+
+#littleButtom {
+  width: 100%;
+  height: 54px;
+  border-bottom: 1px solid rgba(107, 107, 107, 0.5);
+}
+
+#search-text {
+  position: absolute;
+  border: 1px solid rgba(65, 65, 65, 0.5);
+  background: rgb(24, 24, 24);
+  width: 32%;
+  height: 35px;
+  left: 17%;
+  top: 10px;
+  font-size: 16px;
+  text-align: inherit;
+  border-radius: 1px;
+  color: white;
+}
+
+#search input:focus {
+  outline: none;
+  border-color: rgb(63, 110, 196);
+  z-index: -1;
+  padding-left: 35px;
+}
+
+#search-icon {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  left: 17.5%;
+  top: 17px;
+}
+
+#search-icon2 {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  left: 49%;
+  top: 10px;
+  background: rgba(65, 65, 65, 0.5);
+  padding: 8.5px 20px;
+}
+
+#micro {
+  position: absolute;
+  width: 21px;
+  height: 21px;
+  left: 53.5%;
+  top: 10px;
+  border-radius: 50%;
+  background: rgb(21, 21, 21);
+  padding: 8px;
+}
+
+#accountHref {
+  position: absolute;
+  width: 83px;
+  height: 35px;
+  left: 82%;
+  top: 10px;
+  border: 1px solid rgb(0, 138, 197);
+  border-radius: 2px;
+  line-height: 35px;
+  text-decoration: none;
+  color: rgb(0, 138, 197);
+  font-size: 14px;
+  font-family: 微軟正黑體;
+  text-align: center;
+}
+
+#account {
+  width: 30px;
+  height: 30px;
+  margin-top: 3px;
+  left: 8px;
+  position: absolute;
+}
+
+#text {
+  float: right;
+  width: 48px;
+}
+
+#more {
+  position: absolute;
+  top: 18px;
+  width: 18px;
+  height: 18px;
+  left: 80%;
+}
+
+#menu {
+  position: absolute;
+  left: 40%;
+  transform: translate(-50%);
+}
+
+#menu li {
+  display: inline-block;
+  margin: 5px 5px 0 5px;
+  padding: 0.5rem 0;
+}
+
+#menu li a {
+  text-decoration: none;
+  display: block;
+  color: white;
+  padding: 0.5rem 0.6rem;
+  border-radius: 20px;
+  font-size: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.202);
+  background: rgba(33, 33, 33, 0.974);
+}
+
+#menu li a:focus {
+  background: rgb(255, 255, 255);
+  color: black;
+}
+
+#leftTop {
+  width: 100%;
+  height: 55px;
+}
+
+#ytLogo {
+  position: absolute;
+  left: 22%;
+}
+
+#ytmenu {
+  position: absolute;
+  left: 8%;
+  top: 1.8%;
+}
+
+#leftMenu {
+  width: 100%;
+  height: 97vh;
+  overflow: scroll;
+}
+
+/* 調整卷軸 */
+/* 捲軸底色 */
+#leftMenu::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* 捲軸寬度 */
+#leftMenu::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: transparent;
+}
+
+#leftMenu:hover::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: rgb(124, 124, 124);
+}
+
+/* 捲軸本體顏色 */
+#leftMenu::-webkit-scrollbar {
+  width: 8px;
+  background: transparent;
+}
+
+/*  */
+
+#menuTop {
+  border-bottom: 1px solid rgba(66, 66, 66, 0.5);
+  padding: 15px 5px 15px 0;
+}
+
+#menu2 {
+  border-bottom: 1px solid rgba(66, 66, 66, 0.5);
+  padding: 9px 5px 9px 0;
+}
+
+#menuExplore {
+  border-bottom: 1px solid rgba(66, 66, 66, 0.5);
+  padding: 9px 5px 9px 0;
+}
+
+#menuYT {
+  border-bottom: 1px solid rgba(66, 66, 66, 0.5);
+  padding: 10px 5px 10px 0;
+}
+
+#menuMore {
+  border-bottom: 1px solid rgba(66, 66, 66, 0.5);
+  padding: 10px 5px 10px 0;
+}
+
+#menuSetting {
+  border-bottom: 1px solid rgba(66, 66, 66, 0.5);
+  padding: 10px 5px 10px 0;
+}
+
+#menubutton {
+  padding: 10px 5px 10px 0;
+  height: 150px;
+}
+
+#menubutton {
+  padding: 15px 5px 8px 0;
+}
+
+#menuSetting ul li,
+#menuMore ul li,
+#menuYT ul li,
+#menuTop ul li,
+#menu2 ul li {
+  position: relative;
+}
+
+
+#menuExplore ul li {
+  width: 225px;
+  height: 40px;
+  position: relative;
+}
+
+#menuExplore ul li a {
+  height: 39px;
+  display: block;
+  width: 240px;
+  text-decoration: none;
+  color: white;
+}
+
+#menuSetting ul li a,
+#menuMore ul li a,
+#menuYT ul li a,
+#menu2 ul li a,
+#menuTop ul li a {
+  display: block;
+  width: 240px;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+
+#menuSetting ul li a:hover,
+#menuMore ul li a:hover,
+#menuYT ul li a:hover,
+#menuExplore ul li a:hover,
+#menu2 ul li a:hover,
+#menuTop ul li a:hover {
+  background: rgba(145, 145, 145, 0.5);
+}
+
+#menuSetting ul li img,
+#menuMore ul li img,
+#menuYT ul li img,
+#menu2 ul li img,
+#menuTop ul li img {
+  width: 45px;
+  padding-left: 9px;
+}
+
+#menuExplore ul li img {
+  width: 18px;
+  height: 18px;
+  padding: 4px;
+  background: #333;
+  border-radius: 50%;
+  margin-top: 4px;
+  margin-left: 15px;
+}
+
+
+#menuTitleY,
+#menuEtitle {
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  padding-left: 17px;
+  padding-top: 10px;
+  padding-bottom: 15px;
+  font-size: 14px;
+}
+
+
+#menuExplore ul li span,
+#menu2 ul li span,
+#menuTop ul li span {
+  width: 200px;
+  height: 40px;
+  position: absolute;
+  top: 11px;
+  left: 70px;
+  font-size: 14px;
+  font-family: "Roboto", "Arial", sans-serif;
+}
+
+#menuSetting ul li span,
+#menuMore ul li span,
+#menuYT ul li span {
+  width: 200px;
+  height: 40px;
+  position: absolute;
+  top: 11px;
+  left: 70px;
+  font-size: 14px;
+  font-family: "Roboto", "Arial", sans-serif;
+  margin-top: 6px;
+}
+
+#menubutton a {
+  color: rgb(255, 255, 255);
+  font-weight: 500;
+  font-size: 13px;
+  font-family: "Roboto", "Arial", sans-serif;
+  margin-top: 6px;
+  text-decoration: none;
+}
+
+#a1,
+#a2,
+#a3,
+#a4 {
+  color: rgb(255, 255, 255);
+  font-weight: 500;
+  padding-left: 20px;
+  font-size: 13px;
+  font-family: "Roboto", "Arial", sans-serif;
+  margin-top: 6px;
+  text-decoration: none;
+}
+
+#menubutton span {
+  font-size: 12px;
+  font-weight: 400;
+  font-family: "Roboto", "Arial", sans-serif;
+  color: rgb(255, 255, 255);
+  padding-left: 20px;
+}
+
+#menuAccount {
+  width: 200px;
+  border-bottom: 1px solid rgba(66, 66, 66, 0.5);
+  padding: 15px 10px 15px 20px;
+  color: white;
+  font-size: 14px;
+  position: relative;
+}
+
+#accountHref2 {
+  border: 1px solid rgb(0, 138, 197);
+  text-decoration: none;
+  color: rgb(0, 138, 197);
+  border-radius: 2px;
+  display: block;
+  width: 90px;
+  height: 34px;
+  margin-top: 15px;
+}
+
+#accountHref2 span {
+  color: rgb(0, 138, 197);
+}
+
+#account2 {
+  width: 30px;
+  height: 30px;
+  margin-left: 9px;
+  margin-top: 1px;
+}
+
+#text2 {
+  padding: 6px;
+  margin-right: 4px;
+  position: absolute;
+}
+
+
+#menubutton span,
+#menuAccount span {
+  line-height: 20px;
+}
+
+#maincontainer {
+  width: 100%;
+  height: 100%;
+  padding-top: 150px;
+  overflow: scroll;
+}
+
+.containerBigger1 {
+  width: 80%;
+  height: 350px;
+  margin-left: 80px;
+  margin-right: 80px;
+}
+
+.containerBigger1 ul li {
+  width: 23.9%;
+  height: 72%;
+  padding: 0 0 40px 0;
+  padding: 0 8px 40px 8px;
+  display: block;
+  float: left;
+}
+
+.containerBigger1 ul li:hover {
+  transform: scale(1.3);
+  transition-delay: 1.5s;
+  background: #111;
+}
+
+.word {
+  position: absolute;
+  width: 360px;
+  height: 204px;
+  text-align: center;
+  line-height: 25px;
+  font-size: 12px;
+  color: transparent;
+}
+
+.word:hover {
+  position: absolute;
+  width: 200px;
+  height: 25px;
+  left: 160px;
+  top: 175px;
+  background: black;
+  color: white;
+  transition-timing-function: ease-out;
+}
+
+.classimg {
+  width: 100%;
+  float: left;
+}
+
+.smallimg {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  float: left;
+  margin-top: 15px;
+  margin-bottom: 70px;
+}
+
+
+.title {
+  width: 80%;
+  height: 38px;
+  float: left;
+  margin-left: 10px;
+  margin-top: 15px;
+  color: white;
+  font-family: "Roboto", "Arial", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 16px;
+}
+
+.ytname {
+  width: 80%;
+  height: 20px;
+  float: left;
+  color: rgb(190, 190, 190);
+  font-size: 14px;
+  margin-top: 3px;
+  margin-left: 10px;
+}
+
+
+.accountsTime {
+  float: left;
+  width: 189px;
+  height: 20px;
+  color: rgb(189, 189, 189);
+  font-size: 14px;
+  margin-left: 10px;
+}
+
+.end {
+  width: 1920px;
+  height: 50px;
+}
+
+.end2 {
+    width: 1920px;
+    height: 150px;
+  }
