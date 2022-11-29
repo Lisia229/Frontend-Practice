@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ToDoList</title>
+  <style>
+
+  </style>
+</head>
+
+<body>
+  <div id="app">
+    <input type="text" v-model="newItem" @keydown.enter="addItem" :style="inputStyle">
+    <input type="button" value="新增" @click="addItem">
+    <hr>
+    <!-- 過濾選項 -->
+    <input type="button" value="顯示全部" @click="filter= '-1' ">
+    <input type="button" value="顯示已完成" @click="filter= '1' ">
+    <input type="button" value="顯示未完成" @click="filter= '0' ">
+    <hr>
+    <input type="button" value="全部標記已完成" @click="markDone(true)">
+    <input type="button" value="全部標記未完成" @click="markDone(false)">
+    <hr>
+    <input type="button" value="刪除全部" @click="delItems('全部')">
+    <input type="button" value="刪除已完成" @click="delItems('已完成')">
+    <input type="button" value="刪除未完成" @click="delItems('未完成')">
+    <hr>
+    目前顯示{{ filter }}，共 {{ filteredItem.length }} 個    <!-- 點兩下編輯的功能 -->
+    <ul>
+      <!-- 原本是<li v-for="item in items"> -->
+      <li v-for="item in filteredItem" :key="item.id">
+        <input type="checkbox" v-model="item.done">
+        <span v-if="item.edit">
+          <input type="text" v-model="item.model" @keydown.enter="saveEdit(item.id)" @keydown.esc="cancelEdit(item.id)">
+        </span>
+        <span v-else @dblclick="editItem(item.id)">
+          <del v-if="item.done">{{ item.name }}</del>
+          <span v-else>{{ item.name }}</span>
+        </span>
+        <input type="button" value="X" @click="delItem(item.id)">
+      </li>
+    </ul>
+    <!-- <input type="button" value="刪除全部" @click="delAll(item.id)"> -->
+  </div>
+  <script src="http://unpkg.com/vue@3"></script>
+  <script>
+    // vue的起手式    
+    // Vue.createApp({}).mount('#app')
+    Vue.createApp({
+      // 新增資料
+      data() {
+        return {
+          // 設定id
+          id: 1,
+          // 新增新的物件 
+          newItem: '',
+          // 新增陣列
+          items: [],
+          // 過濾
+          filter: '-1'
+        }
+      },
+      // 涵式
+      methods: {
+        addItem() {
+          // 判斷式 如果輸入的長度小於2 就跳出 不給輸入
+          if (this.newItem.length < 2) return
+
+          // 新增items 使用push
+          this.items.push({
+            // 每新增一個物件id自動++
+            id: this.id++,
+            // 給是否已完成代辦事項的
+            name: this.newItem,
+            done: false,
+            // 給編輯欄位的
+            model: this.newItem,
+            edit: false
+          })
+          // 輸入完後要清空輸入欄位
+          this.newItem = ''
+        },
+        findIdxById(id) {
+          return this.items.findIndex(item => item.id === id)
+        },
+        editItem(id) {
+          this.items[this.findIdxById(id)].edit = true
+        },
+        saveEdit(id) {
+          const idx = this.findIdxById(id)
+          this.items[idx].name = this.items[idx].model
+          this.items[idx].edit = false
+        },
+        cancelEdit(id) {
+          const idx = this.findIdxById(id)
+          this.items[idx].model = this.items[idx].name
+          this.items[idx].edit = false
+        },
+        delItem(id) {
+          this.items.splice(this.findIdxById(id), 1)
+        },
+        // delAll(){
+        //   this.items=''
+        // }
+        markDone(value) {
+          this.items.map(item => {
+            item.done = value
+            return item
+          })
+        },
+        delItems(value) {
+          this.items = this.items.filter(item => {
+            if (value === '全部') return false
+            else if (value === '已完成') return item.done === false
+            else return item.done === true
+          })
+        }
+      },
+      // 動態資料
+      computed: {
+        // 新增css樣式
+        inputStyle() {
+          // 三元寫法 如果長度=0 就顯示黑色邊框....
+          return this.newItem.length === 0 ? { border: '5px solid black' } : this.newItem.length < 2 ? { border: '5px solid red' } : { border: '5px solid green' }
+        },
+        // 過濾
+        // 此時原本上面的item in items 要改成 item in filteredItem
+        filteredItem() {
+          return this.items.filter(item => {
+            if (this.filter === '-1') return true
+            else if (this.filter === '1') return item.done
+            else return !item.done
+          })
+        }
+      },
+      watch: {
+        items: {
+          handler () {
+            localStorage.newtodo = JSON.stringify(this.items)
+          },
+          deep: true
+        }
+      },
+      created () {
+        this.items = JSON.parse(localStorage.newtodo || '[]')
+        this.id = this.items.length > 0 ? this.items[this.items.length - 1].id + 1 : 1 
+      }
+    }).mount('#app')
+  </script>
+</body>
+
+</html>
