@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    rect,
+    circle {
+      fill: rgb(225, 224, 224)
+    }
+
+    rect.on,
+    circle.on {
+      fill: rgb(215, 0, 186);
+    }
+
+    .number {
+      display: inline-block;
+      width: 40px;
+      margin: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="app">
+    <Number v-for="d in display" :data="d"></Number>
+    <hr>
+    <input type="button" value="開始" @click="start">
+    <input type="button" value="暫停" @click="stop">
+    <input type="button" value="歸零" @click="reset">
+  </div>
+  <script src="https://unpkg.com/vue@3"></script>
+  <script type="text/x-template" id="number">
+    <div class="number">
+      <svg version="1.1" id="Number" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+      viewBox="0 0 212.987 402.597"       enable-background="new 0 0 212.987 402.597"
+      xml:space="preserve">
+      <rect :class="{ on:['0','2','3','5','6','7','8','9'].includes(data) }" x="20.933" y="5.867" width="171.141" height="28.757"/>
+      <rect :class="{ on:['2','3','4','5','6','8','9'].includes(data) }" x="20.933" y="198.478" width="171.141" height="18.762"/>
+      <rect :class="{ on:['0','2','3','5','6','8','9'].includes(data) }" x="20.933" y="380.138" width="171.141" height="17.493"/>
+      <rect :class="{ on:['0','4','5','6','8','9'].includes(data) }" x="4.825" y="39.891" width="14.094" height="155.034"/>
+      <rect :class="{ on:['0','2','6','8'].includes(data) }" x="6.839" y="217.239" width="14.094" height="155.033"/>
+      <rect :class="{ on:['0','1','2','3','4','7','8','9'].includes(data) }" x="195.698" y="36.535" width="14.094" height="155.034"/>
+      <rect :class="{ on:['0','1','3','4','5','6','7','8','9'].includes(data) }" x="195.596" y="219.757" width="14.094" height="155.033"/>
+      <circle :class="{ on: data === ':' }" cx="106.503" cy="121.281" r="14.09"/>
+      <circle :class="{ on: data === ':' }" cx="106.503" cy="294.436" r="14.09"/>
+      </svg>
+    </div>
+  </script>
+  <script>
+    const { createApp, ref, computed } = Vue
+    createApp({
+      setup() {
+        let timer = 0
+        const counter = ref(0)
+        const start = () => {
+          timer = setInterval(() => {
+            counter.value++
+          }, 10)
+        }
+        const stop = () => {
+          clearInterval(timer)
+        }
+        const reset = () => {
+          stop()
+          counter.value = 0
+        }
+        const display = computed(() => {
+          return Math.floor(counter.value / 100).toString().padStart(3, '0') + ':' + (counter.value % 100).toString().padStart(2, '0')
+        })
+
+        return {
+          start, stop, reset, display, counter
+        }
+      }
+    })
+      .component('Number', {
+        template: '#number',
+        //我有個資料叫 data，最懶的寫法 
+        props: ['data']
+      })
+      .mount('#app')
+  </script>
+</body>
+
+</html>
